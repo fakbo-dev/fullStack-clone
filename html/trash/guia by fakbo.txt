@@ -1,0 +1,134 @@
+
+.....................
+primero siempre al archivo principal colocarle "index.html" 
+al igual que sus demas archivos siempre llevar .html o no servira el codigo
+siempre comenzar con <html> al iniciar cada proyecto
+el simbolo"<" se utilizar para iniciar los tags que son el nucleo de html siendo de color "rojo" dentros de los tags existen los "atributos" de color naranja 
+los "valores" son los resultados de los atributos
+
+
+la estructura
+
+empieza siempre con <html> llendo por las "metas" que son tags importantes para el navegador y 
+la posicion de tu pagina web esto se pone en el tag <head> que es la encargada de tener el codigo que NO se ve en la pagina
+
+metas importantes
+<tittle>= titulo de la pagina web
+<meta charset="utf-8">=codigo universal para no tener errores de tipeo y errores de acentos
+<meta name="keywords" content="">=palabras clave que se utilizan para que el navegador posicione tu pagina segun las palabras puestas
+<meta name="description" content="">= como su nombre dice pequeño descripcion de lo que trata la pagina ayuda a el posicionamiento de la pagina 
+<meta name="author" content="">=el propetario de la pagina web
+<meta name="copyright" content="">=si la pagina tiene compañia o productos asociados con marca registrada
+<meta name="robots" content="index">=se utiliza para que la pagina salga listada en los buscadores de las paginas web como google opera etc lo que es normalmente
+<meta name="robots" content="noindex">=solo se usa para pagina ocultas 
+
+Luego pasamos a la estructura de <body> que es en donde se ve el codigo de la pagina y lo demas 
+tags del body
+
+Titulos
+
+<h1>=Titulo en grande se recomienda usarlo solo una vez 
+<h2>=se usa usualmente para tener un subtitulo 
+<h3>=Las H3 se usan para títulos de subsecciones, es decir subtítulos de un H2. 
+También en este caso es esencial que contengan keywords (palabras clave) relacionadas al tema principal de la nota.
+<h4>=subtitulos de h3
+<h5>=subtitulos de h4
+<h6>=subtitulos de h5
+
+Divisores
+
+<div>=divisores se utilizan para tener una mejor estructura y facilita el ccs tiene parecido con el tag <p> pero de manera semantica 
+se debe utilizar para separar y agrupar contenidos
+
+Texto
+<p>= se usa para parrafos
+<b>=Negrita
+<i>=Italica
+<strike>=tachada
+<small>=pequella
+<big>=grande 
+<br>=se utiliza para rellenar la linea hacia la derecha y bajar los textos
+<ul>= se usa para crear listas no ordenadas se usa normalmente
+<ol>=se usa para crear listas ordenadas
+<li>=se usan dentro de los <ul> y los <ol> y es para mostrar los elementos de la lista
+<article>=se utiliza para iniciar un articulo y esta bien semanticamente
+<section>=van dentro de los articles y es para divir los mismo si existen diferentes articulos
+<aside>= se utiliza para añadir archivo extra y se modifica en css
+<footer>=es el pie de pagina se utiliza mayormente para poner las redes sociales el copyright 
+<center>= se utiliza para centrar funciona con cualquier tag excepto en el table que para que se centre como tal debe estar
+ dentro del tag <td> tal que asi <td><center></center></td>
+
+
+ATRIBUTO IMPORTANTE
+
+el id es un atributo importante para poder desplazarse de manera rapida por el sitio web para usarlo en un elanze se utiliza de esta manera 
+<a href="#codigo"></a> y el lugar de destino con ejemplo pondria un <h2> y quedaria <h2 id="codigo"></h2>
+
+Enlazes
+
+<a>/<a href=""></a>=Se utiliza para enlazar otros proyectos de Html en manera local y externa  
+
+locales son los que estan en la pc y se pueden encontrar por medios de rutas tales como <a href="Carpeta en la que esta/Archivo.html"></a>  
+
+las externas son las que estan en internet y se vinculan de la manera<a href="https://pagina.com"></a>
+
+Tambien puede usarse un atributo el cual seria "target" que sirve para abrir en enlaze en otra pagina que no sea en la que estas viendo un 
+ejemplo seria abrir un video y que se abra en otra pestaña y se representa de esta manera <a href="https://paginacualquiera.com" target="_BLANK"></a>
+
+para volver de una pagina secundaria a la principal se usa el atajo ../ Si estan en el mismo archivo, que significa volver una carpeta atras 
+un ejemplo seria <a href="Carpeta en la que esta/Archivo.html"></a>  y para volver seria <a href="../index.html"></a>  
+
+Multimedias
+
+<img>=<img src="">= en el apartado del atributo src se introduce el nombre del archivo que puede ser externo o local usando la misma analogia que el tag <a>
+
+Tambien existen 2 atributos que no son recomendables de usar pero no hace mal saberlos que son 
+el width="" y el height="" que se utiliza para modificar los pixeles de las imagenes 
+
+<video>=<video src=""></video> tienen que estar en un formato de video para que funcione ademas tiene un atributo indispensable el cual es controls="" qe es predeterminado por el buscador y es el que deja interactuar con el video si es atrasarlo retrasarlo o adelantarlo 
+
+<audio>= usa la misma logica que el tag <video>
+
+Todos estos tienen un atributo IMPORTANTE el cual es "alt" el cual se utiliza para darle nombre por si el archivo multimedia no aparece saber que hiba o que archivo se intentaba mostrar se utilizar para tener un buen orden
+otro atributo es el "tittle" el cual se utiliza para que cuando pase el curson por encima del archivo multimedia te diga el nombre del mismo
+
+
+Formularios
+
+<form>=se utilizan para abrir los formularios en los lenguajes backend se utiliza el atributo "method" que es para la segurad del sitio 
+
+<input>=<input type="" name="">= se utilizan para agregar contenido a los cuestionarios existen distintos atributos los cuales son
+
+<input type="text" name="">= se utiliza para ingresar solo texto
+<input type="password" name="">= se muestra con los digitos escondidos demostrando que es una contraseña
+<input type="number" name="">= solo numeros
+<input type="email" name="">= solo acepta tipeo que contenga el @correo.com
+<input type="color" name="">= para elegir color
+<input type="range" name="">= para determinar un rango este tiene un atributo el cual es "min"y"max" que determina cuanto es el rango que le quieres dar al formulario
+<input type="date" name="">= formato de fecha 
+<input type="time" name="">= formato de hora
+<input type="button" name="">= formato de boton tiene como atributo "value" el cual es para darle nombre al boton 
+<input type="sumbit" name="">=para enviar los formularios anteriores
+
+<textarea>=un formulario para rellenar con texto tiene un atributo el cual es "readonly" el cual seria para que solo se pueda leer un no poder escribir en ese campo
+
+Existe un atributo que puede ser usado por cualquier imput el cual es "required" el cual se utiliza que para se puedan enviar los formularios con este atributo deben ser rellenados para poder ser enviados
+
+Correcion los atributos "readonly"y "value" pueden usarse en cualquier input
+
+metodo para usar el Nav
+
+encabezado: de que trata la pagina y mostrarla (<head>/<nav>)
+Nav:va en <body> luego en <header> <nav> <ul><li><a> para crearlo no se cambia el nav solo se borrar el contenido menos el nav
+
+Tablas
+
+<table>=se usa para inicar una tabla tiene un atributo el cual es "border" que se utiliza para darle borde la tabla no se recomienda ya que se usaba antes y puede entorpecer en el css
+<tr>= se utilizan  dentro del tag <table> y se utiliza para definir las filas
+<td>= se utilizan dentro de los <tr> y sirven para diferenciar los campos por filas
+
+Iconos
+<link>=se utiliza en el head  para darle un icono a la pagina su codigo seria <link rel="icon" type="" href=""> Importante que el archivo a usar para el icono este en formato .ico
+
+
+ 

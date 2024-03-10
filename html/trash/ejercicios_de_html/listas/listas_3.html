@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio tablas html</title>
+	<meta charset="utf-8"/>
+	<meta name="author" content="francesc ricart"/>
+	<style>
+		table{
+			border-collapse:collapse;
+			caption-side: bottom;
+		}
+		caption{
+			font-weight:bold;
+			margin-top:16px;
+		}
+		th,td{padding:5px 10px;}
+		td,th{border:1px solid #1c1c1c;text-align:center;}
+
+	</style>
+</head>
+<body>
+
+<!-- puedes copiar y pegar todo el código en sublime o brackets para resolver el ejercicio -->
+<table>
+  <caption><strong>TABLAS_ejercicio</strong></caption>
+  <thead>
+    <tr>
+      <th scope="rowgroup">Ciudad</th>
+      <th scope="rowgroup">Aeropuerto</th>
+      <th scope="rowgroup">Playa</th>
+      <th scope="rowgroup">Habitantes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Reus</td>
+      <td>Si</td>
+      <td>No</td>
+      <td>100000</td>
+    </tr>
+    <tr>
+      <td>Tarragona</td>
+      <td>NO</td>
+      <td>SI</td>
+      <td>130000</td>
+    </tr>
+    <tr>
+      <td>Madrid</td>
+      <td>SI</td>
+      <td>NO</td>
+      <td>3100000</td>
+    </tr>
+    <tr>
+      <td>Barcelona</td>
+      <td>si</td>
+      <td>no</td>
+      <td>1600000</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

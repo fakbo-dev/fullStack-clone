@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--TITULOS Y PARRAFOS-->
+
+<!--cada parrafo tiene que estar envuelto de esta manera -->
+
+<p>I am a paragraph, oh yes I am.</p>
+
+<!--cada titulo se envuelve de esta menera-->
+
+<h1>I am the title of the story.</h1>
+
+<!-- existen 6 elementos de encabezados
+h1
+h2
+h3
+h4
+h5
+h6
+-->
+
+
+
+<!--JERARQUIA ESTRUCTURAL-->
+
+<!--Por ejemplo, en esta historia, el <h1>elemento representa el título de la historia, los <h2>elementos representan el título de cada capítulo y los <h3>elementos representan subsecciones de cada capítulo:-->
+
+    <h1>The Crushing Bore</h1>
+
+<p>By Chris Mills</p>
+
+<h2>Chapter 1: The dark night</h2>
+
+<p>
+  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…
+</p>
+
+<h2>Chapter 2: The eternal silence</h2>
+
+<p>Our protagonist could not so much as a whisper out of the shadowy figure…</p>
+
+<h3>The specter speaks</h3>
+
+<p>
+  Several more hours had passed, when all of a sudden the specter sat bolt
+  upright and exclaimed, "Please have mercy on my soul!"
+</p>
+
+
+<!--Realmente depende de usted qué representan los elementos involucrados, siempre que la jerarquía tenga sentido. pero se puede tener mejores practicas al crear dichas estructuras -->
+
+<!--
+    Preferiblemente, debe usar uno <h1>por página: este es el encabezado del nivel superior y todos los demás se ubican debajo de este en la jerarquía.
+Asegúrese de utilizar los títulos en el orden correcto en la jerarquía. 
+
+No utilice <h3>elementos para representar subtítulos, seguidos de <h2>elementos para representar subtítulos; eso no tiene sentido y conducirá a resultados extraños.
+
+De los seis niveles de encabezado disponibles, no debes utilizar más de tres por página, a menos que lo consideres necesario. Los documentos con muchos niveles (por ejemplo, una jerarquía de títulos profunda) se vuelven difíciles de manejar y de navegar. En tales ocasiones, es aconsejable distribuir el contenido en varias páginas, si es posible.-->
+
+<!--LISTAS-->
+
+<!-- ul: Unorderer List = Las listas desordenadas se utilizan para marcar listas de elementos cuyo orden no importa. Tomemos como ejemplo una lista de compras. dentros de los ul van los li: List Item que es donde se ponen los valores-->
+
+
+<!-- ol: Orderer List = Las listas ordenadas son listas en las que el orden de los elementos sí importa. Tomemos como ejemplo un conjunto de instrucciones. igual que en el ul se ustilican los 'li'-->
+
+
+
+<!-- LISTAS ANIDADAS-->
+
+<!-- Está perfectamente bien anidar una lista dentro de otra. Es posible que desee tener algunas subviñetas debajo de una viñeta de nivel superior. Tomemos la segunda lista de nuestro ejemplo de receta:-->
+<ol>
+    <li>Remove the skin from the garlic, and chop coarsely.</li>
+    <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
+    <li>Add all the ingredients into a food processor.</li>
+    <li>Process all the ingredients into a paste.</li>
+    <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+    <li>If you want a smooth hummus, process it for a longer time.</li>
+  </ol>
+
+<!-- demostracion de una lista anidada-->
+
+<ol>
+    <li>Remove the skin from the garlic, and chop coarsely.</li>
+    <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
+    <li>Add all the ingredients into a food processor.</li>
+    <li>
+      Process all the ingredients into a paste.
+      <ul>
+        <li>
+          If you want a coarse "chunky" hummus, process it for a short time.
+        </li>
+        <li>If you want a smooth hummus, process it for a longer time.</li>
+      </ul>
+    </li>
+  </ol>
+
+
+<!-- ENFASIS E Strong-->
+
+<!-- En el lenguaje humano, a menudo enfatizamos ciertas palabras para alterar el significado de una oración y, a menudo, queremos marcar ciertas palabras como importantes o diferentes de alguna manera.-->
+
+<!-- Cuando queremos añadir énfasis en el lenguaje hablado, enfatizamos ciertas palabras, alterando sutilmente el significado de lo que estamos diciendo. De manera similar, en el lenguaje escrito tendemos a enfatizar las palabras poniéndolas en cursiva. Por ejemplo, las siguientes dos oraciones tienen significados diferentes.-->
+
+<!-- En HTML utilizamos el <em>elemento (énfasis) para marcar dichas instancias. Además de hacer que el documento sea más interesante de leer, estos son reconocidos por lectores de pantalla, que pueden configurarse para pronunciarlos en un tono de voz diferente. Los navegadores colocan esto en cursiva de forma predeterminada, pero no debes usar esta etiqueta únicamente para obtener un estilo en cursiva. Para hacer eso, usarías un <span>elemento y algo de CSS, o quizás un <i>elemento (ver más abajo).-->
+
+<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+
+<!-- Para enfatizar palabras importantes, tendemos a enfatizarlas en el lenguaje hablado y a ponerlas en negrita en el lenguaje escrito. Por ejemplo:-->
+
+<!--En HTML utilizamos el <strong>elemento (gran importancia) para marcar dichas instancias. Además de hacer que el documento sea más útil, estos son reconocidos por los lectores de pantalla, que se pueden configurar para pronunciarlos en un tono de voz diferente. Los navegadores aplican este estilo como texto en negrita de forma predeterminada, pero no debes usar esta etiqueta únicamente para obtener un estilo en negrita. Para hacer eso, usarías un <span>elemento y algo de CSS, o quizás un <b>elemento (ver más abajo).-->
+
+<p>This liquid is <strong>highly toxic</strong>.</p>
+
+<p>I am counting on you. <strong>Do not</strong> be late!</p>
+
+
+
+<!-- CURSIVA NEGRITA Y SUBRAYADO-->
+
+<!-- Esta es la mejor regla que puedes recordar: sólo es apropiado usar <b>, <i>o <u>para transmitir un significado tradicionalmente expresado en negrita, cursiva o subrayado cuando no hay un elemento más adecuado; y normalmente lo hay. Considere si <strong>, <em>, <mark>o <span>podrían ser más apropiados-->
+
+
+<!-- 
+<i>se utiliza para transmitir un significado tradicionalmente transmitido por cursiva: palabras extranjeras, designación taxonómica, términos técnicos, un pensamiento…
+
+<b>se utiliza para transmitir un significado que tradicionalmente se transmite en negrita: palabras clave, nombres de productos, frase principal…
+
+<u>se utiliza para transmitir un significado tradicionalmente transmitido mediante subrayado: nombre propio, falta de ortografía…-->
+
+<!-- scientific names -->
+<p>
+    The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
+    hummingbird in Eastern North America.
+  </p>
+  
+  <!-- foreign words -->
+  <p>
+    The menu was a sea of exotic words like <i lang="uk-latn">vatrushka</i>,
+    <i lang="id">nasi goreng</i> and <i lang="fr">soupe à l'oignon</i>.
+  </p>
+  
+  <!-- a known misspelling -->
+  <p>Someday I'll learn how to <u class="spelling-error">spel</u> better.</p>
+  
+  <!-- term being defined when used in a definition -->
+  <dl>
+    <dt>Semantic HTML</dt>
+    <dd>
+      Use the elements based on their <b>semantic</b> meaning, not their
+      appearance.
+    </dd>
+  </dl>
+  
+</body>
+</html>
+<!---->

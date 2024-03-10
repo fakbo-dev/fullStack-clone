@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- ENCABEZADO-->
+
+<!-- el encabezado en un documento html es  la parte que no se muestra en el navegador web cuando se carga la pagina, contiene informacion como la pagina title, enlaces a CSS enlaces favicon personales y otros metadatos-->
+
+<!--METADATOS-->
+
+<!-- son datos que describen datos y html oficial de agregar esto y es con el <meta> elemento  existe muchos tipos diferentes de metas-->
+
+<!--muchos metas  incluyen atributos name y content
+name: especifica el tipo de  metaelemento que es; que tipo de informacion contiene
+
+content: especifica el metacontenido real.
+
+-->
+
+<!--ejemplo-->
+<meta name="author" content="Chris Mills" />
+<meta
+  name="description"
+  content="The MDN Web Docs Learning Area aims to provide
+complete beginners to the Web with all they need to know to get
+started with developing websites and applications." />
+
+<!-- el contenido de este meta es de mostrar en los buscadores una breve descripcion de la pagina a la que estas buscando puedes probar a buscar la pagina de MDN web docs-->
+
+
+<!--OTROS TIPOS DE METADATOS-->
+
+<!-- existe creaciones patentadas disegner por diferentes webs para proporcionar mas  informacion especifica como la de facebook y twitter-->
+<meta
+  property="og:image"
+  content="https://developer.mozilla.org/mdn-social-share.png" />
+<meta
+  property="og:description"
+  content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both websites
+and HTML Apps." />
+<meta property="og:title" content="Mozilla Developer Network" />
+
+
+
+<!--AGREGAR ICONOS PERSONIFICADOS-->
+
+<!--Para enriquecer aún más el diseño de su sitio, puede agregar referencias a íconos personalizados en sus metadatos, y estos se mostrarán en ciertos contextos. El más utilizado es el favicon (abreviatura de "icono de favoritos", en referencia a su uso en las listas de "favoritos" o "marcadores" de los navegadores).-->
+
+
+
+<!--APLICAR CSS Y JAVASCRIPT-->
+
+<!--el elemento link requiere de dos elementos para poder vincular el css a tu html rel = 'stylesheet' que indica que es la hoja de estilo del documento y href que contiene la ruta al archivo de la hoja de estilo -->
+<link rel="stylesheet" href="my-css-file.css" />
+
+<!--el script elemento tambien va en el encabezado y debe uncluir src atributo que contenga la ruta al javaScript que desea cargar y 'defer'-->
+
+
+
+<!-- CONFIGURACION DEL IDIOMA  PRINCIPAL DEL DOCUMENTO-->
+
+<!--se configura usando el atributo 'lang' como el siguiente ejemplo-->
+<html lang="en-US">
+  …
+</html>
+
+<!--esto es util ya que  los motores de busqueda indexaran  su documento html  de manera mas efectiva si su idioma esta configurado ( lo que permite aparecer correctamente en resultados de idiomas especificos, por ejemplo)  tamnien puede configurar subsecciones de su documento para que reconozcan como idioma diferentes como ejemplo-->
+<p>Japanese example: <span lang="ja">ご飯が熱い。</span>.</p>
+
+<!-- -->
+</body>
+</html>
+<!---->

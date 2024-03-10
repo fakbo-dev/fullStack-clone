@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--El html consta de una serie de elemtos que se utilizan para encerrar, envolver o marcar diferentes partes de una contenido para que aparezca o actue de una determinaad manera.-->
+
+
+
+<p>My cat is very grumpy</p>
+<!--Las etiquetas en HTML no distinguen entre mayúsculas y minúsculas. Esto significa que pueden escribirse en mayúsculas o minúsculas. Por ejemplo, una etiqueta <title>podría escribirse como <title>, <TITLE>, , etc. y funcionará. Sin embargo, se recomienda escribir todas las etiquetas en minúsculas para mayor coherencia y legibilidad.-->
+
+
+
+<!-- ANATOMIA DE UNA ETIQUETA-->
+
+<!--etiqueta de apertura: nombre del elemento entre corchetes angulares de apertura y cierre-->
+
+<!--contenido: contenido del elemento-->
+
+<!--etiqueta de cierre: Igual que la etiqueta de apertura pero con una barra lateral al inicio de ella que marca donde termina-->
+
+
+
+<!-- ELEMENTOS ANIDADOS -->
+
+<!--las etiquetas pueden colocarse dentro de otras a esto se le llama anidar-->
+
+<p>My cat is <strong>very</strong> grumpy.</p>
+
+
+
+<!--ELEMENTOS VACIO-->
+
+<!-- algunos elemtnos constan de una sola etiqueta  que normalmente normalmente se utiliza para insertar/incrustar algo en el documento, Por ejemplo-->
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
+  alt="Firefox icon" />
+
+
+<!-- ATRIBUTOS -->
+
+<!--Los elementos pueden tener atributos, los cuales tienen informacion adicional sobre el elemento que no aparecera en el contenido un ejemplo seria el atributo 'class'-->
+
+<!--un atributo tiene que tener
+    Un espacio entre este y el nombre del elemento
+    el nombre del atributo seguido de un signo igual
+    un valor al atributo entre comillas de apertura y cierre
+-->
+
+
+<!--EMEPLOS DE ATRIBUTOS-->
+
+<!-- href : especifica el direccion de un enlace por ejemplo  'href="https://www.mozilla.org/"''.-->
+
+<!-- title: especifica informacion adicional sobre un vinculo, como una descripcion de la agina que lo vincula  aparece al pasar el mouse por encima del vinculo por ejemplo (title="The Mozilla homepage")-->
+
+<!--target: especifica el contexto de navegacion utilizado  para mostrar el enlace por ejemplo target = '_blank' mostrara el enlace en una nueva pestana-->
+
+
+<!--ATRIBUTOS BOOLEANOS-->
+
+<!-- solo pueden tener un valor que generalmente es el mismo del nombre del atributo por ejemplo (disable) atributo que puede asignar a los elementos de entrada del formulario y se utiliza para desabilitar los elementos de entrada del formulario-->
+
+<!--<input type="text" disabled="disabled" />-->
+
+
+<!--OMITIR COMILLAS ALREDEDOR DE LOS VALORES DE LOS ATRIBUTOS-->
+
+<!--Incluya siempre las comillas del atributo. Evita estos problemas y da como resultado un código más legible.-->
+
+
+<!--ANATOMIA DE UN DOCUMENTO HTML-->
+
+<!--<!DOCTYPE html>: El tipo de documento. Cuando HTML era joven (1991-1992), los tipos de documento debían actuar como enlaces a un conjunto de reglas que la página HTML debía seguir para ser considerada un buen HTML. Los tipos de documento solían verse así:-->
+
+<!--<html></html>: El <html>elemento. Este elemento envuelve todo el contenido de la página. A veces se le conoce como elemento raíz.-->
+
+<!--<head></head>: El <head>elemento. Este elemento actúa como contenedor para todo lo que desea incluir en la página HTML, ese no es el contenido que la página mostrará a los espectadores. Esto incluye palabras clave y una descripción de la página que aparecería en los resultados de búsqueda, CSS para diseñar el contenido, declaraciones de juegos de caracteres y más. Aprenderá más sobre esto en el próximo artículo de la serie.-->
+
+<!--<meta charset="utf-8">: El <meta>elemento. Este elemento representa metadatos que no pueden ser representados por otros elementos HTML relacionados con meta, como <base>, <link>, o . El atributo especifica la codificación de caracteres de su documento como UTF-8, que incluye la mayoría de los caracteres de la gran mayoría de los lenguajes escritos por humanos. Con esta configuración, la página ahora puede manejar cualquier contenido textual que pueda contener. No hay ninguna razón para no configurar esto y puede ayudar a evitar algunos problemas más adelante.<script><style><title>charset-->
+
+<!--<title></title>: El <title>elemento. Esto establece el título de la página, que es el título que aparece en la pestaña del navegador en la que está cargada la página. El título de la página también se utiliza para describir la página cuando se marca como favorita.    -->
+
+<!--<body></body>: El <body>elemento. Contiene todo el contenido que se muestra en la página, incluido texto, imágenes, videos, juegos, pistas de audio reproducibles o cualquier otra cosa.-->
+
+
+<!--CARACTERES ESPECIALES DE HTML-->
+
+<!--En HTML, los caracteres <, >, ", 'y &son caracteres especiales. Son partes de la propia sintaxis HTML. para agregarlos es de la sigueinte manera-->
+
+<!--
+    <	&lt;
+    >	&gt;
+    "	&quot;
+    '	&apos;
+    &	&amp;
+-->
+</body>
+</html>
+<!---->
