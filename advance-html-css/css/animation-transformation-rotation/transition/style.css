@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container > a {
+    text-decoration: none;
+    border: 2px solid #f00;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #5af05a;
+    /* transition */
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.container > a:hover {
+    background: brown;
+    color: white;
+}

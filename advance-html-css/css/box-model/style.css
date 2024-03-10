@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+}
+
+div {
+    /* Border */
+    border-width: 2px;
+    border-style: solid;
+    border-color: #07e934;
+    /* border shortcut */
+    border: 2px solid #ff0000;
+    /* padding */
+    padding: 20px;
+    /* margin */
+}

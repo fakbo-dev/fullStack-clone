@@ -1,0 +1,23 @@
+/* Transform propertie */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > div {
+    height: 200px;
+    width: 200px;
+    background: crimson;
+    /** transform: translateY(-100px); */
+    /** transform: translateX(-200px); */
+
+    /*? transform : translate(XAXYS, YAXYS) */
+    /** transform: translate(200px, 200px); */
+
+    /** transform: rotate(90deg); */
+    /** transform: scale(0.5, 0.1); */
+    /** transform: skew(20deg); accept negative values */
+    
+}

@@ -1,0 +1,159 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-font: "Playfair Display", serif;
+    --primary-font: "Roboto", sans-serif;
+    --main-color: #37132d;
+}
+
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav Start */
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+}
+
+li a {
+    text-decoration: none;
+    margin: 10px;
+    color: black;
+    font-family: var(--primary-font);
+}
+/* Nav End */
+
+
+/* Section One start */
+.content_section {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.header_content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.header_heading {
+    font-size: 4rem;
+    font-family: var(--main-color);
+
+}
+
+
+.header_subheadings {
+    width: 70%;
+    font-family: var(--primary-font);
+    color: #525252;
+    margin: 20px 0;
+}
+
+.header_img-container {
+    width: 30%;
+    height: 50%;
+    position: relative;
+}
+
+.header_img {
+    width: 200px;
+    height: 300px;
+}
+
+.img-one {
+    position: absolute;
+    left: 10rem;
+}
+
+.img-two {
+    position: absolute;
+    left: 3rem;
+    top: 8rem;
+}
+
+.main-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    background: var(--main-color);
+    color: #fff;
+    font-family: var(--primary-font);
+}
+/* Section One End */
+
+
+/* Expirience Section Start */
+.experience {
+    height: 90vh;
+    margin-left: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray-heading {
+    color: #848484;
+    font-family: var(--main-font);
+}
+
+.experience-img {
+    background: url(img/nathon-oski-fE42nRlBcG8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 350px;
+    height: 350px;
+    margin-left: 50px;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+/* Expirience Section End */
+
+/* Social Media Start */
+
+.social-media {
+    margin: 5rem;
+}
+
+.follow {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 20px;
+    background: var(--main-color);
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: bold;
+    margin-right: 3rem;
+}
+
+.sm-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Social Media End */

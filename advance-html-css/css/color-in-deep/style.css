@@ -1,0 +1,27 @@
+/* Selector {Property: value;} */
+
+h1 {
+    /* Color: colorName;*/
+    color: blueviolet;
+}
+h2 {
+    /* color: RGB(red, green, blue) */
+    color: rgb(246, 13, 13);
+    /* color RGBA(red, green, blue, alpha) */
+    color: rgba(246, 13, 13, .8);
+}
+
+h3 {
+    /* color: #rrgghh*/
+    /* values between 00 and ff(maximun) */
+    color: #3cb471;
+}
+h4 {
+    /*  color: hsl(hue, saturation, lightness)*/
+    color: hsl(142, 47%, 44%);
+}
+.background {
+    /* background-color:  any type of color propertie*/
+    background-color: #ff4b6f;
+    color: #000000;
+}

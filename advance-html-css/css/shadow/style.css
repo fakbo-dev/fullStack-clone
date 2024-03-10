@@ -1,0 +1,20 @@
+/* box-shadow/text-shadow: x, y,  blurness, color */
+
+body {
+    background-color: #000;
+}
+
+h1 {
+    text-shadow: 2px 2px 2px crimson;
+    font-size: 5em;
+    text-align: center;
+    
+    
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: #00ceea;
+    box-shadow: 10px 10px 20px orange;
+}

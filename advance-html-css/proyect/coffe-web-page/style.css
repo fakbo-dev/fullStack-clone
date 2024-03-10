@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #deab5f;
+    --primary-color: #312e2e;
+}
+
+/* Utility Styles */
+
+button {
+    padding: 10px 30px;
+    background: var(--main-color);
+    border: none;
+    cursor: pointer;
+}
+
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #100e0f;
+}
+
+/* Nav Start */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+li a:hover {
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 5px;
+}
+/* NAV END */
+
+
+/* HEADER START */
+
+.header {
+    background: url(img/pexels-nao-triponez-129207.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+.main-headings {
+    position: absolute;
+    top: 7rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+}
+.primary-heading {
+    position: absolute;
+    bottom: 4rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+    margin-bottom: -40px;
+}
+.main-btn {
+    position: absolute;
+    bottom: 2rem;
+    transform: translateY(60px);
+}
+
+/* Our story Start */
+#our-story {
+    height: 100vh;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.img {
+    width: 400px;
+    height: 400px;
+    background: url(img/pexels-chitokan-2183027-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+}
+.title-style {
+    display: flex;
+    align-items: center;
+}
+.title {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    color: #fff;
+    transform: translateX(-100px);
+}
+.line {
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    transform: translateX(-120px);
+}
+
+.section-content p {
+    max-width: 500px;
+    color: #fff;
+    font-family: sans-serif;
+    line-height: 20px;
+    margin: 20px 0;
+}
+/* our Story end */
+
+/* Coffe Start */
+
+.coffe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+.img-2 {
+    width: 400px;
+    height: 400px;
+}
+.title-two {
+    font-size:  3rem;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+}
+.content-section p{
+    max-width: 500px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: #fff;
+}
+.btn-2 {
+    margin-top: 20px;
+}
+/* Coffe End */
+
+.products {
+    margin-top: 5rem;
+}
+.title-three {
+    font-size: 4rem;
+    margin: 10rem 0 10rem 10rem;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    border: 2px solid var(--main-color);
+    padding: 0 20px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.card-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -60px;
+}
+.img-one {
+    background: url(img/1.png);
+    background-position: center;
+    background-size: cover;
+}
+.img-two {
+    background: url(img/2.png);
+    background-position: center;
+    background-size: cover;
+}
+.img-three {
+    background: url(img/3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.card-title {
+    color: #fff;
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+
+.card .items p{
+    color: #fff;
+    margin: 20px 0;
+    font-family: sans-serif;
+}
+
+/* Products End */
+footer {
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+footer .container {
+margin: 20px;
+max-width: 300px;
+text-align: center;
+}
+
+footer .heading-info {
+    margin-bottom: 20px;
+}
+
+footer p {
+    line-height: 25px;
+}
+
+span {
+    color: var(--main-color);
+}
+.para {
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+    .main-headings, .primary-heading {
+        font-size: 2.5rem;
+    }
+
+    #our-story {
+        text-align: center;
+    }
+
+    #our-story .title {
+        transform: translateX(50px);
+    }
+    #our-story .line {
+        display: none;
+    }
+
+    .content-section {
+        text-align: center;
+    }
+
+    #our-story .img-container .img {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .coffe-container .img-container {
+        margin-top: 3rem;
+        width: 50%;
+    }
+    .img-container .img-2 {
+        margin-left: -4rem;
+    }
+}

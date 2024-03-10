@@ -1,0 +1,15 @@
+
+
+div {
+    height: 100vh;
+    /* backgroun-color: any type of color */
+    background-color: #49fa09;
+    /* background-image: url(); */
+    background-image: url("https://images.unsplash.com/photo-1683009427042-e094996f9780?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position */
+    background-position: bottom;
+    /* background attachment */
+    background-attachment: fixed;
+}

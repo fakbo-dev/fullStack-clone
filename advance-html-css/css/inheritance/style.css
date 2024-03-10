@@ -1,0 +1,26 @@
+/* inheritance is when we declare something on an element, and it also applies that element's decedant */
+/* Not everything is inherited ONLY typography so if you want to force the inherited you need to use  inherite keyword*/
+
+
+/* inherit for default */
+.parent {
+    color: orange;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+/* Layout is not inherit */
+
+.parent {
+    width: 200px;
+    height: 200px;
+    background: crimson;
+}
+
+.children {
+    background: inherit;
+    width: inherit;
+    height: inherit;
+}

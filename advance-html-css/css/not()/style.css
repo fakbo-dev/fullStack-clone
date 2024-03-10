@@ -1,0 +1,17 @@
+body {
+    color: white;
+    background: #333;
+    padding: 2rem;
+}
+
+.section {
+    width: 42rem;
+    margin: 0 auto;
+    background: #4a4949;
+    padding: 4rem;
+}
+
+.section.A .article-title :not(.content) {
+    color: violet;
+    font-size: 14px;
+}

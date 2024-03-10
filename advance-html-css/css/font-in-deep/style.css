@@ -1,0 +1,25 @@
+body {
+    /* Font family */
+    font-family: "pixelify sans",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Text transform (upperCase, lowerCase, capitalize)*/
+    text-transform: uppercase;
+    /* line-height */
+    line-height: 23px;
+    /* letter-spacing */
+    letter-spacing: 1vw;
+    /* Text align */
+    text-align: center;
+    /* text-Decoration */
+    text-decoration:none;
+    /* word spacing */
+    word-spacing: 10px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    
+}
+p {
+    /* font-weight */
+    font-weight: normal;
+}

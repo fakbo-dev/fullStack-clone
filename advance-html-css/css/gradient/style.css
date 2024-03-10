@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+}
+
+div {
+    height: 100vh;
+    /*background: linear-gradient(to bottom right,
+        #1c1cfba3, 
+        #2eed2eba,
+        crimson);*/
+        background: radial-gradient(rgba(0, 0, 255, 0.516), #16e0ff6f);
+}

@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
+p::before {
+    content: "Banca Shat ";
+    background-color: crimson;
+    font-size: 20px;
+    color: aquamarine;
+    font-weight: 800;
+}
+p::after {
+    content: "🐒";
+}
