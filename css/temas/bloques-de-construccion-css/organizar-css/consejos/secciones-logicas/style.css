@@ -1,0 +1,84 @@
+/*Crear secciones lógicas en la hoja de estilos
+Es una buena idea tener todo el estilo común primero en la hoja de estilo. Esto significa todos los estilos que generalmente se aplicarán a menos que hagas algo especial con ese elemento. Por lo general, tendrá reglas configuradas para:
+
+body
+p
+h1, , , , h2h3h4h5
+ul y ol
+Las propiedadestable
+Enlaces
+En esta sección de la hoja de estilo proporcionamos el estilo predeterminado para el tipo en el sitio, configurando un estilo predeterminado para tablas de datos y listas, etc.
+
+/* || GENERAL STYLES */
+
+/*body {
+    /* … */
+ /* }
+  
+  /*h1,
+  h2,
+  h3,
+  h4 {
+    /* … */
+ /* }
+  
+  /*ul {
+    /* … */
+  /*}
+  
+  /*blockquote {
+    /* … */
+  /*}
+  
+  Después de esta sección, podríamos definir algunas clases de utilidad, por ejemplo, una clase que elimine el estilo de lista predeterminado para las listas que vamos a mostrar como elementos flexibles o de alguna otra manera. Si tiene algunas opciones de estilo que sabe que querrá aplicar a muchos elementos diferentes, se pueden poner en esta sección.
+  
+  /* || UTILITIES */
+  
+  /*.nobullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* … */
+  
+  /*Luego podemos agregar todo lo que se usa en todo el sitio. Eso podría ser cosas como el diseño básico de la página, el encabezado, el estilo de navegación, etc.
+  
+  /* || SITEWIDE */
+  
+  /*.main-nav {
+    /* … */
+  /*}
+  
+  /*.logo {
+    /* … */
+ /* }
+  
+  /*Finalmente, incluiremos CSS para cosas específicas, desglosadas por contexto, página o incluso componente en el que se usan.
+  
+  /* || STORE PAGES */
+  
+  /*.product-listing {
+    /* … */
+ /* }
+  
+  .product-box {
+    /* … */
+  /*}
+  Copiar en el portapapeles
+  Al ordenar las cosas de esta manera, al menos tenemos una idea en qué parte de la hoja de estilo buscaremos algo que queremos cambiar.
+  
+  Evite selectores demasiado específicos
+  Si creas selectores muy específicos, a menudo encontrarás que necesitas duplicar trozos de tu CSS para aplicar las mismas reglas a otro elemento. Por ejemplo, puede tener algo como el siguiente selector, que aplica la regla a con una clase de dentro de an con una clase de .<p>box<article>main
+  
+  article.main p.box {
+    border: 1px solid #ccc;
+  }
+  Copiar en el portapapeles
+  Si desea aplicar las mismas reglas a algo fuera de , o a algo que no sea , tendría que agregar otro selector a estas reglas o crear un conjunto de reglas completamente nuevo. En su lugar, puede utilizar el selector para aplicar la regla a cualquier elemento que tenga la clase:main<p>.boxbox
+  
+  .box {
+    border: 1px solid #ccc;
+  }
+  Copiar en el portapapeles
+  Habrá momentos en que hacer algo más específico tenga sentido; Sin embargo, esto generalmente será una excepción en lugar de una práctica habitual.*/

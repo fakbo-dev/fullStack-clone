@@ -1,0 +1,25 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+  /*Introducción al posicionamiento
+El posicionamiento nos permite producir resultados interesantes al anular el flujo normal del documento. ¿Qué sucede si desea alterar ligeramente la posición de algunas cajas desde su posición de flujo predeterminada para dar una sensación ligeramente peculiar y angustiada? El posicionamiento es tu herramienta. ¿O qué sucede si desea crear un elemento de interfaz de usuario que flote sobre la parte superior de otras partes de la página y / o siempre se encuentre en el mismo lugar dentro de la ventana del navegador, sin importar cuánto se desplace la página? El posicionamiento hace posible tal trabajo de diseño.
+
+Hay varios tipos diferentes de posicionamiento que puede poner en práctica en elementos HTML. Para hacer que un tipo específico de posicionamiento esté activo en un elemento, usamos la propiedad position.*/
+.positioned {
+  position: static;
+  background-color: yellow;
+}

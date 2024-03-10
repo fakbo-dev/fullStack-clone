@@ -1,0 +1,9 @@
+/*El modelo flexible
+Cuando los elementos se presentan como cajas flexibles, se distribuyen con respecto a dos ejes:*/
+
+
+/*El eje principal (main axis) es el eje que corre en la dirección en que se colocan los elementos flexibles (por ejemplo, según se disponen las filas en una página o hacia abajo según se disponen las columnas en una página). El inicio y el final de este eje se denominan inicio principal (main start) y final principal (main end).
+El eje transversal (cross axis) es el eje que corre perpendicular a la dirección en la que se colocan los elementos flexibles. El inicio y el final de este eje se denominan inicio transversal (cross start) y extremo cruzado (cross end).
+El elemento padre que tiene establecido display: flex (el elemento <section> en nuestro ejemplo) se llama contenedor flexible.
+Los elementos que se presentan como cajas flexibles dentro del contenedor flexible se denominan elementos flexibles (son los elementos <article> de nuestro ejemplo).
+Ten presente esta terminología al avanzar por las secciones posteriores. Si en algún momento te confundes con el uso de estos conceptos, siempre puedes volver atrás a consultarlos.*/

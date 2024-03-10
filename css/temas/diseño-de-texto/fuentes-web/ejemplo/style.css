@@ -1,0 +1,95 @@
+
+/*Con esto en mente, vamos a construir un ejemplo básico de uso de un tipo de letra seguro para web a partir de los principios básicos. Es difícil hacer un ejemplo de demostración de este aspecto con un ejemplo en vivo incrustado, por lo tanto, nos gustaría que siguieses los pasos que se detallan en las secciones siguientes para que te hagas una idea de cómo funciona el proceso.
+
+Como punto de partida hay que utilizar los archivos web-font-start.html y web-font-start.css a los que añadir tu código (véase el ejemplo en vivo). Haz una copia de estos archivos en un directorio nuevo de tu equipo. En el archivo web-font-start.css, encontrarás un poco de CSS para trabajar con el aspecto y los tipos de letra básicos del ejemplo.
+
+Encontrar tipos de letra
+Para este ejemplo, utilizaremos dos tipografías web: una para los títulos de encabezado y otra para el texto base. Para empezar, hay que encontrar los archivos que contienen el tipo de letra. Los tipos de letra se crean en estudios de diseño y se guardan en diversos formatos de archivo. En general, hay tres tipos de sitios donde puedes obtener fuentes:
+
+Un distribuidor gratuito de tipos de letra: Es un sitio web que pone a disposición tipos de letra para descargar de forma gratuita (aunque puede haber algunas condiciones de licencia, como la acreditación del creador del tipo de letra). Algunos ejemplos de sitios web donde puedes encontrar tipos de letra gratis son Font Squirrel, dafont y Everything Fonts.
+Un distribuidor de fuentes de pago: En este sitio web puedes encontrar tipos de letra a cambio de un precio, dos ejemplos son fonts.com o myfonts.com. También puedes comprar tipos de letra directamente de estudios de diseño, por ejemplo, Linotype, Monotype, o Exljbris.
+Un servicio de tipos de letra en línea: Es un sitio que guarda y te sirve los tipos de letra, lo que te facilita todo el proceso. Consulta la sección Los servicios de tipos de letra en línea para obtener más información.
+Vamos a ver algunos tipos de letra. Ve a Font Squirrel y elige dos tipos de letra: uno que te resulte agradable e interesante para los títulos (quizá una buena tipografía de tipo Display o Slab Serif), y otro un poco menos llamativo y más legible para los párrafos. Cuando encuentres los tipos de letra, pulsa el botón de descarga y guarda el archivo en el mismo directorio que los archivos HTML y CSS que guardaste anteriormente. No importa si son TTF (True Type Fonts) u OTF (Open Type Fonts).
+
+En cada caso, descomprime el paquete de tipos de letra (las tipografías web generalmente se distribuyen en archivos ZIP que contienen los archivos con el tipo de letra y la información de la licencia). En el paquete puede haber más de un archivo con tipos de letra: algunos tipos de letra se distribuyen por familias, con diferentes variantes disponibles, por ejemplo: thin, medium, bold, italic, thin italic, etc. Para este ejemplo, solo queremos que te quedes con un solo archivo de fuente para cada opción.*/ 
+
+/*Nota: En la sección «Encontrar tipos de letra» en la columna de la derecha, puedes hacer clic en las diferentes etiquetas y clasificaciones para filtrar las opciones.*/
+
+
+/*Generar el código
+Ahora deberás generar el código que necesitas (y aplicar el estilo al tipo de letra). Para cada tipo de letra, sigue estos pasos:
+
+Asegúrate de cumplir con todos los requisitos de la licencia, sobre todo si vas a usarlo en un proyecto comercial y/o en una web.
+Ve a Webfont Generator de Fontsquirrel.
+Sube tus dos archivos de tipo de letra con el botón Cargar Fuentes.
+Marca la casilla de verificación con el texto «Sí, las fuentes que elijo pueden utilizarse legalmente para una página web».
+Haz clic en Descarga tu paquete.
+Una vez que el generador haya finalizado el procesamiento, deberías obtener un archivo ZIP para descargar; guárdalo en el mismo directorio que tus archivos HTML y CSS.
+
+El código de tu ejemplo de demostración
+En este punto, descomprime el paquete con los tipos de letra web que acabas de generar. En el directorio descomprimido verás tres elementos útiles:
+
+Las distintas versiones de cada tipo de letra, por ejemplo: .ttf, .woff, .woff2, etc.; los tipos de letra exactos proporcionados se actualizarán con el tiempo a medida que cambien los requisitos técnicos del navegador. Como se ya hemos dicho, se necesita más de un tipo de letra para garantizar la compatibilidad entre navegadores: esta es la forma en que Fontsquirrel se asegura de que tengas todo lo que necesitas.
+Un archivo HTML con un ejemplo de demostración para cada tipo de letra: cárgalos en tu navegador para ver cómo se ve la fuente en diferentes contextos de uso.
+Un archivo stylesheet.css, que contiene el código @font-face que necesitas.
+Para implementar estos tipos de letra en tu ejemplo de demostración, sigue estos pasos:
+
+Cambia el nombre del directorio descomprimido a algo fácil y simple, como fonts.
+Abre el archivo stylesheet.css y copia los dos bloques @font-face incluidos en tu archivo web-font-start.css. Debes ponerlos en la parte superior, antes de cualquier elemento CSS, ya que los tipos de letra deben importarse antes que los puedas utilizar en tu sitio web.
+Cada una de las funciones url() apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade fonts/ al inicio de cada ruta (ajusta la ruta como sea necesario).
+Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:*/
+
+@font-face {
+  font-family: 'fira_sansbold';
+  src: url('webfontkit-20230501-105236/firasans-bold-webfont.woff2') format('woff2'),
+       url('webfontkit-20230501-105236/firasans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'sinkin_sans100_thin';
+  src: url('webfontkit-20230501-105236/sinkinsans-100thin-webfont.woff2') format('woff2'),
+       url('webfontkit-20230501-105236/sinkinsans-100thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* General setup */
+
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+}
+
+
+/*Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.*/
+

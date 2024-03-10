@@ -1,0 +1,49 @@
+/*Diseño de tablas
+Las tablas HTML sirven para mostrar datos tabulados, pero hace muchos años, antes incluso de que el CSS básico fuera compatible de forma fiable en todos los navegadores, los desarrolladores web también usaban tablas para hacer el diseño completo de una página web, colocando en las diversas filas y columnas de una tabla los títulos de encabezado de la página, los pies de página, las diferentes columnas, etc. Esto funcionó en ese momento, pero presenta muchos problemas: los diseños de tabla no son flexibles, requieren mucho código de marcado, son difíciles de depurar y no son semánticamente correctos (por ejemplo, los usuarios de lectores de pantalla tienen problemas para navegar por estos diseños de página web con tablas).
+
+El aspecto que presenta una tabla en una página web cuando usas el código de marcado de una tabla se debe a un conjunto de propiedades CSS que definen el diseño de la tabla. Estas propiedades se pueden usar para diseñar elementos que no son tablas, un uso que a veces se describe como «usar tablas CSS».
+
+El ejemplo siguiente muestra uno de esos usos; el uso de tablas CSS para el diseño debe considerarse en este punto un método heredado, para aquellas situaciones en las que tienes navegadores muy antiguos que no son compatibles con los métodos Flexbox o Grid.
+
+Veamos un ejemplo. Primero, un código de marcado sencillo que crea un formulario HTML. Cada elemento de entrada tiene una etiqueta, y también hemos incluido un título dentro de un párrafo. Cada par etiqueta/entrada está delimitado por un elemento <div>, con fines de compaginación.*/
+
+/*Ahora, el CSS para nuestro ejemplo. La mayor parte del CSS es bastante común, excepto por los usos de la propiedad display. A los elementos <form>, <div>, <label> y <input> se les dice que se muestren como una tabla, filas de tabla y celdas de tabla, respectivamente; actuarán básicamente como marcas de tabla HTML, y lograrán por defecto la alineación perfecta de las etiquetas y las entradas. Todo lo que hay que hacer es añadir un poco de tamaños, márgenes, etc., para que todo se vea un poco mejor, ¡y listo!
+
+Observa que se la ha proporcionado al párrafo de encabezado display: table-caption;, lo que hace que actúe como una celda de encabezado (<caption>) de la tabla; y con caption-side: bottom; se le dice a la celda de encabezado que se asiente en la parte inferior de la tabla con fines de aplicación de estilo, aunque en el código fuente el marcado está antes que los elementos <input>. Esto permite un poco de flexibilidad.*/ 
+
+html {
+    font-family: sans-serif;
+  }
+  
+  form {
+    display: table;
+    margin: 0 auto;
+  }
+  
+  form div {
+    display: table-row;
+  }
+  
+  form label, form input {
+    display: table-cell;
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    width: 200px;
+    padding-right: 5%;
+    text-align: right;
+  }
+  
+  form input {
+    width: 300px;
+  }
+  
+  form p {
+    display: table-caption;
+    caption-side: bottom;
+    width: 300px;
+    color: #999;
+    font-style: italic;
+  }
+  

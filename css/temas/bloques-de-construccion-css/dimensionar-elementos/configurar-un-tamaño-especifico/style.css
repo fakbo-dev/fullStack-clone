@@ -1,0 +1,43 @@
+/*Configurar un tamaño específico
+
+Por supuesto, podemos dar a los elementos de nuestro diseño un tamaño específico. Cuando asignas un tamaño a un elemento (al cual deberá ajustarse el contenido del elemento) nos referimos a este como tamaño extrínseco. Toma nuestro elemento <div> del ejemplo anterior: podemos darle valores específicos como width y height, y así tendrá ese tamaño sea cual sea su contenido. Como descubrimos en nuestro artículo anterior sobre el desbordamiento, una altura establecida puede causar el desbordamiento del contenido si hay más contenido del que cabe en el elemento.*/
+
+
+.wrapper {
+    display: flex;
+    box-sizing: border-box;
+    
+}
+.box {
+    border: 5px solid darkblue;
+    height: 150px;
+    width: 200px;
+    margin: 1em 1em 0 0;
+}
+/*Debido a este problema de desbordamiento, fijar la altura de los elementos con longitudes o porcentajes es algo que debemos hacer con mucho cuidado en la web.*/
+
+/*El uso de porcentajes
+
+En muchos sentidos, los porcentajes actúan como unidades de longitud, y como discutimos en el artículo sobre valores y unidades, a menudo se pueden usar indistintamente con longitudes. Cuando usas un porcentaje, debes tener claro de qué es porcentaje. En el caso de una caja dentro de otro contenedor, si a la caja secundaria le asignas un porcentaje al ancho, será un porcentaje del ancho del contenedor principal.*/
+
+.box-2 {
+  border: 5px solid darkblue;
+  width: 50%;
+}
+
+/*Esto se debe a que los porcentajes se refieren al tamaño del bloque contenedor. Sin un porcentaje aplicado, nuestro elemento <div> ocuparía el 100% del espacio disponible, porque es un elemento de nivel de bloque. Si le damos un ancho porcentual, este se convierte en un porcentaje del espacio que normalmente ocuparía.*/
+
+/*Porcentaje de márgenes y áreas de relleno
+
+Si configuras margins y padding como un porcentaje, puede que observes un comportamiento extraño. En el ejemplo siguiente hay una caja. Hemos asignado a la caja interna un margen (margin) del 10% y una área de relleno (padding) del 10%. El área de relleno y el margen de la parte superior e inferior de la caja son del mismo tamaño que el margen de la izquierda y de la derecha.*/
+
+.box-3 {
+    border: 5px solid darkblue;
+    width: 300px;
+    margin: 10%;
+    padding: 10%;
+  }
+
+/*Podrías esperar, por ejemplo, que el porcentaje de los márgenes superior e inferior sea un porcentaje de la altura del elemento, y el porcentaje de los márgenes izquierdo y derecho sea un porcentaje del ancho del elemento. Sin embargo, ¡este no es el caso!
+
+Cuando utilizas el margen y el área de relleno en porcentajes, el valor se calcula a partir del tamaño en línea del elemento, es decir, el ancho del elemento cuando se trabaja en un lenguaje horizontal. En nuestro ejemplo, todos los márgenes y el área de relleno son del 10% del ancho del elemento. Esto significa que puedes tener márgenes y relleno alrededor de la caja del mismo tamaño. Este es un hecho que vale la pena recordar si utilizas porcentajes de esta manera.*/

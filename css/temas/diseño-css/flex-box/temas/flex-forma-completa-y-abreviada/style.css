@@ -1,0 +1,7 @@
+/*flex: forma completa y abreviada
+flex es una propiedad abreviada que puede especificar hasta tres valores diferentes:
+
+El valor de proporción sin unidades que ya hemos comentado. Se puede especificar individualmente usando la propiedad flex-grow.
+Un segundo valor de proporción sin unidades, flex-shrink, que entra en juego cuando los elementos flexibles desbordan el contenedor. Especifica cuánto de la cantidad desbordada se quita al tamaño de cada elemento flexible para evitar que el contenedor se desborde. Esta es una característica bastante avanzada de flexbox, y no la vamos a exponer en detalle en este artículo.
+El valor de tamaño mínimo que ya hemos visto. Se puede especificar individualmente usando el valor flex-basis.
+Recomendamos no usar las propiedades flex sin abreviar a menos que realmente tengas que hacerlo (por ejemplo, para anular algo establecido previamente). Comportan mucho código añadido y suelen aportar confusión.*/

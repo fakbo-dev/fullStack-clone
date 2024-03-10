@@ -1,0 +1,21 @@
+/*Directrices para aplicar estilos a ejemplos de código CSS
+Las siguientes directrices cubren cómo escribir código de ejemplo CSS para MDN Web Docs.
+
+Directrices generales para ejemplos de código CSS
+Planifica tu CSS
+Antes de sumergirse y escribir grandes trozos de CSS, planifique sus estilos cuidadosamente. ¿Qué estilos generales se necesitarán, qué diseños diferentes necesita crear, qué anulaciones específicas deben crearse y son reutilizables? Sobre todo, debe tratar de evitar demasiadas anulaciones. Si sigues encontrándote escribiendo estilos y luego cancelándolos nuevamente unas cuantas reglas, probablemente necesites repensar tu estrategia.
+
+Usar unidades flexibles/relativas
+Para una máxima flexibilidad en la gama más amplia posible de dispositivos, es una buena idea dimensionar contenedores, relleno, etc. Usar unidades relativas como EMS y REMS o porcentajes y unidades de ventanilla si desea que varíen según el ancho de la ventanilla. Puede leer más sobre esto en nuestro artículo Bloques de construcción de diseño receptivo.
+
+No utilice preprocesadores
+No use sintaxis de preprocesador, como Sass, Less o Stylus, en el código de ejemplo. En MDN Web Docs, documentamos el lenguaje CSS vanilla. El uso de preprocesadores solo elevará el listón para comprender los ejemplos, lo que podría confundir a los lectores.
+
+No utilices metodologías CSS específicas
+Con el mismo espíritu que la directriz anterior, no escriba códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como BEM o SMACSS. Aunque son sintaxis CSS válida, las convenciones de nomenclatura pueden ser confusas para las personas que no están familiarizadas con esas metodologías.
+
+No uses reinicios
+Para obtener el máximo control sobre CSS en todas las plataformas, mucha gente solía usar reinicios de CSS para eliminar todos los estilos, antes de construir las cosas por sí mismas. Esto ciertamente tiene sus méritos, pero especialmente en el mundo moderno, los restablecimientos de CSS pueden ser excesivos, lo que resulta en una gran cantidad de tiempo extra dedicado a reimplementar cosas que no estaban completamente rotas en primer lugar, como márgenes predeterminados, estilos de lista, etc.
+
+Si realmente siente que necesita usar un reinicio, considere usar normalize.css de Nicolas Gallagher, que tiene como objetivo hacer las cosas más consistentes en todos los navegadores, deshacerse de algunas molestias predeterminadas que siempre eliminamos (los márgenes en, por ejemplo) y corregir algunos errores.<body>
+

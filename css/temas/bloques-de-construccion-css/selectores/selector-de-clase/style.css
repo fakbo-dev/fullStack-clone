@@ -1,0 +1,44 @@
+/*selectores de clases*/
+
+/*El selector de clase comienza con un punto (.) y selecciona todo elemento del documento que esté afectado por esa clase. En el ejemplo siguiente hemos creado una clase llamada .highlight y la hemos aplicado en varios lugares del documento. Todos los elementos a los que se aplique esta clase se resaltarán en amarillo.*/
+
+.highlight {
+    background-color: yellow;
+}
+ /*Delimitación de clases en elementos particulares*/
+
+ /*Puedes crear un selector que seleccionará los elementos concretos que estén afectados por esa clase. En el ejemplo siguiente vamos a introducir un resaltado en un elemento <span> con una clase highlight del de los títulos <h1> con clase highlight. Para ello hay que anexar esa clase al selector de tipo correspondiente al elemento que queremos delimitar, sin dejar entre ellos ningún espacio.*/
+
+span.highlight-2 {
+    background-color: yellow;
+}
+
+
+
+ h1.highlight-2 {
+    background-color: pink;
+ }
+ /*Este enfoque hace el elemento CSS menos reutilizable porque la clase solo se aplicará a ese elemento en particular y tendrás que agregar otro selector en caso que quieras que las normas también se apliquen a otros elementos.*/
+
+ /*Delimitar un elemento afectado por más de una clase*/
+
+ /*Puedes aplicar más de una clase a un elemento y delimitarlos de forma individual o seleccionar el elemento cuando todas las clases están presentes en el selector. Puede ser útil cuando se trabaja con componentes que se pueden combinar de maneras diferentes en tu página web.
+
+En el ejemplo siguiente hay un elemento <div> que contiene una nota. El borde gris se aplica cuando la caja tiene una clase notebox. Si además tiene una clase warning o danger, la propiedad border-color cambia.
+
+Para decirle al navegador que solo queremos seleccionar el elemento si incluye todas estas clases, las encadenamos juntas sin ningún espacio entre ellas.*/
+
+.notebox {
+    border: 4px solid #666;
+    padding: .5em;
+    margin: 10px;
+}
+.notebox.warning {
+    border-color: orange;
+    font-weight: bold;
+}
+.notebox.danger {
+    border-color:red;
+    font-weight: bold;
+}
+

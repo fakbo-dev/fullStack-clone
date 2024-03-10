@@ -1,0 +1,56 @@
+/*La especificación de diseño de varias columnas le proporciona un método para distribuir el contenido en columnas, como puede ver en un periódico. En este artículo se explica cómo utilizar esta característica.*/
+
+body {
+    width: 90%;
+    margin: 2em auto;
+    max-width: 900px;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+/*Un ejemplo básico
+Exploremos cómo usar el diseño de varias columnas, a menudo denominado multicol. Puede seguir descargando el archivo de punto de partida multicol y agregando el CSS en los lugares apropiados. En la parte inferior de la sección puede ver un ejemplo de cómo debería verse el código final.
+
+Un diseño de tres columnas
+Nuestro archivo de punto de partida contiene un HTML muy simple: un contenedor con una clase de , dentro del cual hay un encabezado y algunos párrafos.container
+
+El <div> con una clase de contenedor se convertirá en nuestro contenedor multicol. Habilitamos multicol mediante una de dos propiedades: column-count o column-width. La propiedad toma un número como valor y crea ese número de columnas. Si agregas el siguiente CSS a tu hoja de estilo y vuelves a cargar la página, obtendrás tres columnas:column-count*/
+
+.container {
+    column-count: 3;
+  }
+
+  .container {
+    column-width: 200px;
+
+  }
+
+  /*Configuración del ancho de columna
+Cambie su CSS para usar de la siguiente manera:column-width
+
+
+El navegador ahora le dará tantas columnas como pueda del tamaño que especifique; Cualquier espacio restante se comparte entre las columnas existentes. Esto significa que no obtendrá exactamente el ancho que especifique a menos que su contenedor sea exactamente divisible por ese ancho.*/
+
+/*Aplicar estilo a las columnas
+Las columnas creadas por multicol no se pueden diseñar individualmente. No hay forma de hacer una columna más grande que otras columnas o de cambiar el color de fondo o del texto de una sola columna. Tiene dos oportunidades para cambiar la forma en que se muestran las columnas:
+
+Cambiar el tamaño del espacio entre columnas mediante el espacio entre columnas.
+Agregar una regla entre columnas con column-rule.
+Usando el ejemplo anterior, cambie el tamaño del espacio agregando una propiedad. Puede jugar con diferentes valores: la propiedad acepta cualquier unidad de longitud.column-gap
+
+Ahora agregue una regla entre las columnas con . De manera similar a la propiedad border que encontró en lecciones anteriores, es una abreviatura de column-rule-color, column-rule-style y column-rule-width, y acepta los mismos valores que .column-rulecolumn-ruleborder*/
+
+.container {
+    column-count: 3;
+    column-gap: 20px;
+    column-rule: 4px dotted rgb(79, 185, 227);
+  }
+/*Algo a tener en cuenta es que la regla no ocupa ningún ancho propio. Se encuentra a través de la brecha que creaste con . Para hacer más espacio a cada lado de la regla, deberá aumentar el tamaño.column-gapcolumn-gap*/
+
+
+/*Columnas de expansión
+Puede hacer que un elemento se extienda por todas las columnas. En este caso, el contenido se interrumpe donde se introduce el elemento de expansión y luego continúa debajo del elemento, creando un nuevo conjunto de columnas. Para que un elemento abarque todas las columnas, especifique el valor de para la propiedad column-span.all*/
+
+
+
+/*Columnas y fragmentación
+El contenido de un diseño de varias columnas está fragmentado. Básicamente, se comporta de la misma manera que el contenido se comporta en los medios paginados, como cuando imprime una página web. Cuando convierte su contenido en un contenedor multicol, se fragmenta en columnas. Para que el contenido haga esto, debe romperse.*/

@@ -1,0 +1,77 @@
+/*Selectores*/
+
+/* este es un elemento h1 */
+h1 {
+    color: blue;
+}
+
+.h1_special {
+    color: blue;
+}
+/*Si más de un elemento utiliza el mismo CSS, puedes combinar los selectores en una lista de selectores para que la regla se aplique a cada uno de los selectores individuales. Por ejemplo, si tengo el mismo CSS para un h1 y para una clase .special, los puedo escribir como dos reglas separadas. Quedaria tal que asi*/
+h1, .h1_special {
+    color: blue;
+}
+/*Cuando agrupas los selectores de esta manera, si alguno de los selectores no es válido, el navegador sencillamente ignora toda la regla.
+
+En el ejemplo siguiente, la regla que corresponde al selector de clase que no es válido se ignora, mientras que el estilo se aplica al elemento h1.*/
+
+/* h1 {
+    color: blue;
+  }
+  
+  ..special {
+    color: blue;
+  }*/
+
+  /*Sin embargo, si se combinan, toda la regla se considera no válida y no se aplicará estilo ni a h1 ni a la clase.*/
+  
+  /*h1, ..special {
+    color: blue;
+  } */
+
+  /*Tipos de selectores*/
+
+  /*Hay diferentes agrupaciones de selectores, y conocer qué tipo de selector necesitas te ayudará a encontrar la herramienta adecuada para tu trabajo. En estos subartículos vamos a ver los diferentes grupos de selectores con más detalle.*/
+
+  /*Selector de Tipo,clase y ID*/
+  
+  /*Este grupo incluye selectores que delimitan un elemento HTML, como por ejemplo un "<h1>".
+
+  tambien  incluye selectores que delimitan una clase por ejemplo ".soy una clase"
+
+  o un ID  por ejemplo "#unique"*/
+
+  /*Selectores de Atributos*/
+  /*este grupo de selectores te proporciona diferentes formas de seleccionar elementos según la presencia de un atributo determinado en un elemento: ejemplo*/
+  a[tittle] {
+    color: red;
+  }
+  /*O incluso hacer una selección basada en la presencia de un atributo que tiene un valor particular asignado:*/
+  /*a[href:"#"] {
+
+  }*/
+
+  /*pseudo-clases y pseudo-elementos*/
+  /*Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase :hover, por ejemplo, selecciona un elemento solo cuando se le pasa el ratón por encima.*/
+  /*a :hover {
+   color */
+  
+   /*También incluye pseudoelementos, que seleccionan una parte determinada de un elemento en vez del elemento en sí. Por ejemplo, ::first-line siempre selecciona la primera línea del texto que se encuentra dentro de un elemento (<p>, en el ejemplo siguiente), y actúa como si un elemento <span> hubiera delimitado la primera línea, seleccionado y aplicado estilo.*/
+
+   p::first-line {
+     color: pink;
+   }
+
+   /*Combinadores*/
+
+   /*El último grupo de selectores combina otros selectores con el fin de delimitar elementos de nuestros documentos. El ejemplo siguiente selecciona los párrafos que son hijos directos del elemento <article> utilizando el operador de combinación hijo (>):*/
+
+   article > p {
+      background-color: green;
+   }
+
+
+
+
+

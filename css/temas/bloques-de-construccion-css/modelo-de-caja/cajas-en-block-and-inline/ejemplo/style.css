@@ -1,0 +1,31 @@
+/*Podemos ver cómo se comportan los elementos inline en el ejemplo siguiente. Los elementos <span> del primer párrafo están en línea de manera predeterminada y, por lo tanto, no fuerzan ningún salto de línea.
+
+También hay un elemento <ul> que se establece como display: inline-flex, que crea una caja con un comportamiento de tipo en línea alrededor de algunos elementos de tipo flex.
+
+Finalmente, hay dos párrafos configurados con display: inline. El contenedor flexible en línea y los párrafos fluyen todos juntos en línea, en lugar de dividirse en líneas nuevas como lo harían si se mostraran como elementos de bloque.
+
+En el ejemplo puedes cambiar display: inline por display: block o display: inline-flex y por display: flex para alternar entre estos modos de visualización.*/
+
+p, 
+ul {
+  border: 2px solid rebeccapurple;
+}
+
+span,
+li {
+  border: 2px solid blue;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+} 
+
+.inline {
+  display: inline;
+}
+    
+/*En artículos posteriores encontrarás cosas como el diseño flexible. El aspecto clave a recordar aquí es que cambiar el valor de la propiedad display puede cambiar entre el modo de visualización exterior en bloque y en línea de una caja, que cambia la forma en que se presenta junto con otros elementos en la disposición en pantalla.
+
+En el resto de este artículo, nos concentraremos en el tipo de visualización externa./

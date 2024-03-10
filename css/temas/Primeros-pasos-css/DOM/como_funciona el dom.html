@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>EJEMPLO de DOM</title>
+</head>
+<body>
+  <!--usaremos este ejemplo para entender el funcionamiento del DOM(Document Object Model)-->
+  <p>
+    Usaremos:
+    <span>Hojas</span>
+    <span>de estilo</span>
+    <span>en cascada</span>
+  </p>
+  <!--el navegador interpreta el siguiente codigo de la siguiente manera
+  P
+├─ "Usaremos:"
+├─ SPAN
+|  └─ "Hojas"
+├─ SPAN
+|  └─ "de estilo"
+└─ SPAN
+    └─ "en cascada"
+
+    En el DOM, el nodo que se corresponde con nuestro elemento <p> es un padre. Sus hijos son un nodo de texto y los tres nodos correspondientes a nuestros elementos <span>. Los nodos SPAN son también los padres, y los nodos de texto sus hijos:
+      Así es como un navegador interpreta el código HTML anterior, interpreta el árbol DOM y luego lo muestra en el navegador
+  -->
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+/*In this task, the inline element has a margin, padding and border. However, the lines above and below are overlapping it. What can you add to your CSS to cause the size of the margin, padding, and border to be respected by the other lines, while still keeping the element inline?
+
+Your final result should look like the image below:*/
+
+body {
+    background-color: #fff;
+    color: #333;
+    font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .box span {
+    background-color: pink;
+    border: 5px solid black;
+    padding: 1em;
+    display: inline-block;
+  }

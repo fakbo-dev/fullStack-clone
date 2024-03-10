@@ -1,0 +1,39 @@
+/*Color
+
+En CSS hay muchas formas de especificar el color, algunas de las cuales se implementaron más recientemente que otras. En todas partes en CSS se pueden usar los mismos valores de color, tanto para especificar el color del texto como el color de fondo, o de cualquier otra cosa.
+
+El sistema de colores estándar disponible en los ordenadores modernos es de 24 bits, lo que permite visualizar aproximadamente 16,7 millones de colores distintos a partir de una combinación de diferentes canales de rojo, verde y azul con 256 valores diferentes por canal (256 x 256 x 256 = 16.777.216). Echemos un vistazo a algunas de las formas en que podemos especificar colores en CSS.*/
+
+/*En este artículo vamos a ver los métodos comunes para especificar colores que admiten los navegadores; hay otros métodos no tan comunes que no admiten todos los navegadores.*/
+
+/*Palabras clave para los colores
+Muy a menudo, en los ejemplos de este artículo o en cualquier otra página de MDN, verás que se utilizan las palabras clave para los colores, ya que son una forma simple y comprensible de especificar colores. Hay una multitud de estas palabras clave, ¡algunas de las cuales tienen nombres de lo más curiosos! Puedes ver una lista completa en la página para el valor <color>.
+
+Juega con diferentes valores de color en los ejemplos en vivo que encontrarás a continuación, para adquirir una idea más clara de cómo funcionan.*/
+
+/*El siguiente tipo de valores de color que es probable que encuentres son los códigos hexadecimales. Cada valor hexadecimal consiste en un símbolo de hashtag/almohadilla (#) seguido de seis cifras hexadecimales, cada una de las cuales puede tomar uno de los 16 valores entre el 0 y la f (que representa el 15), por ejemplo: 0123456789abcdef. Cada par de cifras representa uno de los canales (rojo, verde y azul) y nos permite especificar cualesquiera de los 256 valores disponibles para cada uno (16 x 16 = 256).*/
+
+/*Estos valores son un poco más complejos y menos fáciles de entender, pero son mucho más versátiles que las palabras clave: puedes usar valores hexadecimales para representar cualquier color que desees usar en tu combinación de colores.*/
+
+
+.box {
+    padding: 10px;
+    margin: 1em 0;
+    border-radius: 0.5em;
+    
+}
+.one {
+  background-color: #02798b;
+}
+
+.two {
+  background-color: #c55da1;
+}
+
+.three {
+  background-color: #128a7d;
+}
+
+/*Lo que debes recordar es que cada propiedad tiene una lista definida de valores admisibles, y cada valor incluye una definición que explica cuáles son sus subvalores. A continuación puedes buscar los detalles aquí, en MDN.
+
+Por ejemplo, comprender que <image> también te permite crear un degradado de color es útil, ¡pero quizás no sea un conocimiento obvio!/

@@ -1,0 +1,50 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+
+.positioned {
+  position: absolute;
+  background-color: yellow;
+  top: 30px;
+  left:30px;
+}
+
+
+/*Presentación del índice z
+Todo este posicionamiento absoluto es muy divertido, pero hay otra característica que aún no hemos considerado. Cuando los elementos comienzan a superponerse, ¿qué determina qué elementos aparecen sobre otros y qué elementos aparecen debajo de otros? En el ejemplo que hemos visto hasta ahora, solo tenemos un elemento posicionado en el contexto de posicionamiento, y aparece en la parte superior ya que los elementos posicionados ganan sobre los elementos no posicionados. ¿Qué pasa cuando tenemos más de uno?
+
+Intenta agregar lo siguiente a tu CSS para que el primer párrafo también esté absolutamente posicionado:*/
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+  z-index: 1;
+}
+
+
+/*En este punto, verá el primer párrafo coloreado como lima, movido fuera del flujo del documento y colocado un poco por encima de donde estaba originalmente. También se apila debajo del párrafo original donde los dos se superponen. Esto se debe a que el párrafo es el segundo párrafo en el orden de origen, y los elementos posicionados más adelante en el orden de origen ganan sobre los elementos posicionados antes en el orden de origen..positioned.positioned
+
+¿Se puede cambiar el orden de apilamiento? Sí, puede hacerlo mediante la propiedad z-index. "Índice Z" es una referencia al eje Z. Puede recordar puntos anteriores en el curso donde discutimos páginas web que usan coordenadas horizontales (eje x) y verticales (eje y) para calcular el posicionamiento de cosas como imágenes de fondo y desplazamientos de sombras. Para los idiomas que se ejecutan de izquierda a derecha, (0,0) está en la parte superior izquierda de la página (o elemento), y los ejes x e y se extienden a la derecha y hacia abajo de la página.
+
+Las páginas web también tienen un eje z: una línea imaginaria que va desde la superficie de la pantalla hacia la cara (o cualquier otra cosa que te guste tener frente a la pantalla). Los valores del índice z afectan dónde se encuentran los elementos posicionados en ese eje; Los valores positivos los mueven más arriba en la pila, los valores negativos los mueven más abajo en la pila. De forma predeterminada, todos los elementos posicionados tienen un de , que es efectivamente 0.z-indexauto
+
+Para cambiar el orden de apilamiento, intente agregar la siguiente declaración a la regla:p:nth-of-type(1)*/
+
+
+/*Tenga en cuenta que solo acepta valores de índice sin unidad; no puede especificar que desea que un elemento esté a 23 píxeles del eje Z, no funciona así. Los valores más altos irán por encima de los valores más bajos y depende de usted qué valores use. El uso de valores de 2 o 3 daría el mismo efecto que los valores de 300 o 40000.z-index*/

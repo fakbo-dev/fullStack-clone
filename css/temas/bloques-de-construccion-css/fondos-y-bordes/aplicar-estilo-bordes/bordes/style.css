@@ -1,0 +1,43 @@
+/*Bordes
+Al aprender sobre el modelo de cajas descubrimos cómo los bordes afectan al tamaño de nuestra caja. En este artículo veremos cómo usar los bordes de una manera creativa. Por lo general, cuando a un elemento le añadimos bordes con CSS, usamos una propiedad abreviada que establece el color, el ancho y el estilo del borde en una línea de CSS.
+
+Podemos establecer un borde para los cuatro lados de una caja con border:*/
+
+.box {
+    border: 1px solid black;
+}
+
+/*O podemos establecer solo un borde de la caja, por ejemplo:*/
+.box {
+border-top: 1px solid black;
+}
+
+/*Cada una de las propiedades de estas propiedades abreviadas sería:*/
+.box {
+border-width: 1px;
+border-style: solid;
+border-color: black;
+}
+/*Y las no abreviadas:*/
+
+.box {
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: black;
+}
+
+/*Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades lógicas asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el uso de diferentes direcciones de texto.*/
+
+/*Hay una variedad de estilos que puedes usar para los bordes. En el ejemplo siguiente, hemos utilizado un estilo de borde diferente para los cuatro lados de la caja. Juega con el estilo, el ancho y el color del borde para ver cómo funcionan los bordes.*/
+
+.box2 {
+    background-color: #567895;
+    border: 5px solid #0b385f;
+    border-bottom-style: dashed;
+    color: #fff;
+  }
+  
+  h2 {
+    border-top: 2px dotted rebeccapurple;
+    border-bottom: 1em double rgba(255, 210, 86, 0.719);
+  }

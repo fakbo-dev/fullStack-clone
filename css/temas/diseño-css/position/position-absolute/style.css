@@ -1,0 +1,43 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+
+.positioned {
+  position: absolute;
+  background-color: yellow;
+  top: 30px;
+  left:30px;
+}
+
+
+/*Posicionamiento absoluto
+El posicionamiento absoluto trae resultados muy diferentes.
+
+Posición de ajuste: absoluta
+Intentemos cambiar la declaración de posición en el código de la siguiente manera:
+
+position: absolute;
+Copiar en el portapapeles
+Si ahora guarda y actualiza, debería ver algo así:*/
+
+/*En primer lugar, tenga en cuenta que la brecha donde debería estar el elemento posicionado en el flujo del documento ya no existe: ¡el primer y tercer elemento se han cerrado juntos como si ya no existieran! Bueno, en cierto modo, esto es cierto. Ya no existe un elemento absolutamente posicionado en el flujo normal del documento. En cambio, se sienta en su propia capa separada de todo lo demás. Esto es muy útil: significa que podemos crear características de interfaz de usuario aisladas que no interfieran con el diseño de otros elementos de la página. Por ejemplo, cuadros de información emergentes, menús de control, paneles dinámicos, características de interfaz de usuario que se pueden arrastrar y soltar en cualquier lugar de la página, etc.
+
+En segundo lugar, observe que la posición del elemento ha cambiado. Esto se debe a que arriba, abajo, izquierda y derecha se comportan de una manera diferente con posicionamiento absoluto. En lugar de posicionar el elemento en función de su posición relativa dentro del flujo normal del documento, especifican la distancia que debe estar el elemento de cada uno de los lados del elemento contenedor. Entonces, en este caso, estamos diciendo que el elemento absolutamente posicionado debe estar a 30px de la parte superior del "elemento contenedor" y a 30px de la izquierda. (En este caso, el "elemento contenedor" es el bloque que contiene la inicial. Consulte la sección siguiente para obtener más información)*/
+
+/* Puede usar la parte superior, inferior, izquierda y derecha para cambiar el tamaño de los elementos si es necesario. ¡Pruebe a configurar y colocar sus elementos posicionados y vea qué sucede! Volver a ponerlo después ...top: 0; bottom: 0; left: 0; right: 0;margin: 0;*/
+
+/*Sí, los márgenes todavía afectan a los elementos posicionados. Sin embargo, el colapso del margen no lo hace.*/

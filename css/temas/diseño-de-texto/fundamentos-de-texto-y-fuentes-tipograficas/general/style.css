@@ -1,0 +1,14 @@
+/*En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de estilos a textos con CSS. Aquí trataremos en detalle todos los fundamentos básicos del diseño del texto y las fuentes tipográficas, incluyendo la configuración de su grosor, la familia y el estilo de letra, las propiedades abreviadas para los tipos de letra, la alineación del texto, el espaciado entre líneas y letras, y otros efectos.*/
+
+/*¿Qué implica aplicar estilo a texto en CSS?
+
+Como ya habrás experimentado en tu trabajo con el HTML y el CSS, el texto incluido en un elemento se dispone dentro de la caja de contenido del elemento. Esta empieza en la parte superior izquierda del área de contenido (o en la esquina superior derecha, en el caso del contenido de los lenguajes RTL, o right-to-left, que se escriben de derecha a izquierda) y fluye hacia el final de la línea. Una vez que llega al final, baja a la línea siguiente y sigue, y luego continúa a la línea siguiente, hasta que todo el contenido se ha ubicado en la caja. El contenido de texto se comporta efectivamente como una serie de elementos en línea, distribuidos en líneas adyacentes entre sí, y sin crear saltos de línea hasta que se llega al final de la línea, a menos que se fuerce un salto de línea manual con el elemento <br>.*/
+
+/*Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse generalmente en dos categorías, que veremos por separado en este artículo:
+
+Estilos del tipo de letra: Propiedades que afectan al texto (qué tipo de letra se usa, su tamaño, si es negrita, itálica, etc.).
+
+Estilos de disposición del texto: Propiedades que afectan al espaciado y otras características relativas a la disposición del texto, lo que permite la elección de, por ejemplo, el espacio entre líneas y letras, y el modo como el texto se alinea dentro de la caja contenedora.*/
+
+/*Nota: Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como <span> o <strong>), o con un pseudoelemento específico para el texto como ::first-letter (selecciona la primera letra del texto de un elemento), ::first-line (selecciona la primera línea del texto de un elemento), o ::selection (selecciona el texto que está resaltado por el cursor)./
+

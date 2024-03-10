@@ -1,0 +1,17 @@
+/*Floats
+El método de flotación de un elemento cambia el comportamiento de ese elemento y de los elementos de nivel de bloque que lo siguen en el flujo normal. El elemento es desplazado hacia la izquierda o hacia la derecha y es eliminado del flujo normal, y el contenido circundante flota alrededor de este elemento.
+
+La propiedad float tiene cuatro valores posibles:
+
+left: establece la flotación a la izquierda del elemento.
+right: establece la flotación a la derecha del elemento.
+none: especifica que no hay flotación en absoluto. Este es el valor predeterminado.
+inherit: especifica que el valor de la propiedad float debe heredarse del elemento padre.
+En el ejemplo siguiente, establecemos una flotación a la izquierda para un elemento <div> y le damos un margin a la derecha para mantener el texto alejado del elemento. Esto nos da el efecto del texto envuelto alrededor de ese cuadro, y es la mayor parte de lo que necesitas saber sobre la flotación, tal como se utiliza en el diseño web moderno.*/
+
+.box {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+}

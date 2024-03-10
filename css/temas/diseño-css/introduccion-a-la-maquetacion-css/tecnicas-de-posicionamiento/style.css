@@ -1,0 +1,89 @@
+/*Técnicas de posicionamiento
+El posicionamiento permite mover un elemento desde donde se colocaría cuando está en flujo normal a otra ubicación. El posicionamiento no es un método para crear diseños de página principal, se trata más bien de administrar y ajustar la posición de elementos específicos en la página.
+
+Sin embargo, hay técnicas útiles para ciertos patrones de diseños de páginas web que se basan en la propiedad position. Comprender el posicionamiento también ayuda a comprender el flujo normal y qué implica sacar un elemento del flujo normal.
+
+Hay cinco tipos de posicionamiento que debes conocer:
+
+El posicionamiento estático es el valor por defecto que tiene establecido cada elemento, esto significa sencillamente «coloca el elemento en su posición normal en el flujo de diseño del documento, nada especial que ver aquí».
+El posicionamiento relativo permite modificar la posición de un elemento en la página y moverlo con respecto a su posición en el flujo normal, lo que incluye superposiciones con otros elementos de la página.
+El posicionamiento absoluto mueve un elemento completamente fuera del flujo de diseño normal de la página, como si estuviera asentado en una capa separada propia. A partir de aquí, puedes fijarlo en una posición relativa a los bordes del elemento <html> de la página (o su elemento padre más próximo). Esto es útil para crear efectos complejos de diseño de página, como cuadros con pestañas en que diferentes paneles de contenido se ubican uno encima del otro y se muestran y ocultan según se desee, o paneles de información que por defecto se asientan fuera de la pantalla, pero puedes hacer que se deslicen hacia la pantalla usando un control de tipo botón.
+El posicionamiento fijo es muy similar al posicionamiento absoluto, excepto que corrige un elemento relativo a la ventana gráfica del navegador, no otro elemento. Esto es útil para crear efectos, como un menú de navegación persistente que siempre permanece en el mismo lugar en la pantalla al contrario que el contenido, que se desplaza.
+El posicionamiento sticky (pegajoso) es un método de posicionamiento más reciente que hace que un elemento actúe como position: static hasta que alcanza un desplazamiento definido con respecto a la ventana gráfica, en cuyo punto actúa como un elemento con la propiedad position: fixed.
+Ejemplo sencillo de posicionamiento*/
+
+/*Ejemplo sencillo de posicionamiento
+Para familiarizarte con estas técnicas de diseño de página, te mostraremos un par de ejemplos rápidos. Todos nuestros ejemplos contarán con el mismo HTML, que es el siguiente:*/
+
+body {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  p {
+      background-color: rgb(207,232,220);
+      border: 2px solid rgb(79,185,227);
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+  }
+  
+/*El posicionamiento relativo
+El posicionamiento relativo permite compensar un elemento desde la posición por defecto que tendría en flujo normal. Esto significa que podrías hacer una tarea como mover un icono un poco hacia abajo para que se alinee con una etiqueta de texto. Para ello, podríamos añadir la regla de posicionamiento relativo siguiente:*/
+
+.positioned2 {
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
+
+/*Aquí asignamos el valor relative a la propiedad position de nuestro párrafo del medio: esto no hace nada por sí solo, así que también añadimos las propiedades top y left, que sirven para mover el elemento afectado hacia abajo y a la derecha. Esto puede parecer lo contrario de lo que esperabas, pero debes pensar en ello como un elemento al que se empuja por sus lados superior e izquierdo, lo que resulta en un movimiento a la derecha y abajo.
+
+Añadir este código dará el resultado siguiente:*/
+
+  .positioned2 {
+    position: relative;
+    background: rgba(255,84,104,.3);
+    border: 2px solid rgb(255,84,104);
+    top: 30px;
+    left: 30px;
+  }
+
+
+/*El posicionamiento absoluto
+El posicionamiento absoluto se utiliza para eliminar por completo un elemento del flujo normal y colocarlo mediante desplazamientos desde los bordes de un bloque contenedor.
+
+Volviendo a nuestro ejemplo original no posicionado, podríamos añadir la regla CSS siguiente para implementar el posicionamiento absoluto:*/
+
+.positioned3 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+/*Aquí le damos a la propiedad position de nuestro párrafo del medio un valor de absolute, y le asignamos las mismas propiedades top y left. Sin embargo, ahora añadir este código da el resultado siguiente:*/
+
+.positioned3 {
+    position: absolute;
+    background: rgba(255,84,104,.3);
+    border: 2px solid rgb(255,84,104);
+    top: 30px;
+    left: 30px;
+}
+
+/*¡Este resultado es muy diferente! El elemento posicionado ahora se ha separado por completo del resto del diseño de la página y se superpone encima de este. Los otros dos párrafos ahora se asientan juntos, como si su hermano con posicionamiento absoluto no existiera. Las propiedades top y left tienen un efecto diferente en elementos con posicionamiento absoluto que en elementos con posicionamiento relativo. En este caso, los desplazamientos se han calculado desde la parte superior e izquierda de la página. Es posible cambiar el elemento padre para que se convierta en este tipo de contenedor, y lo veremos en el artículo sobre posicionamiento (en-US).*/
+
+
+/*Posicionamiento fijo
+El posicionamiento fijo elimina nuestro elemento del flujo de documentos de la misma manera que el posicionamiento absoluto. Sin embargo, en lugar de contar los desplazamientos en relación con el contenedor, se cuentan con respecto a la ventana gráfica. Como el elemento permanece fijo en relación con la ventana gráfica, podemos crear efectos como un menú que permanece fijo mientras la página se desplaza por debajo de él.
+
+En este ejemplo nuestro HTML tiene tres párrafos de texto para poder tener una página que se desplace, y un cuadro al que asignamos la propiedad position: fixed.*/
+
+.positioned5 {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+
+/*Posicionamiento pegajoso
+El posicionamiento pegajoso es el último método de posicionamiento que tenemos a nuestra disposición. Mezcla el posicionamiento estático predeterminado con el posicionamiento fijo. Cuando un elemento tiene la propiedad position: sticky, se desplaza en flujo normal hasta que se alcanzan los desplazamientos con respecto a la ventana gráfica que hemos definido. En ese punto se queda «atascado» como si tuviera configurado un valor position: fixed.*/

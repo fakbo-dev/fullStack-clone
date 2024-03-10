@@ -1,0 +1,44 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: purple;
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+
+/* Add your flexbox CSS below here */
+
+
+/*Especificar qué elementos colocar como cajas flexibles
+Para comenzar, vamos a seleccionar qué elementos se van a presentar como cajas flexibles. Para ello, establecemos un valor especial de display en el elemento padre de los elementos que deseas editar. En este caso, queremos compaginar los elementos <article>, por lo que lo establecemos en <section> (que se convierte en un contenedor flexible):*/
+
+section {
+    display: flex;
+}
+
+
+/*Esto hace que el elemento <section> se convierta en contenedor flex, y sus hijos en elementos flexibles. El resultado de esto debería ser algo así:*/
+
+
+/*Así, esta declaración única nos da todo lo que necesitamos. Increíble, ¿verdad? Tenemos nuestra compaginación en columnas múltiples con columnas de igual tamaño, y todas las columnas tienen la misma altura. Esto se debe a que los valores por defecto que se han asignado a los elementos flexibles (los elementos secundarios del contenedor flexible) están pensados para resolver problemas comunes como este. Veremos más sobre el tema más adelante.
+
+Para que quede claro, reiteremos lo que está sucediendo aquí. El elemento al que le hemos dado un valor de display de flex actúa como un elemento a nivel de bloque en términos de cómo interactúa con el resto de la página, pero sus elementos secundarios se presentan como elementos flexibles. La siguiente sección explicará con más detalle qué significa esto. Ten en cuenta también que puede usar un valor de display de inline-flex si desea diseñar los elementos secundarios de un elemento como elementos flexibles, pero hacer que ese elemento se comporte como un elemento en línea*/
+

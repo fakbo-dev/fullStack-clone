@@ -1,0 +1,68 @@
+/*Combinadores*/
+
+/*Selector de descendientes
+Ya hemos visto los selectores de descendientes en artículos anteriores (selectores con espacios entre ellos):*/
+
+/*body article p*/
+
+/*Estos selectores seleccionan elementos que son descendientes de otros selectores. No es necesario que sean hijos directos.
+
+En el ejemplo siguiente seleccionamos solo el elemento <p> que hay dentro de un elemento con una clase .box.*/
+.box p {
+    color: red;
+}  
+
+/*Selector de combinación de elementos hijo*/
+
+/*El selector de combinación de elementos hijo es un símbolo de «mayor que» (>), que selecciona solo cuando los selectores identifican elementos que son hijos directos. Los elementos descendientes que se encuentran más abajo en la jerarquía no se seleccionan. Por ejemplo, para seleccionar solo los elementos <p> que son hijos directos de elementos <article>:*/
+
+/*article > p*/
+
+/*En el ejemplo siguiente hay una lista ordenada anidada dentro de otra lista no ordenada. Utilizamos los selectores de elementos hijo para seleccionar solo los elementos <li> que son hijos directos de <ul> y les aplicamos un borde superior.
+
+Si eliminamos el símbolo > que lo identifica como un selector de elementos hijo, lo convertimos en un selector de elementos descendientes y se aplicará el borde rojo a todos los elementos <li>.*/
+
+ul > li {
+    border-top: 5px solid red;
+}  
+
+/*Hermanos adyacentes*/
+
+/*El selector de elementos hermanos adyacentes (+) se utiliza para seleccionar un elemento que se encuentra justo al lado de otro elemento en el mismo nivel de la jerarquía. Por ejemplo, para seleccionar todos los elementos <img> que aparecen justo después de elementos <p>:*/
+
+/*El selector de elementos hermanos adyacentes (+) se utiliza para seleccionar un elemento que se encuentra justo al lado de otro elemento en el mismo nivel de la jerarquía. Por ejemplo, para seleccionar todos los elementos <img> que aparecen justo después de elementos <p>:*/
+
+/*p + img*/
+
+/*El caso de uso más común es modificar el párrafo que va justo después del título, como en el ejemplo siguiente. Vamos a buscar un párrafo que sea directamente adyacente a <h1> y le vamos a aplicar un estilo.
+
+Si insertas algún otro elemento, como <h2> entre las etiquetas <h1> y <p>, verás que el selector ya no selecciona el párrafo y no se muestra con los mismos colores de fondo y de primer plano que cuando es adyacente.*/
+
+h1 + p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+/*Hermanos generales*/
+
+/*Si deseas seleccionar los hermanos de un elemento, incluso si no son directamente adyacentes, puedes utilizar el combinador de hermanos general (~). Por ejemplo, para seleccionar todos los elementos <img> que aparecen después de los elementos <p>, hacemos esto:
+
+p ~ img
+
+En el ejemplo siguiente seleccionamos todos los elementos <p> que vienen después de <h1>, y aunque en el documento también hay un <div>, se selecciona incluso la etiqueta <p> que viene después.*/
+
+h1 ~ p {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: .5em;
+}
+/*El uso de selectores de combinación
+Puedes combinar cualquiera de los selectores de los artículos anteriores con selectores de combinación para seleccionar una parte del documento. Por ejemplo, podrías utilizar el código siguiente para seleccionar elementos de una lista con una clase «a» que son hijos directos de <ul>:*/
+
+/*ul > li[class="a"]  {  }*/
+
+/*Ten cuidado cuando creas largas listas de selectores que seleccionan partes del documento muy específicas. Te será difícil volver a utilizar las reglas CSS porque has definido un selector muy específico para la ubicación del elemento en el marcado.
+
+A menudo es mejor crear una clase sencilla y aplicarla al elemento en cuestión. Dicho esto, tu conocimiento de los selectores de combinación te será muy útil si necesitas modificar algo del documento y no puedes acceder al código HTML (tal vez porque se haya generado a partir de CMS)./

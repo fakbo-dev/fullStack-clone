@@ -1,0 +1,23 @@
+/*Múltiples imágenes de fondo
+También es posible poner múltiples imágenes de fondo: puedes especificar múltiples valores background-image para un solo atributo, separados cada uno por una coma.
+
+Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los fondos se superponen con la última imagen de fondo que hay en la parte inferior de la lista, y cada imagen anterior se apila encima de la que sigue en el código.*/
+
+/*Nota: Los degradados se pueden mezclar con imágenes de fondo normales.*/
+
+/*Las otras propiedades background-* ---> ( cualquier propiedad derivada de background) también pueden tener valores múltiples separados por comas, de la misma manera que background-image:*/
+
+/*background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-repeat: no-repeat, repeat-x, repeat;
+background-position: 10px 20px,  top right;*/
+
+/*Cada valor de las diversas propiedades coincide con los valores que están en la misma posición en las otras propiedades. Arriba, por ejemplo, el valor para la propiedad background-repeat de image1 será no-repeat. Sin embargo, ¿qué sucede cuando diferentes propiedades tienen una cantidad diferente de valores? La respuesta es que los valores que ocupan las posiciones más pequeñas se alternan cíclicamente: en el ejemplo anterior hay cuatro imágenes de fondo pero solo dos valores background-position. Los primeros dos valores de posición se aplicarán a las dos primeras imágenes, luego los valores volverán a asignarse cíclicamente: a image3 se le dará el primer valor de posición, y a image4 se le dará el segundo valor de posición.*/
+
+/*Vamos a jugar. En el ejemplo siguiente hemos incluido dos imágenes. Para demostrar el orden de superposición, cambia la imagen de fondo que aparece primero en la lista. O juega con las otras propiedades para cambiar la posición, el tamaño o repite los valores.*/
+
+.box {
+    background-image: url(star.png), url(big-star.png);
+    background-position: top right,center bottom;
+    background-repeat: no-repeat,;
+  
+  }

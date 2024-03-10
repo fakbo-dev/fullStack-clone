@@ -1,0 +1,23 @@
+/* la propiedad margin afecta el margen de el selector*/
+* {
+    margin: 0px;
+}
+
+/*Es posible observar este tipo de comportamiento en las «hojas de estilo de puesta a cero» (o «hojas de estilo reset»), que anulan el formato del navegador. Fueron muy populares en un momento dado; sin embargo, excluir todo el estilo significa que luego tienes que ponerlo todo de nuevo. Por este motivo tendemos a utilizar el selector universal con mucho cuidado, y para situaciones muy específicas como la que se describe a continuación.*/
+
+
+/*Uso del selector universal para facilitar la legibilidad de tus selectores*/
+
+/*Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento <article> y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector :first-child, que veremos con mayor detalle más adelante en el artículo de pseudoclases y pseudoelementos, como selector descendente junto con el selector de elemento <article>:*/
+
+article :first-child {
+    color: red;
+    
+}
+/*Sin embargo, esto podría confundirse con article:first-child, que selecciona cualquier elemento <article> que sea el primer elemento hijo de otro elemento.
+
+Para evitar esta confusión podemos añadir al selector :first-child el selector universal. De este modo la función del selector resulta obvia: seleccionará cualquier elemento que entre en la jerarquía de primer hijo de un elemento <article>:*/
+article *:first-child {
+    color: yellowgreen;
+    
+}

@@ -1,0 +1,34 @@
+/*Flexbox
+Flexbox es el nombre corto del módulo de diseño de cajas flexibles, pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica display: flex al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
+
+El marcado HTML siguiente nos proporciona un elemento contenedor con una clase wrapper dentro del cual hay tres elementos <div>. Por defecto, estos elementos se mostrarían como elementos de bloque, uno debajo del otro, en nuestro documento en español.
+
+Sin embargo, si añadimos display: flex al elemento padre, los tres elementos se organizan en columnas. Esto se debe a que se convierten en elementos flexibles y se ven afectados por algunos valores iniciales que el método Flexbox establece en el contenedor flexible. Se muestran en una fila porque el valor inicial de flex-direction establecido en su elemento padre es row. Todos parecen expandirse hasta la altura del elemento de más altura, porque el valor inicial de la propiedad align-items establecida en su elemento primario es stretch. Esto significa que los artículos se expanden hasta la altura del contenedor flexible, que en este caso está definida por el artículo de mayor altura. Todos los artículos se alinean al comienzo del contenedor y dejan el espacio que sobra al final de la fila.*/
+
+.wrapper {
+  display: flex;
+}
+
+
+
+/*Además de las propiedades anteriores, que pueden aplicarse a contenedores flexibles, también hay propiedades que pueden aplicarse a los elementos flexibles. Estas propiedades, entre otras cosas, pueden cambiar el comportamiento de estos elementos flexibles y permitirles expandirse y contraerse para adaptarse al espacio disponible.
+
+Como un ejemplo sencillo de esto podemos añadir la propiedad flex a todos nuestros elementos secundarios, con un valor de 1. Esto hará que todos los elementos crezcan y llenen el contenedor, en lugar de dejar espacio al final. Si hay más espacio, los artículos se ensancharán; si hay menos espacio, se volverán más estrechos. Además, si añades al código otro elemento, todos los elementos se volverán más pequeños para dejarle espacio; ajustarán el tamaño para ocupar la misma cantidad de espacio, cualquiera que sea.
+
+Ejemplo
+.wrapper {
+    display: flex;
+}
+
+.wrapper > div {
+    flex: 1;
+}
+Copy to Clipboard
+<div class="wrapper">
+    <div class="box1">Uno</div>
+    <div class="box2">Dos</div>
+    <div class="box3">Tres</div>
+</div>*/
+
+
+/*Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre Flexbox.*/

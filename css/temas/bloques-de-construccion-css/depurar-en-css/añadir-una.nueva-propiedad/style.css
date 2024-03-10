@@ -1,0 +1,4 @@
+/*Añadir una propiedad nueva
+Puedes añadir propiedades usando las DevTools. ¿Te has dado cuenta de que quizá no quieres que tu caja herede el tamaño de letra del elemento <body> y quieres establecer tu propio tamaño de letra específico? Pruébalo en DevTools antes de añadirlo a tu archivo CSS.
+
+Puedes hacer clic en la llave de cierre de la regla para comenzar a introducir una declaración nueva, y en ese momento puedes comenzar a escribir la nueva propiedad y DevTools te mostrará una lista de propiedades coincidentes que se completará automáticamente. Después de seleccionar font-size, introduce el valor que deseas probar. También puede hacer clic en el botón + para añadir una regla adicional con el mismo selector y tus reglas nuevas.*/

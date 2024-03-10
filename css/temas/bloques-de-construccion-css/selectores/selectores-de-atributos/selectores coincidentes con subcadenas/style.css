@@ -1,0 +1,26 @@
+/*Selectores coincidentes con subcadenas*/
+
+/*Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases box-warning y box-error y quieres encontrar todos los elementos que empiezan con la cadena de caracteres “box-”, puedes seleccionarlas ambas con [class^="box-"].*/
+
+/*[attr^=value]	li[class^="box-"]	Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor empieza exactamente con la subcadena de caracteres value.
+
+[attr$=value]	li[class$="-box"]	Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor termina exactamente con la subcadena de caracteres value.
+
+[attr*= ]	li[class*="box"]	Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor incluye al menos una ocurrencia de la subcadena value en algún punto de la cadena.*/
+
+/*El ejemplo siguiente muestra cómo se usan estos selectores:
+
+li[class^="a"] relaciona cualquier valor de atributo que empieza con a; luego, relaciona los dos primeros elementos de la lista se verán iguales.
+li[class$="a"] relaciona cualquier valor de atributo que termina con a; luego, relaciona el primer y el tercer elemento de la lista.
+li[class*="a"] relaciona cualquier valor de atributo que contiene a en cualquier posición; luego, relaciona todos los elementos de la lista.*/
+li[class^="a"] {
+    font-size: 200%;
+}
+
+li[class$="a"] {
+    background-color: yellow;
+}
+
+li[class*="a"] {
+    color: red;
+}

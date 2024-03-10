@@ -1,0 +1,71 @@
+
+/*general style*/
+html {
+    font-style: helvetica, arial, sans-serif;
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+ul,
+ol,
+dl,
+p {
+    font-size: 1.5rem;
+}
+
+li,
+p {
+    line-height: 1.5;
+}
+
+/*description list style*/
+
+dd,
+dt {
+    line-height: 1.5;
+}
+
+dt{
+    font-weight: bold;
+}
+
+dd{
+    margin-bottom: 1.5rem;
+}
+
+
+/*Estilos especificos de las listas*/
+
+/*Ahora que hemos analizado el espaciado general de las listas, exploremos algunas propiedades específicas de las listas. Para empezar, debes conocer tres propiedades que pueden establecerse en los elementos <ul> o <ol>:
+
+list-style-type: Establece el tipo de viñetas para la lista, por ejemplo, viñetas cuadradas o circulares para una lista no ordenada; números, letras, o números romanos para una lista ordenada.
+
+list-style-position: Establece si las viñetas aparecen dentro de los elementos de la lista o fuera de ellos, antes del inicio de cada elemento.
+
+list-style-image: Te permite usar una imagen personalizada para la viñeta, en lugar de un simple cuadrado o círculo.*/
+
+/*El estilo de la viñeta
+Como ya sabes, la propiedad list-style-type te permite establecer qué tipo de viñeta usar. En nuestro ejemplo, hemos establecido que se usen números romanos en mayúsculas para la lista ordenada, con:*/
+
+ol {
+  list-style-type: upper-roman;
+}
+
+/*La posición de la viñeta
+La propiedad list-style-position establece si las viñetas aparecen dentro de los elementos de la lista, o fuera de ellos antes del inicio de cada elemento. El valor por defecto es outside, que provoca que las viñetas se sitúen fuera de los elementos de lista, como se observa arriba.
+
+Si estableces el valor en inside, las viñetas se ubican dentro de las líneas:*/
+
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+  }
+
+
+
+
+
+

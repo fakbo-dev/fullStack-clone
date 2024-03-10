@@ -1,0 +1,13 @@
+/*Números, longitudes y porcentajes
+
+Al utilizar CSS te puedes encontrar con varios tipos de datos numéricos. Todos los siguientes están clasificados como tipos de datos numéricos:*/
+
+/*<integer>	Un <integer> es un número entero, como 1024 o -55.
+
+<number>	Un <number> representa un número decimal; puede tener o no un punto de separación decimal con un componente fraccionario, por ejemplo: 0.255, 128 o -1.2.
+
+<dimension>	Una <dimension> es un <number> con una unidad asociada, por ejemplo: 45deg (grados), 5s (segundos) o 10px (píxeles).
+
+<dimension> es una categoría general que incluye los tipos <length>, <angle>, <time> y <resolution>.
+
+<percentage>	Un <percentage> representa una fracción de algún otro valor, por ejemplo, 50%. Los valores de porcentaje siempre son relativos a otra cantidad, por ejemplo, la longitud de un elemento es relativa a la longitud de su elemento padre.*/

@@ -1,0 +1,25 @@
+/*ems y rems
+em y rem son las dos longitudes relativas que es probable que encuentres con mayor frecuencia al cambiar el tamaño de cualquier cosa, de cajas a texto. Vale la pena entender cómo funcionan y las diferencias entre ellos, especialmente cuando comienzas a abordar temas más complejos como aplicar estilos a texto o compaginar con CSS. El ejemplo siguiente te proporciona una muestra.
+
+El HTML es un conjunto de listas anidadas: hay tres listas en total y ambos ejemplos tienen el mismo HTML. La única diferencia es que el primero tiene una clase ems y el segundo una clase rems.
+
+Para empezar, configuramos un tamaño de letra de 16px en el elemento <html>.
+
+En definitiva, la unidad em significa «el tamaño de letra de mi elemento padre». Los elementos <li> dentro de un elemento <ul> con una clase de ems toman el tamaño con respecto a su elemento padre. Por lo tanto, en cada nivel de anidamiento sucesivo, el tamaño de letra aumenta progresivamente, porque en cada uno el tamaño de letra está establecido en 1.3em (1,3 veces el tamaño de letra de su elemento padre).
+
+En definitiva, la unidad rem significa «el tamaño de letra del elemento raíz». ('rem' viene de «root em»). Los elementos <li> dentro de un elemento <ul> con una clase de rems toman su tamaño del elemento raíz (<html>). Esto significa que el tamaño de letra no aumenta en cada nivel sucesivo de anidamiento.
+
+Sin embargo, si cambias el atributo font-size de <html> en el CSS, verás que todo lo demás cambia en relación con él, tanto la letra cuyo tamaño está especificado en unidades rem como la que lo está en unidades em.*/
+
+
+html {
+font-size: 16px;
+}
+
+.ems li {
+font-size: 1.3em;
+}
+
+.rems li {
+font-size: 1.3rem;
+}

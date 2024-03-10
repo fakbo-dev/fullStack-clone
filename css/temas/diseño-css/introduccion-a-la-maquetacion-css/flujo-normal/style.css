@@ -1,0 +1,33 @@
+/*Flujo normal*/
+
+/*Flujo normal
+El flujo normal es el modo como el navegador presenta las páginas HTML de forma predeterminada cuando no haces nada para controlar el diseño de página. Echemos un vistazo rápido a un ejemplo HTML:
+
+<p>Amo a mi gato.</p>
+
+<ul>
+  <li>Comprar comida para gatos</li>
+  <li>Ejercicio</li>
+  <li>Anímate amigo</li>
+</ul>
+
+<p>¡Fin!</p>*/
+
+
+/*Observa aquí cómo se muestra el HTML en el orden exacto en que aparece en el código fuente, con los elementos uno debajo del otro: el primer párrafo, seguido de la lista desordenada, y a continuación el segundo párrafo.
+
+Los elementos que aparecen uno debajo del otro se describen como elementos de bloque, en contraposición con los elementos de línea, que aparecen uno al lado del otro, como las palabras de un párrafo.*/
+
+
+/*La dirección en la que se presentan los contenidos de un elemento de bloque se describe como dirección de los bloques. La dirección de los bloques va de arriba a abajo en un idioma como el español, cuyo modo de escritura es horizontal. Sería horizontal en cualquier idioma con un modo de escritura vertical, como el japonés. Correspondientemente, la dirección de línea es la dirección en la que los contenidos de línea (por ejemplo, una frase) se disponen.*/
+
+
+/*Cuando usas CSS para crear un diseño de página web, alejas los elementos del flujo normal, pero para muchos de los elementos de tu página, el flujo normal proporciona exactamente el diseño que necesitas. Por esta razón resulta tan importante comenzar con un documento HTML bien estructurado, porque te permite trabajar ya con la forma en que las cosas se presentan por defecto, en lugar de tener que luchar contra ello.
+
+Los métodos que permiten cambiar la disposición de los elementos en CSS son los siguientes:
+
+La propiedad display: los valores estándar como block, inline o inline-block pueden cambiar el comportamiento de los elementos en el flujo normal (consulta Tipos de cajas en CSS para obtener más información). Luego hay métodos de diseño completos que se activan con un valor display, por ejemplo CSS Grid y Flexbox.
+Floats: la aplicación de un valor float como left puede hacer que los elementos de nivel de bloque rodeen el elemento por uno de sus lados, como la forma en que las imágenes a veces tienen texto flotando a su alrededor en los diseños de algunas revistas.
+La propiedad position: permite controlar con precisión la ubicación de las cajas dentro de otras cajas. El posicionamiento estático es el valor predeterminado en el flujo normal, pero puede hacer que los elementos se distribuyan de manera diferente si se utilizan otros valores, por ejemplo, pueden estar siempre fijados a la parte superior izquierda de la ventana del navegador.
+Diseño de tablas: se pueden usar las características que sirven para diseñar las partes de una tabla HTML en elementos que no son de tabla con display: table y las propiedades asociadas.
+Diseño en varias columnas: las propiedades de diseño en varias columnas permiten distribuir el contenido de un bloque en columnas, como en el caso de un periódico.*/

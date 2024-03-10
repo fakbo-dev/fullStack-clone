@@ -1,0 +1,29 @@
+/*Generar contenido con ::before y ::after*/
+
+/*Hay un par de pseudoelementos especiales que se utilizan junto con la propiedad de content para introducir contenido en el documento usando el CSS.
+
+Puedes utilizarlos para insertar una cadena de texto, como en el ejemplo siguiente. Intenta cambiar el valor del texto de la propiedad content y observa el cambio en la salida. También puedes cambiar el pseudoelemento ::before por ::after y verás que el texto se inserta al final del elemento, en lugar de al principio.*/
+.box::before {
+  content: "This should show before the other content. ";
+}   
+
+/*Sin embargo, en realidad no es habitual insertar cadenas de texto desde el CSS, porque ese texto resulta inaccesible para algunos lectores de pantalla y puede ser difícil de buscar y modificar en el futuro.
+
+Un uso más adecuado de estos pseudoelementos es insertar un icono. Por ejemplo, la pequeña flecha que añadimos en el ejemplo siguiente es un indicador visual que no queremos que el lector de pantalla muestre:*/
+
+.box::after {
+  content: " ➥";
+}   
+/*Estos pseudoelementos también se utilizan con frecuencia para insertar una cadena vacía a la que luego se le puede aplicar estilo, como a cualquier otro elemento de la página.
+
+En el ejemplo siguiente hemos añadido una cadena vacía mediante el pseudoelemento ::before. Le hemos asociado display: block para poder aplicarle estilo para que tenga una anchura y una altura determinadas. A continuación, utilizamos el CSS para aplicar estilo de la misma forma que lo haríamos con cualquier otro elemento. Juega con el CSS y cambia la forma en que se ve y se comporta.*/
+.box::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  border: 1px solid black;
+}   
+
+/*El uso de los pseudoelementos ::before y ::after, junto con la propiedad content se conoce como «contenido generado» en CSS, y verás que esta técnica se utiliza a menudo para diversas tareas. Un buen ejemplo es la página web CSS Arrow Please, que te ayuda a generar una flecha con CSS. Echa un vistazo al CSS a medida que creas tu flecha y verás cómo funcionan los pseudoelementos ::before y ::after. Cada vez que veas estos selectores, echa un vistazo a la propiedad content para ver qué se añade al documento.*/

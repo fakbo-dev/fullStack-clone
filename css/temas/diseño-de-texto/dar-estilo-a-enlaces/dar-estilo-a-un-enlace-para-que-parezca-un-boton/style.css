@@ -1,0 +1,61 @@
+/*Dar aspecto de botón a un enlace
+Las herramientas que has explorado hasta ahora en este artículo también se pueden usar de otras maneras. Por ejemplo, los estados como hover se pueden usar para diseñar muchos elementos diferentes, no solo enlaces. Es posible que desees diseñar un estado que señale el paso del cursor por encima de párrafos, elementos de lista u otras cosas.
+
+Además, suele ser bastante común dar a los enlaces un aspecto y un comportamiento de botón en ciertas circunstancias: el menú de navegación de un sitio web generalmente está marcado como una lista que contiene enlaces, y es posible aplicarle estilo fácilmente para que se parezca a un conjunto de botones de control o pestañas que proporcionan al usuario acceso a otras partes del sitio web. Vamos a ver cómo.
+
+En primer lugar, un poco de HTML:*/
+
+body,html {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  ul {
+    padding: 0;
+    width: 100%;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 19.5%;
+    margin-right: 0.625%;
+    text-align: center;
+    line-height: 3;
+    color: black;
+  }
+  
+  li:last-child a {
+    margin-right: 0;
+  }
+  
+  a:link, a:visited, a:focus {
+    background: yellow;
+  }
+  
+  a:hover {
+    background: orange;
+  }
+  
+  a:active {
+    background: red;
+    color: white;
+  }
+
+  /*Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más interesantes:
+
+Nuestra segunda regla elimina el área de relleno (padding) predeterminada del elemento <ul> y establece un ancho para abarcar el 100% del contenedor externo (el <body>, en este caso).
+Los elementos <li> por defecto suelen ser elementos de bloque (repasa los tipos de cajas CSS), lo que significa que ocupan sus propias líneas. En este caso, creamos una lista de enlaces horizontal, para lo que en la tercera regla establecemos la propiedad display en el valor inline, que ubica todos los elementos de la lista sobre la misma línea porque ahora se comportan como elementos de línea.
+La cuarta regla (que da formato al elemento <a>) es la más complicada. Vamos a verla paso a paso:
+Como en los ejemplos anteriores, comenzamos por desactivar las propiedades predeterminadas text-decoration y outline, ya que no queremos que estropeen nuestro aspecto.
+A continuación, configuramos la propiedad display en el valor inline-block: los elementos <a> se muestran en línea de forma predeterminada y, aunque no queremos que ocupe más de una línea, como haría un valor de block, queremos poderlos dimensionar: inline-block nos permite hacerlo.
+Ahora nos centramos en el tamaño. Queremos llenar todo el ancho del elemento de lista <ul> y dejar un pequeño margen entre cada botón (pero ningún hueco en el borde derecho), y queremos los 5 botones del mismo tamaño. Para hacer esto, establecemos el atributo width en 19,5%, y el atributo margin-right en 0,625%. Observa que el ancho completo suma 100,625%, lo que haría caer el último botón <ul> a la siguiente línea por desbordamiento. Sin embargo, lo restituimos al 100% con la siguiente regla, que selecciona solo el último elemento <a> de la lista y elimina de él el margen. ¡Hecho!
+Las tres últimas declaraciones son bastante sencillas y tienen principalmente finalidades estéticas. Centramos el texto dentro de cada enlace, establecemos line-height en 3 para dar algo de altura a los botones (lo que también presenta la ventaja de centrar verticalmente el texto), y establecemos el color del texto a negro.*/
+
+
+/*Nota: Es posible que hayas observado que en el HTML se han colocado todos los elementos de lista en una misma línea; esto es porque los espacios/saltos de línea que se colocan entre elementos de bloque crean espacios en la página, igual como lo hacen los espacios entre las palabras, y estos espacios romperían nuestro diseño de menú de navegación horizontal. Así que hemos eliminado esos espacios. Puede encontrar más información sobre este problema (y sus soluciones) en Combatir los espacios entre elementos de bloque colocados en línea.*/

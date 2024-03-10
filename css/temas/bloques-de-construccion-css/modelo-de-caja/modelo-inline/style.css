@@ -1,0 +1,62 @@
+/*El modelo de cajas y las cajas en línea
+Todo lo anterior se aplica por completo a las cajas en bloque. Algunas de las propiedades también pueden aplicarse a las cajas en línea, como las que crea un elemento <span>.
+
+En el ejemplo siguiente hay un elemento <span> dentro de un párrafo al que hemos aplicado las propiedades width, height, margin, border, y padding Puedes ver que la anchura y la altura se ignoran. Se respetan el margen, el relleno y el borde, pero no cambian la relación de otro contenido con respecto a nuestra caja en línea, por lo que el relleno y el borde se superponen a otras palabras en el párrafo.*/
+
+span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+}
+
+/*El uso de display: inline-block
+Hay un valor especial de display que proporciona un punto medio entre inline y block. Esto es útil para situaciones en las que no deseas que un elemento fuerce un salto de línea, pero sí deseas que se respeten las propiedades width y height para evitar superposiciones como la que se ve arriba.
+
+Un elemento con display: inline-block conforma un subconjunto de los elementos en bloque que ya conocemos:
+
+Se respetan las propiedades de ancho y alto.
+El relleno, el margen y el borde mantienen los otros elementos alejados de la caja.
+Sin embargo, no se fuerza un salto de línea, y solo se hace más grande que su contenido si añades las propiedades width y height explícitamente.
+
+En el ejemplo siguiente hemos añadido display: inline-block a nuestro elemento <span>. Cámbialo por display: block o elimina la línea para ver la diferencia entre ambos modelos de visualización.*/
+
+.inline-block {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    display: inline-block;
+    
+}
+
+.bzrp {
+    box-sizing: border-box;
+    width: 124px;
+    height: 94px;
+    display: inline-block;
+}
+
+/*Esto puede ser útil cuando deseas dar a un enlace un área de impacto más grande añadiendo padding. <a> es un elemento en línea como <span>; puedes usar display: inline-block para configurar el área de relleno para facilitar al usuario hacer clic en el enlace.
+
+Esto se ve con bastante frecuencia en las barras de navegación. La navegación siguiente se muestra en una fila usando flexbox y hemos añadido una área de relleno al elemento <a> porque queremos poder cambiar su color de fondo (background-color) cuando se pasa el ratón por encima de <a>. El área de relleno parece superponerse al borde del elemento <ul>. Esto se debe a que <a> es un elemento en línea.
+
+Añade display: inline-block a la regla con el selector .links-list a y verás cómo se soluciona este problema, al hacer que otros elementos respeten el área de relleno.*/
+
+.links-list a {
+    background-color: rgb(179,57,81);
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    display: inline-block;
+  }
+  
+  .links-list a:hover {
+    background-color: rgb(66, 28, 40);
+    color: #fff;
+  }
+      

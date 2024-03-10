@@ -1,0 +1,23 @@
+/*Usar la propiedad abreviada para el fondo
+Como mencionamos al comienzo de este artículo, a menudo verás fondos que están especificados usando la propiedad background. Esta forma abreviada te permite configurar todas las diferentes propiedades a la vez.
+
+Si utilizas varios fondos, debes especificar todas las propiedades para el primer fondo y luego añadir el fondo siguiente separado por una coma. En el ejemplo siguiente hay un degradado con un tamaño y una posición, luego un fondo de imagen con no-repeat y una posición y, por último, un color.
+
+Al escribir los valores abreviados de las imágenes de fondo es necesario seguir algunas reglas, por ejemplo:
+
+Solo es posible especificar un color de fondo (background-color) después de la coma final.
+El valor para background-size solo puede incluirse inmediatamente después de background-position, separado con el carácter '/', así: center/80%.*/
+
+
+div {
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+}
+
+.box {
+    background:   
+      linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
+  url(big-star.png) center no-repeat, 
+      rebeccapurple;
+  }

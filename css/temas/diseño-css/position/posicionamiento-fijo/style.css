@@ -1,0 +1,44 @@
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+/*Posicionamiento fijo
+Veamos ahora el posicionamiento fijo. Esto funciona exactamente de la misma manera que el posicionamiento absoluto, con una diferencia clave: mientras que el posicionamiento absoluto fija un elemento en su lugar en relación con su antecesor posicionado más cercano (el bloque de contención inicial si no hay uno), el posicionamiento fijo generalmente fija un elemento en su lugar en relación con la parte visible de la ventana gráfica. (Una excepción a esto ocurre si uno de los antepasados del elemento es un bloque de contención fijo porque su propiedad transform tiene un valor distinto de ninguno). Esto significa que puede crear elementos de interfaz de usuario útiles que se fijen en su lugar, como menús de navegación persistentes que siempre están visibles sin importar cuánto se desplace la página.
+
+Reunamos un ejemplo simple para mostrar lo que queremos decir. En primer lugar, elimine las reglas existentes de su CSS.p:nth-of-type(1).positioned
+
+Ahora actualice la regla para eliminar la declaración y agregar una altura fija, así:bodyposition: relative;*/
+
+/*Ahora vamos a dar el elemento h1 y hacer que se coloque en la parte superior de la ventana gráfica. Agregue la siguiente regla a su CSS:position: fixed;*/
+
+h1 {
+  position: fixed;
+  top: 0;
+  width: 500px;
+  margin-top: 0;
+  background: white;
+  padding: 10px;
+
+}
+
+/*Se requiere para que se pegue a la parte superior de la pantalla. Le damos al encabezado el mismo ancho que la columna de contenido y luego un fondo blanco y algo de relleno y margen para que el contenido no sea visible debajo de él.top: 0;
+
+Si guarda y actualiza, verá un pequeño efecto divertido de que el encabezado permanezca fijo: el contenido parece desplazarse hacia arriba y desaparecer debajo de él. Pero observe cómo parte del contenido se recorta inicialmente bajo el encabezado. Esto se debe a que el encabezado posicionado ya no aparece en el flujo del documento, por lo que el resto del contenido se mueve hacia arriba hasta la parte superior. Podríamos mejorar esto moviendo los párrafos un poco hacia abajo. Podemos hacer esto estableciendo un margen superior en el primer párrafo. Agregue esto ahora:*/
+
+p:nth-of-type(1) {
+  margin-top: 60px;
+}

@@ -1,0 +1,23 @@
+/*this is for local fonts*/
+@font-face {
+    font-family:Roboto Regular ;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Open-Sans;
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+* {
+    font-size: 10px;
+}
+
+h1 {
+    font-family: Open-Sans ,Roboto Regular;
+    font-size: 3.5em;
+}
+p {
+    font-family: Roboto Regular;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+}

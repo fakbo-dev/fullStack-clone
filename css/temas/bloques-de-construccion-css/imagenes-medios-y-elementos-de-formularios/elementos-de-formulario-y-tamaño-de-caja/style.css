@@ -1,0 +1,12 @@
+/*Elementos de formulario y tamaño de la caja
+Los elementos de formulario utilizan reglas diferentes en los diversos navegadores para el dimensionado de las cajas de los diferentes controles de formulario. Ya cubrimos la propiedad box-sizing en el artículo sobre el modelo de cajas. Puedes usar este conocimiento cuando diseñes formularios que garanticen una experiencia homogénea en cuanto a los anchos y las alturas de los elementos de formulario.
+
+Por coherencia, es una buena idea establecer los márgenes y el área de relleno en 0 para todos los elementos, y luego establecerlos de nuevo al diseñar cada uno de los controles de formulario.*/
+
+button,
+input,
+select,
+textarea  {
+  box-sizing: border-box;
+  padding: 0;
+}

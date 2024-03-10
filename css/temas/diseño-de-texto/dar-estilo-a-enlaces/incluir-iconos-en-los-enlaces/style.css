@@ -1,0 +1,53 @@
+/*Incluir iconos en los enlaces
+Una práctica común es incluir iconos en los enlaces para proporcionar más de un indicador en cuanto a qué tipo de contenido apunta. Echemos un vistazo a un ejemplo muy simple que añade un icono a enlaces externos (enlaces que conducen a otros sitios web). Este icono suele parecerse a una pequeña flecha que sale de un cuadro; para este ejemplo, usaremos este fantástico ejemplo de icons8.com.
+
+Echemos un vistazo a algunos elementos HTML y CSS que nos van a proporcionar el efecto que queremos. En primer lugar, algunos elementos HTML sencillos para dar estilo:*/
+
+
+body {
+  width: 300px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:focus, a:hover {
+  border-bottom: 1px solid;
+}
+
+a:active {
+  color: red;
+}
+
+a[href*="http"] {
+  background: url('external-link-52.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px; 
+}
+
+/*¿Qué pasa aquí? Omitiremos la mayor parte del CSS, ya que es la misma información que has visto antes. Sin embargo, la última regla es interesante: insertamos una imagen de fondo personalizada en enlaces externos de una manera similar a como manejamos viñetas personalizadas en los elementos de lista en el último artículo. Esta vez, sin embargo, utilizamos la propiedad abreviada background en lugar de las propiedades individuales. Establecemos la ruta a la imagen que queremos insertar, especificamos el valor no-repeat para que solo se inserte una copia, y luego especificamos la posición como al 100% a la derecha del contenido de texto y a 0 píxeles del extremo superior.
+
+También usamos background-size para especificar el tamaño de la imagen de fondo (es útil tener un icono más grande y luego cambiar su tamaño de esta manera, según sea necesario para fines de diseño web adaptativo). Sin embargo, esto solo funciona con Internet Explorer 9 y versiones posteriores, por lo que si trabajas con navegadores antiguos, tendrás que cambiar el tamaño de la imagen e insertarla tal como es.
+
+Finalmente, establecemos un área de relleno a la derecha (padding-right (en-US)) para los enlaces, para crear un espacio en que aparezca la imagen de fondo, de modo que no se superponga con el texto.
+
+Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces HTML de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un selector de atributos: a[href*="http"] selecciona los elementos <a>, pero solo si tienen un atributo href con un valor que contiene «http» en algún lugar de su contenido textual.
+
+Eso es todo. Vuelve a la sección de aprendizaje activo anterior ¡y prueba esta nueva técnica!*/

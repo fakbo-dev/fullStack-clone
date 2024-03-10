@@ -1,0 +1,33 @@
+a:link {
+    color: lightblue;
+}
+a:hover {
+    color: red;
+    font-size: 1.1em;
+}
+a:active{
+    color: black;
+    font-size: 1.1em;
+}
+a:visited{
+    color: grey;
+}
+
+li:hover{
+    background: yellow;
+}
+li:not(:hover){
+    background-color: grey;
+}
+/* work with numbers, odd, even, every third element */
+li:nth-child(1){
+    background-color: blueviolet;
+}
+#greeting p{
+    background-color: lightseagreen;
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: block;
+}

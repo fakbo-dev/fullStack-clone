@@ -1,0 +1,35 @@
+/*Los elementos de formulario
+Los elementos de formulario pueden ser un problema si queremos diseñar con CSS, y el artículo sobre formularios web (en-US) contiene guías detalladas sobre los aspectos más complicados relativos a este tema, que no vamos a repetir en este artículo. Hay algunos conceptos básicos clave que vale la pena destacar en esta sección.
+
+Muchos controles de formulario se añaden con el elemento <input>: este elemento define desde campos de formulario simples, como entradas de texto, hasta campos más complejos añadidos en HTML5, como selectores de color y fecha. Hay algunos elementos adicionales, como <textarea> para la entrada de texto multilínea, y también elementos que se utilizan para contener y etiquetar partes de formularios como <fieldset> y <legend>.
+
+El HTML5 también incluye atributos que permiten a los desarrolladores web indicar qué campos son obligatorios e incluso el tipo de contenido que debe introducirse. Si el usuario añade algo inesperado o deja un campo obligatorio en blanco, el navegador puede mostrar un mensaje de error. Los diversos navegadores no presentan ningún estilo coherente ni ninguna homogeneización en cuanto a la personalización que permiten para tales elementos.*/
+
+/*Aplicar estilo a los elementos de entrada de texto
+
+Los elementos que permiten la entrada de texto, como <input type="text">, algunos tipos específicos como <input type="email"> y el elemento <textarea> son bastante fáciles de diseñar y tienden a comportarse como otras cajas de tu página. Sin embargo, el estilo predeterminado de estos elementos es diferente según el sistema operativo y el navegador con el que el usuario visite el sitio.
+
+En el ejemplo siguiente hemos diseñado algunas entradas de texto con CSS: puedes ver que algunos elementos como los bordes, los márgenes y el área de relleno se aplican como es de esperar. Utilizamos selectores de atributos para apuntar a los diferentes tipos de entrada. Intenta cambiar el aspecto de este formulario ajustando los bordes, añadiendo colores de fondo a los campos y cambiando las fuentes y área de relleno.*/
+
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #000;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #333;
+}
+
+/*Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.*/

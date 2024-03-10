@@ -1,0 +1,19 @@
+/*¿Qué es un valor CSS?
+
+En las especificaciones CSS y en las páginas de propiedades de este proyecto MDN, podrás detectar los valores porque estarán escritos entre corchetes angulares, como <color> o <length>. Cuando veas que el valor <color> es válido para una propiedad en particular, significa que para esa propiedad puedes usar como valor cualquier color válido de entre los que se enumeran en la página de referencia de la propiedad <color>.*/
+
+/*También verás valores CSS denominados tipos de datos. Los términos son básicamente intercambiables: cuando veas algo en CSS denominado 'tipo de datos', en realidad es solo una forma elegante de decir 'valor'.*/
+
+/*Sí, hay una tendencia de denotar los valores CSS entre corchetes angulares, para diferenciarlos de las propiedades CSS (por ejemplo, la propiedad color con respecto al tipo de dato <color>). Aunque podría generarte confusión entre los tipos de datos CSS y los elementos HTML, porque ambos usan corchetes angulares, es poco probable porque se usan en contextos muy diferentes.*/
+
+
+h1 {
+    color: black;
+    background-color: rgb(197,93,161);
+  }
+
+/*Un valor en CSS es una forma de definir una colección de subvalores admitidos. Esto significa que si ves <color> como válido, no necesitas preguntarte cuáles de los diferentes tipos de valor de color puedes usar: palabras clave, valores hexadecimales, funciones rgb(), etc. Puedes usar cualquier valor <color> disponible siempre que tu navegador lo admita. La página de MDN te dará información sobre lo que admite cada navegador para cada valor. Por ejemplo, puedes ver que en la sección de compatibilidad de navegadores de la página para <color> se enumeran diferentes tipos de valores de color y los navegadores que los admiten.*/
+
+/*Echemos un vistazo a algunos de los tipos de valores y unidades con los que puedes encontrar con frecuencia, con ejemplos para que puedas probar diferentes valores posibles.*/
+
+

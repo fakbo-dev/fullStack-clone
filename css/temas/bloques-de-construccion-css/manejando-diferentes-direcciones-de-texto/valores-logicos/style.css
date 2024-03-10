@@ -1,0 +1,23 @@
+/*Hasta ahora hemos examinado los nombres de las propiedades lógicas. Existen también algunas propiedades que toman valores físicos de top, right, bottom, y left. Estos valores también tienen asignaciones a valores lógicos: block-start, inline-end, block-end, y inline-start.
+
+Por ejemplo, puedes hacer que una imagen flote a la izquierda para hacer que el texto se ajuste alrededor de la imagen. Puedes reemplazar left con inline-start como se muestra en el ejemplo a continuación.
+
+Cambia el modo de escritura en este ejemplo a vertical-rl para ver que sucede con la imagen. Cambia inline-start por inline-end para cambiar el modo en que flota.*/
+
+.box {
+  inline-size: 200px;
+  writing-mode: vertical-rl;
+  
+  
+}
+
+img{
+  float: inline-end;
+  margin-inline-end: 10px;
+  margin-block-end: 10px;
+  
+}
+/*Aquí también estamos usando valores lógicos de margen para asegurar que el margen está en el sitio correcto sin importar que modo de escritura es.*/
+
+/*¿Debería usar propiedades físicas o lógicas?
+Las propiedades lógicas y los valores son más recientes que su equivalente físico, y por lo tanto se han implementado recientemente en los navegadores. Puedes revisar cualquier página de propiedades en MDN para ver hasta donde llega el soporte del navegador. Si no estás usando multiples modos de escritura, entonces, por ahora, deberías preferir usar las versiones físicas. Sin embargo, en última instancia, esperamos que la gente va a pasar a las versiones lógicas para la mayoría de las cosas, ya que tienen mucho sentido una vez que comienzas a tratar también con métodos de diseño como Flexbox y Grid.*/

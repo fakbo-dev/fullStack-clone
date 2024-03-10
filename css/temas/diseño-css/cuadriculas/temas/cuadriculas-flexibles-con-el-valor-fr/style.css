@@ -1,0 +1,59 @@
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.container > div {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+}
+
+
+
+/*Cuadrículas flexibles con la unidad fr
+Además de crear cuadrículas con longitudes y porcentajes, podemos usar la unidad fr para dimensionar de manera flexible las filas y columnas de la cuadrícula. Esta unidad representa una fracción del espacio disponible en el contenedor de la cuadrícula.
+
+Cambia tu lista de trazas en la definición siguiente para crear tres trazas 1fr.*/
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Ahora deberías observar que tus trazas son flexibles. La unidad fr distribuye el espacio por proporciones, de modo que puedes dar valores positivos diferentes a sus trazas, por ejemplo, si cambias la definición de la manera siguiente:*/
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+/*
+Ahora la primera traza tiene 2fr del espacio disponible, y las otras dos trazas tienen 1fr, lo que da una primera traza más grande. Puedes mezclar unidades fr y trazas de longitud fija; en tal caso, el espacio que se necesita para las trazas fijas se descuenta del espacio en que se distribuyen las otras trazas.*/
+
+/*La unidad fr distribuye el espacio disponible, no todo el espacio. Por lo tanto, si una de tus trazas tiene algo grande dentro, habrá menos espacio libre para compartir.*/
+
+/*Los espacios entre trazas
+Para crear espacios entre trazas, utilizamos las propiedades grid-column-gap para los espacios entre columnas, grid-row-gap (en-US) para los espacios entre filas, y grid-gap para configurar ambos a la vez.*/
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+/*Estos espacios pueden expresarse en cualquier unidad de longitud o en porcentaje, pero no en unidades fr.*/
+
+/*Las propiedades *gap solían tener el prefijo grid-, pero esto se ha cambiado en la especificación, porque la intención es hacerlas compatibles con diversos métodos de diseño. Por el momento, Edge y Firefox admiten las versiones sin prefijo, y las versiones con prefijo se mantienen como un alias, por lo que será seguro usarlas durante algún tiempo. Para quedarte en lo seguro, y que tu código sea más a prueba de balas, puedes duplicar y añadir ambas propiedades.*/
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 20px;
+    gap: 20px;
+  }
+  

@@ -1,0 +1,134 @@
+/*A la hora de dar estilo a los enlaces, es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.*/
+
+/*Echemos un vistazo a algunos enlaces
+Analizamos cómo se implementan los enlaces en tu HTML de acuerdo con las buenas prácticas de Creación de hipervínculos. En este artículo desarrollaremos estos conocimientos y te mostraremos las buenas prácticas del diseño de enlaces.*/
+
+
+/*Los estados de un enlace
+Lo primero que hay que entender es el concepto de estados de un enlace (diferentes estados en los que pueden estar los enlaces, que pueden diseñarse usando diferentes pseudoclases):
+
+Link (no visitado): El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. Se puede especificar usando la pseudoclase :link.
+Visited: Un enlace cuando ya se ha visitado (está grabado en el historial del navegador); se le aplica otro formato con la pseudoclase :visited.
+Hover: Un enlace cuando se le pasa el cursor por encima; se le aplica otro formato con la pseudoclase :hover.
+Focus: Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab del teclado o se le da el foco mediante programación usando HTMLElement.focus()); se le aplica un formato diferente con la pseudoclase :focus.
+Active: Un enlace cuando se activa (por ejemplo, se hace clic encima); se le aplica un formato diferente con la pseudoclase :active.*/
+
+/*Estilos predeterminados
+El ejemplo siguiente ilustra cómo se comportará un enlace por defecto (el CSS simplemente amplía y centra el texto para que destaque más).*/
+
+
+
+p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/*Nota: Todos los enlaces que hay en los ejemplos de esta página son simulados, encontrarás un símbolo # (almohadilla) en el lugar de una URL real. Esto es porque si incluyéramos enlaces reales, los ejemplos quedarían interrumpidos al hacer clic (daría error, o se cargaría una página en el ejemplo incrustado de la que no podrías volver atrás). # solo establece enlaces dentro de la misma página.*/
+
+
+/*A medida que explores los estilos predeterminados, observarás algunas cosas:
+
+Los enlaces están subrayados.
+Los enlaces no visitados se ven de color azul.
+Los enlaces visitados se ven de color morado.
+Al pasar el puntero del ratón sobre un enlace, cambia a un pequeño icono en forma de mano.
+Los enlaces que tienen el foco presentan un contorno alrededor: deberías poder saltar por los enlaces de esta página con el teclado pulsando la tecla de tabulación (en Mac, es posible que necesites habilitar la opción Acceso total por teclado: Todos los controles presionando Ctrl + F7 para que funcione).
+Los enlaces activos se muestran de color rojo (intenta mantener el cursor sobre el enlace mientras haces clic).*/
+
+/*Curiosamente, estos estilos predeterminados son casi los mismos que se utilizaban al inicio de los navegadores en la década de 1990. Esto se debe a que los usuarios conocen y esperan que sea de esta forma. Podría confundir a mucha gente que los enlaces se mostrasen de manera diferente. Esto no quiere decir que no puedas cambiar el formato de los enlaces, solo que no deberías alejarte mucho de la conducta esperada. Al menos deberías:
+
+Subrayar los enlaces, pero no otros elementos. Si no quieres hacerlo, al menos destacarlos de alguna otra forma.
+Hacer que reaccionen de alguna manera cuando se les pasa el cursor por encima, y de una manera algo diferente cuando se activan.
+Los estilos por defecto se pueden desactivar/cambiar usando las propiedades CSS siguientes:
+
+color para el color del texto.
+
+cursor para el estilo del cursor (no debes deshabilitar esta opción a menos que tengas una muy buena razón para hacerlo).
+
+outline para el contorno del texto (un contorno es similar a un borde, la única diferencia es que el borde ocupa un espacio en la caja y el contorno solo se solapa sobre el fondo). El contorno es una ayuda de accesibilidad útil, así que piénsatelo bien antes de desactivar esta opción; al menos deberías plantear dos estilos para los estados de pasar el puntero por encima y de tener el foco.*/
+
+
+/* No estás limitado a las propiedades anteriores para diseñar tus enlaces; tienes libertad para usar cualquier propiedad que te guste. ¡Solo trata de que no resulte descabellado!*/
+
+/*Dar formato a algunos enlaces
+Ahora que hemos visto los estados predeterminados, veamos un conjunto típico de estilos de enlace.
+
+Para empezar, escribiremos nuestro conjunto de reglas vacío:*/
+
+/*a {
+
+}
+
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:focus {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}*/
+
+/*Este orden es importante porque los estilos de enlace se construyen sobre los anteriores. Por ejemplo, los estilos de la primera regla se aplicarán a todas las reglas siguientes, y cuando activas un enlace también pasas con el cursor por encima. Si los pones en un orden incorrecto, no funcionarán adecuadamente. Para recordar este orden, puedes intentar utilizar una fórmula nemotécnica como LoVe Fears HAte.*/
+
+body {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+  }
+  
+  p {
+    line-height: 1.4;
+  }
+  
+  a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: #265301;
+  }
+  
+  a:visited {
+    color: #437A16;
+  }
+  
+  a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;
+    background: #CDFEAA;
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+  }
+  
+  /*¿Qué hemos hecho aquí? Sin duda tiene un aspecto diferente al estilo predeterminado, pero todavía ofrece una experiencia lo suficientemente familiar como para que los usuarios sepan de qué se trata:
+
+Las dos primeras reglas no presentan gran interés en esta explicación.
+La tercera regla usa el selector a para eliminar el subrayado de texto predeterminado y el contorno en el estado de foco (que de todos modos varía dependiendo del navegador), y añade una pequeña cantidad de área de relleno a cada enlace (todo esto se aclarará más adelante).
+A continuación, utilizamos los selectores a:link y a:visited para establecer un par de variaciones de color en los enlaces no visitados y visitados, para que se distingan.
+Las dos reglas siguientes usan a:focus y a:hover para establecer colores de fondo diferentes para los enlaces con el foco y los enlaces activados con el paso del cursor, y además un subrayado para que el enlace destaque aún más. Aquí destacamos dos aspectos:
+El subrayado se ha creado usando border-bottom y no text-decoration, y es que algunas personas lo prefieren porque el primero tiene mejores opciones en cuanto a estilo, y se dibuja un poco más abajo, por lo que no pisa los trazos descendentes de la palabra que se subraya (por ejemplo, los trazos de la g o la y).
+El valor border-bottom se ha establecido en 1px solid sin especificar ningún color. Así, el borde adopta el mismo color que el texto del elemento, lo que es útil en casos en los que el texto es de un color diferente en cada caso.
+Finalmente, a:active se usa para dar a los enlaces un esquema de color inverso mientras se activan, ¡para dejar claro que algo importante sucede!*/

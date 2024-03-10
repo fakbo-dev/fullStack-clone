@@ -1,0 +1,26 @@
+/*Elementos de reemplazo en una compaginación
+A medida que vayas usando diversas técnicas de diseño CSS en elementos de reemplazo, irás descubriendo que se comportan de manera ligeramente diferente a otros elementos. Por ejemplo, en un diseño flexible o en un diseño de página de cuadrícula, los elementos se expanden por defecto hasta que llenan toda el área. En cambio, las imágenes no se expanden, sino que se alinean con el inicio del área de la cuadrícula o del contenedor flexible.
+
+Puedes ver esto en el ejemplo siguiente, en que hay un contenedor de con dos columnas y dos filas, que tiene cuatro elementos. Todos los elementos <div> tienen un color de fondo y se estiran para llenar la fila y la columna. La imagen, sin embargo, no se expande.*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 20px;
+  }
+  
+  .wrapper > div {
+    background-color: rebeccapurple;
+    border-radius: .5em;
+  }
+
+/*Si sigues estos artículos en orden, no habrás llegado todavía a la compaginación. Ten en cuenta solo que cuando los elementos de reemplazo forman parte de una cuadrícula o un diseño flexible, presentan comportamientos predeterminados diferentes, en esencia para evitar que el diseño los expanda de manera extraña.
+
+Para forzar que la imagen se expanda para llenar la celda de la cuadrícula en la que se encuentra, tendrías que hacer algo como lo siguiente:*/
+
+/*img {
+    width: 100%;
+    height: 100%;
+  }*/
+
+  /*Sin embargo, esto deformaría la imagen, por lo que probablemente no es lo que querrías hacer.*/

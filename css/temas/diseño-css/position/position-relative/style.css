@@ -1,0 +1,41 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+  /*Introducción al posicionamiento
+El posicionamiento nos permite producir resultados interesantes al anular el flujo normal del documento. ¿Qué sucede si desea alterar ligeramente la posición de algunas cajas desde su posición de flujo predeterminada para dar una sensación ligeramente peculiar y angustiada? El posicionamiento es tu herramienta. ¿O qué sucede si desea crear un elemento de interfaz de usuario que flote sobre la parte superior de otras partes de la página y / o siempre se encuentre en el mismo lugar dentro de la ventana del navegador, sin importar cuánto se desplace la página? El posicionamiento hace posible tal trabajo de diseño.
+
+Hay varios tipos diferentes de posicionamiento que puede poner en práctica en elementos HTML. Para hacer que un tipo específico de posicionamiento esté activo en un elemento, usamos la propiedad position.*/
+.positioned {
+  position: relative;
+  background-color: yellow;
+  top: 30px;
+  left:30px;
+}
+
+/*Posicionamiento relativo
+El posicionamiento relativo es el primer tipo de posición que analizaremos. Esto es muy similar al posicionamiento estático, excepto que una vez que el elemento posicionado ha tomado su lugar en el flujo normal, puede modificar su posición final, incluso haciendo que se superponga a otros elementos de la página. Continúe y actualice la declaración en su código:position*/
+
+
+/*Posicionamiento relativo
+El posicionamiento relativo es el primer tipo de posición que analizaremos. Esto es muy similar al posicionamiento estático, excepto que una vez que el elemento posicionado ha tomado su lugar en el flujo normal, puede modificar su posición final, incluso haciendo que se superponga a otros elementos de la página. Continúe y actualice la declaración en su código:position*/
+
+/*Presentación superior, inferior, izquierda y derecha
+Arriba, abajo, izquierda y derecha se utilizan junto a la posición para especificar exactamente dónde mover el elemento posicionado. Para probar esto, agregue las siguientes declaraciones a la regla en su CSS:.positioned*/
+
+/*Los valores de estas propiedades pueden tomar cualquier unidad que razonablemente esperes: píxeles, mm, rems, %, etc.*/
+
+/*Genial, ¿eh? Ok, así que esto probablemente no era lo que esperabas. ¿Por qué se ha movido a la parte inferior y a la derecha si especificamos arriba e izquierda? Esto puede parecer contradictorio. Debe pensar en ello como si hubiera una fuerza invisible que empuja el lado especificado de la caja colocada, moviéndola en la dirección opuesta. Entonces, por ejemplo, si especifica , es como si una fuerza empujara la parte superior de la caja, haciendo que se mueva hacia abajo en 30px.top: 30px;*/

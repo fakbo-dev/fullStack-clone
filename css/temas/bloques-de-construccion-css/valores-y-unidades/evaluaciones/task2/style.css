@@ -1,0 +1,32 @@
+/*Task 2
+In this task, we want you to set the size of various items of text, as described below:
+
+The <h1> element should be 50 pixels.
+The <h2> element should be 2em.
+All <p> elements should be 16 pixels.
+A <p> element that is directly after an <h1> should be 120%.
+Your final result should look like the image below:*/
+
+
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+h1 {
+  font-size: 50px;
+  }
+
+h2 {
+  font-size: 2em;
+  }
+
+p {
+  font-size: 16px;
+  }
+
+h1+p {
+  font-size: 120%;
+  }

@@ -1,0 +1,16 @@
+/*Unidades de ventana gráfica
+
+La ventana gráfica es el área visible de tu página en el navegador que utilizas para ver un sitio, y también tiene un tamaño. En CSS hay unidades que asociadas con el tamaño de la ventana gráfica: las unidades vw para el ancho y vh para la altura. Con estas unidades puedes establecer tamaños relativos a la ventana gráfica del usuario.
+
+1vh es igual al 1% de la altura de visualización, y 1vw es igual al 1% de la anchura. Puedes usar estas unidades para dimensionar cajas, pero también texto. En el ejemplo siguiente hay un cuadro que tiene un tamaño de 20vh y 20vw. La caja contiene una letra A, a la que se le ha dado un valor para font-size de 10vh.*/
+
+.box {
+    border: 5px solid darkblue;
+    width: 20vw;
+    height: 20vh;
+    font-size: 10vh;
+  }
+
+/*Si cambias los valores vh y vw, cambia el tamaño de la caja o de la letra; cambiar el tamaño de la ventana gráfica también cambia esos tamaños porque están dimensionados en relación con el de la ventana gráfica. Para ver el cambio del ejemplo cuando cambias el tamaño de la ventana gráfica, debes cargar el ejemplo en una ventana nueva del navegador, que pueda cambiar de tamaño (ya que tu ventana gráfica es el <iframe> incrustado que contiene el ejemplo que se muestra arriba). Abre el ejemplo, cambia el tamaño de la ventana del navegador y observa lo que ocurre con el tamaño de la caja y el texto.
+
+Cambiar los tamaños según la ventana gráfica puede ser útil en tus diseños. Por ejemplo, si deseas mostrar una sección principal a pantalla completa antes del resto del contenido, haz que esa parte de tu página de 100vh empuje el resto del contenido por debajo de la ventana gráfica, de modo que solo aparezca cuando desplacen los contenidos del documento con la barra de desplazamiento.*/

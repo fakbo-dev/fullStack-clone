@@ -1,0 +1,52 @@
+/*Los valores HSL y HSLA
+
+Un poco menos compatible que RGB es el modelo de color HSL (no compatible con las antiguas versiones de Internet Explorer), que se implementó después de mucha insistencia por parte de los diseñadores. En lugar de los valores rojo, verde y azul, la función hsl() admite valores de matiz, saturación y luminosidad, que se utilizan para distinguir entre los 16,7 millones de colores, pero de una manera diferente:
+
+Matiz: El tono base del color. Toma un valor entre 0 y 360, que representa un ángulo en torno a una rueda de colores.
+
+Saturación: ¿Qué nivel de saturación presenta el color? Esta propiedad toma un valor entre 0 y 100%, en que 0 no es un color (aparece como un tono de gris) y 100% es el nivel de saturación total del color.
+
+Luminosidad: ¿Qué claridad o brillo presenta el color? Este atributo toma un valor entre 0 y 100%, en que 0 es no claro (aparece completamente negro) y 100% es completamente claro (aparece completamente blanco).
+
+Podemos adaptar el ejemplo con colores RGB para usar colores HSL, así:*/
+
+.box {
+  padding: 10px;
+  margin: 1em 0;
+  border-radius: 0.5em;
+
+}
+
+.one {
+  background-color: hsl(188, 97%, 28%);
+}
+
+.two {
+  background-color: hsl(321, 47%, 57%);
+}
+
+.three {
+  background-color: hsl(174, 77%, 31%);
+}
+
+/*Al igual que RGB tiene un equivalente RGBA, HSL tiene un equivalente HSLA, que le proporciona la misma capacidad para especificar el canal alfa. Demostramos esto a continuación cambiando nuestro ejemplo RGBA para usar colores HSLA.*/
+
+.wrapper-2 {
+  background-image: url(../../../fondos-y-bordes/evaluaciones/task1/balloons.jpg);
+  padding: 70px 20px;
+
+}
+
+.one-2 {
+  background-color: hsl(188 97% 28% / .3);
+}
+
+.two-2 {
+  background-color: hsl(321 47% 57% / .7);
+}
+
+.three-2 {
+  background-color: hsl(174 77% 31% / .9);
+}
+
+/*Puedes usar cualquiera de estos valores de color en tus proyectos. Es probable que para la mayoría de los proyectos te decidas por una paleta de colores y luego uses esos colores (y tu método elegido para especificar el color) en todo el proyecto. También puedes mezclar y combinar diversos modelos de color, sin embargo, por coherencia, en general es mejor si todo el proyecto usa el mismo.*/

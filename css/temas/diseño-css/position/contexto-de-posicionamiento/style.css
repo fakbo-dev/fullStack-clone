@@ -1,0 +1,35 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  p {
+    background: aqua;
+    border: 3px solid blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  span {
+    background: red;
+    border: 1px solid black;
+  }
+
+
+.positioned {
+  position: absolute;
+  background-color: yellow;
+  top: 30px;
+  left:30px;
+}
+
+
+/*Contextos de posicionamiento
+¿Qué elemento es el "elemento contenedor" de un elemento absolutamente posicionado? Esto depende en gran medida de la propiedad de posición de los ancestros del elemento posicionado (Ver Identificación del bloque contenedor).
+
+Si ningún elemento antecesor tiene su propiedad de posición definida explícitamente, entonces de forma predeterminada todos los elementos ancestros tendrán una posición estática. El resultado de esto es que el elemento absolutamente posicionado estará contenido en el bloque de contención inicial. El bloque que contiene inicial tiene las dimensiones de la ventana gráfica y también es el bloque que contiene el elemento <html>. En otras palabras, el elemento absolutamente posicionado se mostrará fuera del elemento <html> y se posicionará en relación con la ventana gráfica inicial.
+
+El elemento posicionado está anidado dentro del <cuerpo> en la fuente HTML, pero en el diseño final está a 30px de distancia de los bordes superior e izquierdo de la página. Podemos cambiar el contexto de posicionamiento, es decir, con qué elemento se coloca el elemento posicionado absolutamente en relación con. Esto se hace estableciendo el posicionamiento en uno de los antepasados del elemento: en uno de los elementos en los que está anidado (no puede colocarlo en relación con un elemento en el que no está anidado). Para ver esto, agregue la siguiente declaración a la regla:body
+
+position: relative;*/

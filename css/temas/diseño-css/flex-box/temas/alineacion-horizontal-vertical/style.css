@@ -1,0 +1,57 @@
+/*Alineación horizontal y vertical
+También puedes usar las funciones de los elementos flexbox para alinear elementos flexibles sobre el eje principal o transversal. Exploremos este aspecto a partir de un ejemplo nuevo: flex-align0.html (consúltalo en vivo), que vamos a convertir en una barra de herramientas/botones ordenada y flexible. En este momento puedes ver una barra de menú horizontal, con algunos botones pegados en línea a la esquina superior izquierda.*/
+
+
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    width: 70%;
+    max-width: 960px;
+    margin: 20px auto;
+  }
+
+  button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+  }
+
+  div {
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  /* Add your flexbox CSS below here */
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Actualiza la página y observa que los botones ahora están convenientemente centrados, horizontal y verticalmente. Lo hemos hecho a partir de dos propiedades nuevas.
+
+align-items controla dónde se ubican los elementos flexibles en el eje transversal.
+
+Por defecto, el valor es stretch, que ensancha todos los elementos flexibles para rellenar el elemento primario en la dirección del eje transversal. Si el elemento padre no tiene un ancho fijo en la dirección del eje transversal, todos los elementos flexibles son tan largos como los elementos flexibles más largos. Así es como nuestro primer ejemplo obtuvo columnas de igual altura por defecto.
+El valor center que utilizamos en nuestro código anterior mantiene las dimensiones intrínsecas de los elementos pero los centra sobre el eje transversal. Es por eso que los botones de nuestro ejemplo ahora están centrados verticalmente.
+También puedes tener valores como flex-start y flex-end, que alinean todos los elementos al inicio y al final del eje transversal, respectivamente. Consulta align-items para conocer todos los detalles al respecto.
+Puedes anular el comportamiento align-items para elementos flexibles individuales aplicándoles la propiedad align-self. Por ejemplo, añade a tu CSS lo siguiente:
+
+button:first-child {
+  align-self: flex-end;
+}
+Copy to Clipboard
+Observa qué efecto tiene esto y retíralo de nuevo al terminar.
+
+justify-content controla dónde se ubican los elementos flexibles sobre el eje principal.
+
+El valor por defecto es flex-start, que asienta todos los elementos al comienzo del eje principal.
+Puedes usar flex-end para que se asienten al final.
+center también es un valor de justify-content (para alinear contenido), que asienta los elementos flexibles sobre el centro del eje principal.
+El valor space-around que hemos usado antes es útil porque distribuye todos los elementos de manera uniforme sobre el eje principal y deja un poco de espacio en cada extremo.
+Hay otro valor, space-between, que es muy similar a space-around, pero no deja espacio en los extremos.
+Te animamos a jugar con estos valores para ver cómo funcionan antes de continuar.*/
+

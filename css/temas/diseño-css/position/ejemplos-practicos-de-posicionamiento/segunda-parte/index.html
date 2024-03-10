@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabbed info box</title>
+  </head>
+<body>
+  <section class="fake-content">
+    <h1>Fake content</h1>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+    <p>
+      This is fake content. Your main web page contents would probably go here.
+    </p>
+  </section>
+  
+<section class="info-box">
+  <ul>
+    <li><a href="#" class="active">Tab 1</a></li>
+    <li><a href="#">Tab 2</a></li>
+    <li><a href="#">Tab 3</a></li>
+  </ul>
+  <div class="panels">
+    <article class="active-panel">
+      <h2>The first tab</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+    </article>
+    <article>
+      <h2>The second tab</h2>
+
+      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+    </article>
+    <article>
+      <h2>The third tab</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+
+      <ol>
+        <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
+        <li>Aliquam ut porttitor urna.</li>
+        <li>Nulla facilisi</li>
+      </ol>
+    </article>
+  </div>
+</section>
+<!--
+    Este código hace lo siguiente:
+
+Primero guardamos una referencia a todas las pestañas y todos los paneles en dos variables llamadas y , para que podamos hacer cosas fácilmente con ellas más adelante.tabspanels
+Luego usamos un bucle para recorrer todas las pestañas y ejecutar una función llamada en cada una, que configura la funcionalidad que debería ocurrir cuando se hace clic en cada una. Cuando se ejecuta, a la función se le pasa una referencia a la ficha concreta para la que se está ejecutando y un número de índice que identifica la posición de la ficha en la matriz.forsetTabHandler()itabs
+En la función, la ficha tiene un controlador de eventos establecido, de modo que cuando se hace clic en la ficha, ocurre lo siguiente: setTabHandler()onclick
+Se utiliza un bucle para recorrer todas las pestañas y eliminar cualquier clase que esté presente en ellas.for
+A de se establece en la pestaña en la que se hizo clic: recuerde desde antes que esta clase tiene una regla asociada en el CSS que establece el mismo color y color de fondo en la pestaña con el que se diseñan los paneles.classactive
+Se utiliza un bucle para recorrer todos los paneles y eliminar cualquier clase que esté presente en ellos.for
+Se establece una clase de en el panel que corresponde a la pestaña en la que se hizo clic; recuerde anteriormente que esta clase tiene una regla asociada en el CSS que establece su índice z en 1, lo que hace que aparezca en la parte superior de los otros paneles.active-panel
+Eso es todo para el primer ejemplo. Mantenga su código abierto, ya que lo agregaremos en el segundo.
+-->
+<script>
+const tabs = document.querySelectorAll(".info-box li a");
+const panels = document.querySelectorAll(".info-box article");
+
+for (let i = 0; i < tabs.length; i++) {
+  setTabHandler(tabs[i], i);
+}
+
+function setTabHandler(tab, tabPos) {
+  tab.onclick = () => {
+    for (const tab of tabs) {
+      tab.className = "";
+    }
+
+    tab.className = "active";
+
+    for (const panel of panels) {
+      panel.className = "";
+    }
+
+    panels[tabPos].className = "active-panel";
+  };
+}
+
+
+</script>
+  
+</body>
+</html>

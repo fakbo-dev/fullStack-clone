@@ -1,0 +1,67 @@
+/*Un panel deslizante oculto
+El último ejemplo que presentaremos aquí es un panel que se desliza dentro y fuera de la pantalla con solo presionar un icono; como se mencionó anteriormente, esto es popular para situaciones como diseños móviles, donde los espacios de pantalla disponibles son pequeños, por lo que no desea usar la mayor parte mostrando un menú o panel de información en lugar del contenido útil.
+
+Nuestro ejemplo terminado se verá así:*/
+
+/*Para empezar, tenemos un elemento <etiqueta> y un elemento <entrada> elementos que normalmente se usan para asociar una etiqueta de texto con un elemento de formulario con fines de accesibilidad (lo que permite a un usuario de pantalla ver qué descripción va con qué elemento de formulario). Aquí se asocia con la casilla de verificación utilizando los atributos y.<label><input>forid/
+
+
+/*Hemos puesto un carácter de signo de interrogación especial en nuestro HTML para que actúe como nuestro icono de información, que representa el botón que se presionará para mostrar / ocultar el panel.*/
+
+/*Aquí vamos a usar estos elementos para un propósito ligeramente diferente: otro efecto secundario útil de los elementos es que puede hacer clic en la etiqueta de una casilla de verificación para marcar la casilla de verificación, así como solo en la casilla de verificación en sí. Esto ha llevado al conocido truco de casilla de verificación, que proporciona una forma libre de JavaScript de controlar un elemento alternando un botón. El elemento que controlaremos es el elemento <aparte> que sigue a los otros dos (hemos dejado su contenido fuera de la lista de código anterior por brevedad).<label>
+
+En las siguientes secciones explicaremos cómo funciona todo esto.*/
+
+label[for="toggle"] {
+  font-size: 3rem;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
+}
+
+/*La primera regla establece el estilo ; Aquí tenemos:<label>
+
+Establezca un tamaño de fuente grande para que el icono sea bonito y grande.
+Establezca la posición en él, y use la parte superior y derecha para colocarlo bien en la esquina superior derecha.absolute
+Establezca un índice z de 1 en él: esto es para que cuando el panel de información tenga estilo y se muestre, no cubra el icono; En su lugar, el icono se colocará encima de él para que pueda presionarse nuevamente para ocultar el panel de información.
+Se utilizó la propiedad del cursor para cambiar el cursor del mouse cuando se desplaza sobre el icono a un puntero de mano (como el que se ve cuando se pasa el cursor sobre los enlaces), como una pista visual adicional para los usuarios de que el icono hace algo interesante.
+La segunda regla establece la posición en el elemento de casilla de verificación real y lo oculta en la parte superior de la pantalla. En realidad, no queremos ver esto en nuestra interfaz de usuario.absolute<input>*/
+
+aside {
+  background-color: #a60000;
+  color: white;
+
+  width: 340px;
+  height: 100%;
+  padding: 0 20px;
+
+  position: fixed;
+  top: 0;
+  right: -370px;
+
+  transition: 0.6s all;
+}
+
+/*Están sucediendo muchas cosas aquí, vamos a discutirlo poco a poco:
+
+Primero, establecemos un color de fondo simple y color en el cuadro de información.
+A continuación, establecemos un ancho fijo en el panel y hacemos que su altura sea toda la altura de la ventana gráfica del navegador.
+También incluimos un poco de relleno horizontal para espaciarlo un poco.
+A continuación, establecemos la posición en el panel para que siempre aparezca en el mismo lugar, incluso si la página tiene contenido para desplazarse. Lo pegamos en la parte superior de la ventana gráfica y lo configuramos para que, por defecto, esté fuera de la pantalla a la derecha.: fixed;
+Finalmente, establecemos una transición en el elemento. Las transiciones son una característica interesante que le permite hacer que los cambios entre estados ocurran sin problemas, en lugar de simplemente "encender", "apagar" abruptamente. En este caso, tenemos la intención de hacer que el panel se deslice suavemente en la pantalla cuando la casilla de verificación esté marcada. (O para decirlo de otra manera, cuando se hace clic en el icono del signo de interrogación, recuerde, haga clic en la casilla de verificación asociada! Te dijimos que era un hack). Aprenderás mucho más sobre...<label>
+Configuración del es*/
+
+input[type="checkbox"]:checked + aside {
+  right: 0px;
+}
+
+
+
+

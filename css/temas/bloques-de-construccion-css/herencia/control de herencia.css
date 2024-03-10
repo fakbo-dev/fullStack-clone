@@ -1,0 +1,32 @@
+/* Crea tu CSS de prueba aquí */
+
+body {
+  color: green;
+}
+        
+.my-class-1 a {
+  color: inherit;
+}
+        
+.my-class-2 a {
+  color: initial;
+}
+        
+.my-class-3 a {
+  color: unset;
+}
+  
+a {
+  color: red;
+}
+/* control de herencia
+CSS proporciona cuatro valores de propiedad universales especiales para el control de la herencia. Todas las propiedades CSS aceptan estos valores.
+
+inherit
+Establece que el valor de la propiedad que se aplica a un elemento determinado sea exactamente igual al del elemento padre. En la práctica, esto "activa la herencia".
+
+initial
+Establece que el valor de la propiedad que se aplica a un elemento seleccionado tenga el mismo valor que esté establecido para esa propiedad en la hoja de estilo por defecto del navegador.
+
+unset (en-US)
+Restablece la propiedad a su valor natural, lo que significa que si la propiedad se hereda de forma natural, actúa como inherit, y en caso contrario como initial.

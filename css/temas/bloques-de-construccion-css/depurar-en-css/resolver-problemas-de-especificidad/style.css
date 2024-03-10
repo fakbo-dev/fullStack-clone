@@ -1,0 +1,19 @@
+/*Resolver problemas de especificidad
+A veces, durante el desarrollo, pero en particular cuando necesitas editar el CSS de un sitio ya publicado, te resultará difícil conseguir que se aplique un determinado CSS. No importa lo que hagas, el elemento simplemente no parece aceptar tu CSS. Lo que suele suceder aquí es que un selector más específico anula tus cambios, y en este caso DevTools te será de gran ayuda.
+
+En nuestro archivo de ejemplo hay dos palabras incluidas en un elemento <em>. Uno se muestra en color naranja y el otro en rosa. En el CSS hemos aplicado:*/
+
+em {
+    color: hotpink;
+    font-weight: bold;
+  }
+
+/*Sin embargo, un poco más arriba en la hoja de estilo hay una regla con un selector .special:*/
+
+.special {
+    color: orange;
+  }
+
+/*Como recordarás del artículo sobre cascada y herencia, en que hablamos sobre la especificidad, los selectores de clase son más específicos que los selectores de elemento, por lo que este es el valor que se aplica. DevTools puede ayudarte a encontrar estos problemas, especialmente si la información está oculta en algún lugar de una extensa hoja de estilo.
+
+Inspecciona <em> con la clase .special y DevTools te mostrará que el naranja es el color que se aplica, y también te muestra la propiedad color aplicada al em tachado. Aquí puedes ver que la clase anula el selector de elemento.*/

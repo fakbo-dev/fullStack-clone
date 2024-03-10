@@ -1,0 +1,8 @@
+/*Compatibilidad entre navegadores
+La compatibilidad de los elementos flexbox está garantizada para la mayoría de los navegadores nuevos: Firefox, Chrome, Opera, Microsoft Edge e Internet Explorer 11, las versiones más recientes de Android/iOS, etc. Sin embargo, todavía hay navegadores antiguos en uso que no admiten las propiedades flexbox (o lo hacen, pero admiten una versión muy antigua y desactualizada).
+
+Esto no importa demasiado mientras estás aprendiendo y experimentando; pero cuando consideras usar propiedades flexbox en un sitio web real, debes hacer pruebas y asegurarte de que tu experiencia de usuario sea lo suficientemente aceptable en tantos navegadores como sea posible.
+
+Las propiedades flexbox son un poco más complicadas que otras características de CSS. Por ejemplo, si un navegador no soporta sombras en CSS, es probable que el sitio todavía sea utilizable. Sin embargo, si no es compatible con las funciones flexbox, probablemente el diseño completo se romperá, y el sitio web se inutilizará.
+
+Expusimos estrategias para superar problemas de compatibilidad entre navegadores en nuestro módulo Pruebas de compatibilidad del navegador.*/

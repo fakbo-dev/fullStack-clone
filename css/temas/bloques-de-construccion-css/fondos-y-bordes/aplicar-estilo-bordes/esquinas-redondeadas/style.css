@@ -1,0 +1,20 @@
+/*Esquinas redondeadas
+El redondeo de esquinas en una caja se logra mediante el uso de la propiedad border-radius (en-US) y otras propiedades asociadas que se relacionan con cada esquina de la caja. Como valor pueden usarse dos longitudes o porcentajes: el primer valor define el radio horizontal y el segundo el radio vertical. En muchos casos, solo se pondrá un valor, que se utilizará para ambos.
+
+Por ejemplo, para hacer que las cuatro esquinas de una caja tengan un radio de 10 píxeles:*/
+
+.box {
+    border-radius: 10px;
+}
+
+/*O para hacer que la esquina superior derecha tenga un radio horizontal de 1 em y un radio vertical del 10%:*/
+.box {
+border-top-right-radius: 1em 10%;
+}
+/*En el ejemplo siguiente hemos establecido las cuatro esquinas, y luego cambiamos los valores de la esquina superior derecha para que sea diferente. Juega con los valores para cambiar las esquinas. Echa un vistazo a la página de la propiedad border-radius (en-US) para ver las opciones de sintaxis disponibles.*/
+
+.box {
+border: 10px solid rebeccapurple;
+border-radius: 1em;
+border-top-right-radius: 10% 30%;
+}

@@ -1,0 +1,5 @@
+/*Consideraciones de accesibilidad con los fondos
+
+Al colocar texto sobre una imagen o un color de fondo, debes asegurarte de que tiene suficiente contraste para que tus visitantes puedan leer el texto. Si estableces una imagen de fondo y el texto se coloca encima de la imagen, también debes especificar un color de fondo (background-color) que permita leer el texto si la imagen no se carga.
+
+Los lectores de pantalla no pueden analizar las imágenes de fondo, por lo tanto, deben ser puramente decorativas; cualquier contenido importante debe ser parte de la página HTML y no debe estar contenido en un fondo.*/

@@ -1,0 +1,49 @@
+/*Valores RGB y RGBA
+
+El tercer esquema del que hablaremos aquí es RGB. Un valor RGB es una función rgb() que recibe tres parámetros que representan los valores de los canales rojo, verde y azul del color, de modo muy similar a los valores hexadecimales. La diferencia con RGB es que cada canal está representado no por dos dígitos hexadecimales, sino por un número decimal entre el 0 y el 255, lo que de algún modo resulta algo más fácil de entender.
+
+Vamos a reescribir nuestro último ejemplo para utilizar colores RGB:*/
+
+
+.box {
+  padding: 10px;
+  margin: 1em 0;
+  border-radius: 0.5em;
+}
+
+.one {
+  background-color: rgb(2, 121, 139);
+}
+
+.two {
+  background-color: rgb(197, 93, 161);
+}
+
+.three {
+  background-color: rgb(18, 138, 125);
+}
+
+/*También puedes usar colores RGBA: estos funcionan exactamente de la misma manera que los colores RGB, por lo que puedes usar cualquier valor RGB; sin embargo, hay un cuarto valor que representa el canal alfa del color, que controla la opacidad. Si estableces este valor en 0, el color será completamente transparente, mientras que en 1 será completamente opaco. Los valores intermedios le confieren diferentes niveles de transparencia.*/
+
+/*Nota: Establecer un canal alfa en un color representa una diferencia clave para usar la propiedad opacity que vimos anteriormente. Cuando usas la opacidad, el elemento y todo lo que contiene es opaco, mientras que cuando usas colores RGBA, solo son opacos los que especificas.*/
+
+/*En este ejemplo, cambia los valores del canal alfa y observa cómo afecta a la salida de color.*/
+
+.wrapper-2{
+  background: url(../../../fondos-y-bordes/evaluaciones/task1/balloons.jpg);
+  padding: 40px 20px;
+}
+.one-2 {
+  background-color: rgba(2, 121, 139, .3);
+}
+
+.two-2 {
+  background-color: rgba(197, 93, 161, .9);
+}
+
+.three-2 {
+  background-color: rgba(18, 138, 125, .7);
+}
+
+/*En algún momento, los navegadores modernos se actualizaron para que rgba() y rgb(), y hsl() y hsla() (ver más abajo) se convirtieran en alias puros el uno del otro y comenzaran a comportarse exactamente igual. Así, por ejemplo, tanto rgba() como rgb() admiten colores con y sin valores de canal alfa. Cambia el rgba() del ejemplo anterior por rgb() y observa si los colores aún funcionan. El estilo que uses depende de ti, pero separar las definiciones de los colores transparentes y las de los no transparentes con el uso de funciones diferentes mejora la ejecución de los navegadores y puede actuar como un indicador visual de dónde se definen colores transparentes en tu código.*/
+

@@ -1,0 +1,142 @@
+/*Una tabla HTML típica
+Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:*/
+
+/*a tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como scope, <caption>, summary, <thead> (en-US), <tbody> (en-US), etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en punk-bands-unstyled.html):*/
+
+/*Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS para arreglar esto.*/
+
+/*Espaciado y distribución
+Lo primero que hay que hacer es solucionar los aspectos de espaciado/distribución; ¡el estilo por defecto de la tabla es tan apretado! Para ello, añadimos el CSS siguiente al archivo style.css:*/
+/* spacing */
+
+
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+  }
+
+
+/*En general es una buena idea establecer un valor table-layout (en-US) en fixed para la tabla porque le proporciona un comportamiento predeterminado predecible. Normalmente se tiende a dar un tamaño de columna según la cantidad de contenido que haya en estas, lo que suele producir resultados extraños. Con table-layout: fixed, puedes dar a las columnas un tamaño de acuerdo con el ancho de sus celdas de encabezado y a continuación gestionar los contenidos de la forma que te parezca más adecuada. Por esto hemos seleccionado los cuatro encabezados con el selector thead th:nth-child(n) (:nth-child) (Seleccionar el descendiente enésimo que es un elemento <th> en una secuencia dentro del elemento <thead> (en-US)) y, dados estos, asignar los porcentajes de anchura. Chris Coyier expone esta técnica con más detalle en Fixed Table Layouts.
+
+Hemos emparejado esto con un width del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).
+Un valor border-collapse de collapse es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente.*/
+
+
+/* typography */
+
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  }
+  
+  thead th, tfoot th {
+    font-family: 'Rock Salt', cursive;
+  }
+  
+  th {
+    letter-spacing: 2px;
+  }
+  
+  td {
+    letter-spacing: 2px;
+  }
+  
+  tbody td {
+    text-align: center;
+  }
+  
+  tfoot th {
+    text-align: right;
+  }
+
+
+  /*En realidad aquí no hay nada que sea específico para las tablas. En general, modificamos el estilo de la letra para facilitar la lectura:
+
+Hemos establecido una lista global de fuentes Sans Serif. Esto es puramente una elección de estilo. También hemos configurado nuestro tipo de letra personalizada en los encabezados que hay dentro de los elementos <thead> (en-US) y <tfoot> (en-US) para dotarlos de una encantadora sucia estética punk.
+Hemos establecido algunos letter-spacing (en-US) en los encabezados y las celdas, porque creemos que ayuda a la legibilidad. De nuevo es, sobre todo, una elección estilística.
+Hemos establecido en el elemento <tbody> (en-US) el centrado del texto en las celdas de la tabla para que se queden alineadas con los encabezados. Por defecto, en text-align (en-US) se asigna un valor left para las celdas, y un valor center para los encabezados, pero a menudo queda mejor disponer las alineaciones de texto establecidas de la misma manera en ambos. El peso predeterminado para la negrita en los tipos de letra de los encabezados basta para diferenciar su aspecto.
+Hemos establecido el texto del encabezado alineado a la derecha en el elemento <tfoot> (en-US) para que visualmente quede mejor asociado con sus datos.*/
+
+/*Gráficos y colores
+Ahora, ¡a por los gráficos y los colores! Puesto que la tabla rezuma contenido y actitud punk, vamos a darle un brillante estilo imponente que le pegue. No te preocupes, no tienes que hacer tus tablas tan extremadas: puedes optar por algo más sutil y de buen gusto.
+
+Empieza añadiendo el CSS siguiente a tu archivo style.css, de nuevo al final:*/
+
+thead, tfoot {
+    background: url(leopardskin.jpg);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  thead th, tfoot th, tfoot td {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+    border: 3px solid purple;
+  }
+
+/*Rayas de cebra
+Queremos dedicar una sección independiente a mostrarte cómo implementar rayas de cebra, alternando filas de color que facilitan el análisis y la legibilidad de las diversas filas de datos de la tabla. Añade el CSS siguiente al final de tu archivo style.css:*/
+
+tbody tr:nth-child(odd) {
+    background-color: #ff33cc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e495e4;
+  }
+  
+  tbody tr {
+    background-image: url(noise.png);
+  }
+  
+  table {
+    background-color: #ff33cc;
+  }
+
+  /*Ya has visto el selector :nth-child, que se usa para seleccionar elementos hijo específicos. También se le puede dar una fórmula como parámetro, de modo que seleccione una secuencia de elementos. La fórmula 2n-1 seleccionaría todos los elementos hijo impares (1, 3, 5, etc.), y la fórmula 2n, todos los elementos hijo pares (2, 4, 6, etc.) Nosotros hemos utilizado las palabras clave odd y even en nuestro código, que hacen exactamente lo mismo que las fórmulas mencionadas. En este caso, damos a las filas pares y a las impares (espeluznantes) colores diferentes.
+También hemos añadido un mosaico de fondo repetitivo a todas las filas del cuerpo de la tabla, que es solo un poco de ruido (un .png semitransparente con un poco de distorsión visual) para proporcionar algo de textura.
+Por último, le hemos dado a toda la tabla un color de fondo sólido para que los navegadores que no admiten el selector :nth-child todavía dispongan de un fondo para las filas del cuerpo de la tabla.*/
+
+/*Aplicar estilo al título
+Hay una última cosa que hacer con nuestra tabla: aplicar estilo al título. Para ello, añade al final de tu archivo style.css lo siguiente:*/
+caption {
+    font-family: 'Rock Salt', cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #666;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+/*quí no hay nada notable, excepto la propiedad caption-side (en-US), a la que se le ha dado un valor bottom. Esto coloca el título en la parte inferior de la tabla, lo que junto con el resto de declaraciones nos proporciona este aspecto final (puedes verlo vivo en punk-bands-complete.html):*/
+
+/*Consejos rápidos para el diseño de tablas
+Antes de seguir adelante, creemos que tendríamos que proporcionar una lista rápida de los puntos más útiles que acabamos de ilustrar:
+
+Haz el marcado de la tabla lo más simple posible y mantén las cosas flexibles. Por ejemplo, con el uso de porcentajes, para que el diseño sea más adaptativo.
+Usa table-layout (en-US): fixed para crear un diseño de tabla más predecible que te permita establecer con facilidad los anchos de columna configurando width en sus encabezados (<th>).
+Usa border-collapse: collapse para que los bordes de los elementos de la tabla colapsen entre sí y proporcionen una apariencia más ordenada y más fácil de controlar.
+Usa <thead> (en-US), <tbody> (en-US) y <tfoot> (en-US) para dividir la tabla en fragmentos lógicos y proporcionar lugares adicionales para aplicarle CSS, para superponer estilos entre sí con más facilidad, si es necesario.
+Usa rayas de cebra en filas alternativas para facilitar la legibilidad.
+Usa text-align (en-US) para alinear el texto en tus elementos <th> y <td>, para ordenar los elementos y facilitar su legibilidad./

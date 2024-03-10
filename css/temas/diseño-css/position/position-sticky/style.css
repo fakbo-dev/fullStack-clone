@@ -1,0 +1,21 @@
+/*Posicionamiento pegajoso
+Hay otro valor de posición disponible llamado , que es algo más nuevo que los demás. Esto es básicamente un híbrido entre posición relativa y fija. Permite que un elemento posicionado actúe como si estuviera relativamente posicionado hasta que se desplaza a un cierto umbral (por ejemplo, 10px desde la parte superior de la ventana gráfica), después de lo cual se fija.position: sticky
+
+Ejemplo básico
+El posicionamiento adhesivo se puede usar, por ejemplo, para hacer que una barra de navegación se desplace con la página hasta cierto punto y luego se adhiera a la parte superior de la página.*/
+
+dt {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 1em 0;
+  }
+  
+
+  /*ndice de desplazamiento
+Un uso interesante y común es crear una página de índice de desplazamiento donde los diferentes encabezados se adhieren a la parte superior de la página a medida que llegan a ella. El marcado para tal ejemplo podría verse así:position: sticky*/
+
+/*El CSS podría tener el siguiente aspecto. En el flujo normal, los elementos <dt> se desplazarán con el contenido. Cuando agregamos al elemento <dt>, junto con un valor superior de 0, los navegadores compatibles pegarán los encabezados en la parte superior de la ventana gráfica a medida que alcancen esa posición. Cada encabezado posterior reemplazará al anterior a medida que se desplaza hasta esa posición.position: sticky*/

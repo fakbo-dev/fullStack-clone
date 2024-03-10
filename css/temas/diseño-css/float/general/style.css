@@ -1,0 +1,8 @@
+/*La historia de los elementos flotantes
+La propiedad float fue introducida para permitir a los desarrolladores implementar diseños sencillos que incluyeran una imagen flotando dentro de una columna de texto, con el texto envolviendo la parte izquierda o derecha de la imagen. El tipo de cosa que encuentras habitualmente en el diseño de un periódico.
+
+Pero los desarrolladores web pronto se dieron cuenta de que podían flotar cualquier cosa, no solo imágenes, por lo que su uso se extendió, por ejemplo creando efectos de diseño divertidos como estas letras capitulares.
+
+Los elementos flotantes han sido usados comúnmente para crear diseños web completos con múltiples columnas situadas unas al lado de las otras (el comportamiento por defecto sería que las columnas se situaran unas debajo de las otras, en el mismo orden en el que aparecen en el código fuente). Ahora hay disponibles técnicas más modernas y mejores, que exploraremos más adelante en este módulo, por lo que el uso de float de este modo debería contemplarse como una técnica anticuada (en-US).
+
+En este artículo nos centraremos en el uso apropiado de la propiedad float.*/

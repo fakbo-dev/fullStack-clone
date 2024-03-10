@@ -1,0 +1,28 @@
+/*Definir una cuadrícula
+Como punto de partida, descárgate el archivo de punto de partida y ábrelo en tu editor de texto y tu navegador (también puedes verlo en vivo aquí). Hay un ejemplo con un contenedor que tiene algunos elementos hijo. Por defecto, estos se muestran en flujo normal, por lo que las cajas se muestran una debajo de la otra. Vamos a trabajar con este archivo durante la primera parte de este artículo, y vamos a hacer cambios en él para ver cómo se comporta la cuadrícula.
+
+Para definir una cuadrícula utilizamos el valor grid de la propiedad display. Al igual que con el método Flexbox, esto activa la compaginación de cuadrícula y todos los elementos que son hijos directos del contenedor se convierten en elementos de cuadrícula. Añade esto al CSS en tu archivo:*/
+
+/*A diferencia del método Flexbox, los elementos no se ven diferentes inmediatamente. La declaración display: grid te proporciona una cuadrícula de una sola columna, por lo que tus elementos continúan mostrándose uno debajo del otro, como lo hacen en el flujo normal.
+
+Para ver algo que se parezca más a una cuadrícula, necesitamos añadir columnas a la cuadrícula. Vamos a añadir tres columnas de 200 píxeles. Puedes usar cualquier unidad de longitud o porcentajes para crear estas trazas de columna.*/
+
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.container > div {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}

@@ -1,0 +1,45 @@
+/*Reglas de mano larga vs. taquigrafía
+Por lo general, cuando se enseñan los detalles de la sintaxis CSS, es más claro y obvio usar propiedades de mano larga, en lugar de taquigrafía concisa (a menos que, por supuesto, esté explicando la taquigrafía a través del ejemplo). Recuerde que el objetivo de los ejemplos en MDN Web Docs es enseñar a las personas, no a ser inteligentes o eficientes. Te explicamos aquí por qué recomendamos escribir reglas a mano.
+
+A menudo es más difícil entender lo que está haciendo la taquigrafía. En el siguiente ejemplo, lleva un tiempo distinguir exactamente lo que está haciendo la sintaxis de la fuente.
+font: small-caps bold 2rem/1.5 sans-serif;*/
+
+/*Mientras que el siguiente estilo es más claro:
+
+font-variant: small-caps;
+font-weight: bold;
+font-size: 2rem;
+line-height: 1.5;
+font-family: sans-serif;*/
+
+
+/*La abreviatura de CSS viene con posibles dificultades adicionales: los valores predeterminados se establecen para partes de la sintaxis que no establece explícitamente, lo que puede producir restablecimientos inesperados de los valores que ha establecido anteriormente en la cascada u otros efectos esperados. La propiedad grid, por ejemplo, establece todos los siguientes valores predeterminados para los elementos que no se especifican:
+
+grid-template-rows: none
+
+grid-template-columns: none
+
+grid-template-areas: none
+
+cuadrícula-auto-filas: auto
+
+grid-auto-columns: auto
+
+grid-auto-flow: row
+
+espacio de columna: 0
+
+Intervalo de fila: 0
+
+espacio de columna: normal
+
+Intervalo de fila: normal
+
+Algunas abreviaturas solo funcionan como se espera si incluye los diferentes componentes de valor en un orden determinado. Este es el caso de las animaciones CSS. En el siguiente ejemplo, el orden esperado se escribe como un comentario:*/
+
+/*Algunas abreviaturas solo funcionan como se espera si incluye los diferentes componentes de valor en un orden determinado. Este es el caso de las animaciones CSS. En el siguiente ejemplo, el orden esperado se escribe como un comentario:
+/* duration | timing-function | delay | iteration-count
+  direction | fill-mode | play-state | name */
+/*animation: 3s ease-in 1s 2 reverse both paused slidein;*/
+
+/*En este ejemplo, el primer valor que se puede analizar como <time> se asigna a la propiedad animation-duration y el segundo valor que se puede analizar como time se asigna a animation-delay. (Para obtener más información, consulte Detalles de la sintaxis de animación).*/

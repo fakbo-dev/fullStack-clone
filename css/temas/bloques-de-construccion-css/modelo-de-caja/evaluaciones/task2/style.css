@@ -1,0 +1,26 @@
+/*In this task, add to the box:
+
+A 5px, black, dotted border.
+A top margin of 20px.
+A right margin of 1em.
+A bottom margin of 40px.
+A left margin of 2em.
+Padding on all sides of 1em.
+Your final result should look like the image below:*/
+
+body {
+    background-color: #fff;
+    color: #333;
+    font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+  }
+  .box {
+    border: 5px dotted black;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
+
+}

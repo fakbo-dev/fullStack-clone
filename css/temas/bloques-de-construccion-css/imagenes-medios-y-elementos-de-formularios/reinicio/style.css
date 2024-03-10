@@ -1,0 +1,18 @@
+/*Ponerlo todo junto en un «Reinicio»
+Como último paso podemos resumir las diversas propiedades expuestas en el «reinicio de formulario» siguiente para proporcionar una base coherente sobre la que trabajar. Esto incluye todos los elementos mencionados en las tres últimas secciones:*/
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+/*Nota: Muchos desarrolladores utilizan las hojas de estilo de normalización para crear un conjunto de estilos de línea base para usar en todos los proyectos. Por lo general, estas hojas hacen cosas similares a las que acabamos de describir y garantizan que cualquier cosa que pueda ser diferente en distintos navegadores tenga establecido un valor por defecto coherente antes de que tú hagas tu propio trabajo con el CSS. Aunque ya no son tan importantes como lo eran antes, porque los navegadores suelen ser más homogéneos que en el pasado. Sin embargo, si deseas ver un ejemplo, consulta Normalize.css, que es una hoja de estilo muy popular que muchos proyectos utilizan como base./

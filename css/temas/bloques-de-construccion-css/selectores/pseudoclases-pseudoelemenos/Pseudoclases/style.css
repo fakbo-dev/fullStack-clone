@@ -1,0 +1,46 @@
+/*¿Qué es una pseudoclase?*/
+
+/*Una pseudoclase es un selector que marca los elementos que están en un estado específico, por ejemplo, los que son el primer elemento de su tipo, o aquellos por los que el cursor les pasa por encima. Tienden a actuar como si hubieras aplicado una clase en una parte determinada del documento y, a menudo, ayudan a reducir el exceso de clases y proporcionan un marcado más flexible y fácil de mantener.*/
+
+/*Las pseudoclases son palabras clave que comienzan con dos puntos:
+
+:pseudo-class-name*/
+
+/*Echemos un vistazo a algunos ejemplos. Si queremos el primer párrafo de un artículo en letra más grande y en negrita, podemos añadir una clase a ese párrafo y luego añadirle CSS a esa clase, como se muestra en este ejemplo:*/
+
+.first {
+    font-size: 120%;
+    font-weight: bold;
+}   
+/*Sin embargo, podría ser complicado de mantener. ¿Y si añadiésemos un párrafo nuevo en la parte superior del documento? Habría que mover la clase para que quede antes del nuevo párrafo. En lugar de añadir la clase, podríamos utilizar el selector de pseudoclase :first-child, que siempre seleccionará el primer elemento hijo del artículo, y de esta forma no tendremos que editar el código HTML (esto no siempre es posible, tal vez debido a que lo genera un CMS).*/
+
+article p:first-child {
+    font-size: 120%;
+    font-weight: bold;
+}
+/*es mejor de la segunda manera.*/
+/*Todas las pseudoclases se comportan del mismo modo. Seleccionan un fragmento del documento que está en un estado determinado y se comportan como si se hubiera añadido una clase a su HTML.:
+
+:last-child
+:only-child
+:invalid*/
+
+/*Es válido escribir pseudoclases y pseudoelementos sin que les preceda un selector de elemento. En el ejemplo anterior, podría escribirse :first-child y la regla se aplicaríaa cualquier elemento que sea el primer hijo de un elemento <article>, no solo un párrafo primer hijo. :first-child equivale a *:first-child. Pero normalmente se quiere más control y hay que ser más específico.*/
+
+/*Pseudoclases de acción de usuario*/
+
+/*Algunas pseudoclases solo intervienen cuando el usuario interactúa con el documento de alguna manera. Estas pseudoclases de acción de usuario, que también reciben el nombre de pseudoclases dinámicas, actúan como si se añadiese una clase al elemento cuando el usuario interactúa con él. Algunos ejemplos son:*/
+
+/*:hover: solo interviene si el usuario pasa el cursor sobre un elemento, normalmente un enlace.
+:focus: solo interviene si el usuario selecciona el elemento con los controles del teclado.*/
+a:link,
+a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+a:hover {
+    color:hotpink;
+}   
+    
+

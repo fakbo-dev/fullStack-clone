@@ -1,0 +1,17 @@
+/*¿Qué son los modos de escritura?
+
+Un modo de escritura en CSS se refiere a si el texto está escrito horizontal o verticalmente. La propiedad writing-mode permite cambiar de un modo a otro. No necesitas estar trabajando en un lenguaje que use un modo de escritura vertical para querer hacer esto - Podrías cambiar el modo de escritura de partes de tu diseño por razones creativas.
+
+En el ejemplo siguiente existe un encabezado desplegado usando writing-mode: vertical-rl. El texto ahora aparece vertical. El texto vertical es común en diseño gráfico, y puede ser una forma de agregar un aspecto más interesante a tu diseño web.*/
+
+h1 {
+    writing-mode: vertical-rl;
+    
+  }
+/*Los tres valores posibles para la propiedad writing-mode son:
+
+horizontal-tb: Dirección de flujo de bloque de arriba abajo. Las frases aparecen horizontales.
+vertical-rl: Dirección de flujo de bloque de derecha a izquierda. Las frases aparecen verticales.
+vertical-lr: Dirección de flujo de bloque de izquierda a derecha. Las frases aparecen verticales.*/
+
+/*Así, la propiedad writing-mode está configurando en realidad la direccion en que los elementos de nivel bloque son desplegados en la página - ya sea de arriba abajo, derecha a izquierda, o de izquierda a derecha. Luego señala la dirección del flujo de texto en las frases./

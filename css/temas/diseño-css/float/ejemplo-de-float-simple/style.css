@@ -1,0 +1,42 @@
+
+/*Un ejemplo de float simple
+Exploremos cómo usar los float. Empezaremos con un ejemplo realmente simple que incluye un bloque de texto flotando alrededor de un elemento. Puedes acompañarnos creando un fichero index.html en tu ordenador, rellenándolo con una plantilla HTML simple, e insertando el código siguiente en los lugares adecuados. Al final de la sección podrás ver un ejemplo en vivo de cómo debería ser el código final.
+
+Primero, empecemos con algo de HTML simple — añade lo siguiente al cuerpo de tu HTML, eliminando cualquier otra cosa que hubiera antes:*/
+
+/*Ahora aplica el siguiente CSS a tu HTML (usando un elemento <style> o un <link> para separar el fichero .css — tú eliges):*/
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif
+  }
+  
+  .box {
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+  }
+
+  .special {
+    background-color: rgb(79,185,227);
+    padding: 10px;
+    color: #fff;
+  }
+
+  /*Si guardas y recargas la página, verás algo parecido a lo que esperarías: la caja se encuentra por encima del texto, en un flujo normal. Para flotar el texto alrededor, añade las propiedades float y margin-right a la regla .box:*/
+
+  /*Analicemos ahora cómo funciona el float — el elemento con el float aplicado (el elemento <div> en este caso) es sacado del flujo normal del documento y está pegado al lado izquierdo de su elemento contenedor padre (<body>, en este caso). Cualquier contenido que esté por debajo del elemento flotado en el flujo normal, ahora lo envolverá, rellenando el espacio a la derecha hasta la parte superior del elemento flotante. Allí se detendrá.
+
+Flotar el contenido a la derecha tiene exactamente el mismo efecto, pero a la inversa — el elemento flotado se pegará a la derecha, y el contenido lo envolverá por la izquierda. Prueba cambiando el valor de la propiedad float a right y reemplaza margin-right con margin-left (en-US) en el último conjunto de reglas para ver el resultado.
+
+Si bien podemos agregar un margen al flotante para alejar el texto, no podemos agregar un margen al texto para alejarlo del flotante. Esto se debe a que un elemento flotante se saca del flujo normal y las cajas de los siguientes elementos siguen detrás del flotador. Puedes comprobarlo haciendo algunos cambios en tu ejemplo.
+
+Añade una clase special al primer párrafo de texto, el que sucede inmediatamente a la caja flotante, y luego añade en tu CSS las siguientes reglas. Esto le dará al párrafo siguiente un color de fondo.*/
+
+/*Los cuadros de línea de nuestro siguiente elemento se han acortado para que el texto discurra alrededor del flotador, pero debido a que el flotador se eliminó del flujo normal, el cuadro alrededor del párrafo aún permanece en ancho completo.*/

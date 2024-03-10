@@ -1,0 +1,29 @@
+/*Selectores
+No uses selectores de ID porque son:
+menos flexible; No puede agregar más si descubre que necesita más de uno.
+Más difíciles de anular porque tienen mayor especificidad que las clases.
+
+
+/*asi/
+
+.editorial-summary {
+  /* ... */
+/*}
+
+
+/*no asi*/
+/*#editorial-summary {
+  /* ... */
+/*}
+Cuando una regla tiene varios selectores, coloque cada selector en una nueva línea. Esto hace que la lista de selectores sea más fácil de leer y puede ayudar a que las líneas de código sean más cortas. Haga esto:
+h1,
+h2,
+h3 {
+  font-family: sans-serif;
+  text-align: center;
+}
+No esto:
+h1, h2, h3 {
+  font-family: sans-serif;
+  text-align: center;
+}*/

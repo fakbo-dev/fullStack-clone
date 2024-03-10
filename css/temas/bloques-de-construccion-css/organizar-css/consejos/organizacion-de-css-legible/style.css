@@ -1,0 +1,18 @@
+/*Formato de CSS legible
+Hay un par de formas en que verá CSS formateado. Algunos desarrolladores ponen todas las reglas en una sola línea, así:
+
+.box {background-color: #567895; }
+h2 {background-color: black; color: white; }
+
+
+Otros desarrolladores prefieren dividir todo en una nueva línea:
+
+.box {
+  background-color: #567895;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+
+A CSS no le importa cuál uses. Personalmente, encontramos que es más legible tener cada par de propiedad y valor en una nueva línea.*/

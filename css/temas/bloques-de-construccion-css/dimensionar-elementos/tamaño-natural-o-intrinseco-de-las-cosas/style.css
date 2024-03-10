@@ -1,0 +1,16 @@
+/*El tamaño natural o intrínseco de las cosas
+Los elementos HTML tienen un tamaño natural, establecido antes de que se vean afectados por cualquier código CSS. Un ejemplo sencillo es una imagen. Una imagen tiene un ancho y una altura que están definidos en el archivo de imagen que está incrustando en la página. Este tamaño se describe como el tamaño intrínseco, que proviene de la imagen misma.
+
+Si colocas una imagen en una página y no cambias su altura y ancho, ya sea usando atributos en la etiqueta <img> o el CSS, se mostrará con ese tamaño intrínseco. En el ejemplo siguiente le hemos dado un borde a la imagen para que puedas ver la extensión del archivo.*/
+
+img {
+    border: 5px solid darkblue;
+  }
+
+  /*Sin embargo, un elemento <div> vacío no tiene tamaño propio. Si añades un elemento <div> sin contenido a tu HTML, entonces debes darle un borde como hemos hecho con la imagen y verás una línea en la página. Se trata del borde del elemento replegado sobre sí mismo porque no hay contenido para mantenerlo abierto. En nuestro ejemplo siguiente, ese borde se extiende por todo el ancho del contenedor, porque es un elemento de nivel de bloque, un comportamiento con el que deberías comenzar a familiarizarte. No tiene altura (o tamaño en la dimensión de bloque) porque no hay contenido*/
+
+  .box {
+    border: 5px solid darkblue;
+  }
+
+/*En el ejemplo anterior, añade texto al elemento vacío. Ahora el borde contiene ese texto porque la altura del elemento queda definida por el contenido. Por lo tanto, el tamaño de este elemento <div> en la dimensión del bloque proviene del tamaño del contenido. Nuevamente, este es el tamaño intrínseco del elemento: su tamaño está definido por su contenido.*/

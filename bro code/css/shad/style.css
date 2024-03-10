@@ -1,0 +1,12 @@
+/*text-shadow work with two values what represent horizontal and vertical, also you can add a third value what is blur after that you can change the color of the shadow, and for more than one shadow effect each shadow is comma separated so add a comma afterward */
+
+h1 {
+    text-shadow: 3px 3px 5px red, -3px -3px 5px lightblue;
+}
+/* with box shadow is basically the same.*/
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 3px 3px 5px;
+}

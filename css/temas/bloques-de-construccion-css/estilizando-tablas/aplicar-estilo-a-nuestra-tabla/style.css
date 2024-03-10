@@ -1,0 +1,6 @@
+/*Una tabla HTML típica
+Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica porque la mayoría de los ejemplos de tablas HTML son sobre zapatos, el tiempo o empleados; y hemos decidido hacer las cosas más interesantes creando una tabla sobre grupos de música punk famosos del Reino Unido. El código es el siguiente:*/
+
+/*a tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como scope, <caption>, summary, <thead> (en-US), <tbody> (en-US), etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en punk-bands-unstyled.html):*/
+
+/*Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS para arreglar esto.*/

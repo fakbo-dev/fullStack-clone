@@ -1,0 +1,67 @@
+/*sintax of color propertie
+/* Keyword values 
+color: currentcolor;
+
+/* <named-color> values 
+color: red;
+color: orange;
+color: tan;
+color: rebeccapurple;
+
+/* <hex-color> values 
+color: #090;
+color: #009900;
+color: #090a;
+color: #009900aa;
+
+/* <rgb()> values and legacy <rgba()> values
+color: rgb(34, 12, 64, 0.6);
+color: rgba(34, 12, 64, 0.6);
+color: rgb(34 12 64 / 0.6);
+color: rgba(34 12 64 / 0.6);
+color: rgb(34.6 12 64 / 60%);
+color: rgba(34.6 12 64 / 60%);
+
+/* <hsl()> values and legacy <hsla()> values 
+color: hsl(30, 100%, 50%, 0.6);
+color: hsla(30, 100%, 50%, 0.6);
+color: hsl(30 100% 50% / 0.6);
+color: hsla(30 100% 50% / 0.6);
+color: hsl(30.2 100% 50% / 60%);
+color: hsla(30.2 100% 50% / 60%);
+
+/* <hwb()> values 
+color: hwb(90 10% 10%);
+color: hwb(90 10% 10% / 0.5);
+color: hwb(90deg 10% 10%);
+color: hwb(1.5708rad 60% 0%);
+color: hwb(0.25turn 0% 40% / 50%);
+
+/* Global values 
+color: inherit;
+color: initial;
+color: revert;
+color: revert-layer;
+color: unset;
+*/
+
+body {
+    background-color: rgb(41, 41, 41);
+}
+
+#p1 {
+    color: tomato;
+}
+/*the rgb have 3 value  this value range from 0 to 255*/
+#p2 {
+    color: rgb(102, 222, 255);
+}
+/*the hexadecimal numbers range from 0 to 9 and a to f*/
+#p3 {
+    color: #59ff5f;
+}
+/* hsl meaning Hue, Saturation, lightness*/
+#p4 {
+    color: hsl(284, 91%, 39%);
+}
+

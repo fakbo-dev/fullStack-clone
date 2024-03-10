@@ -1,0 +1,20 @@
+/*Estilo de sintaxis
+Hay una variedad de estilos de escritura CSS que puede usar, pero preferimos el estilo expandido, con la llave selector/apertura, la llave de cierre y cada declaración en una línea separada. Esto maximiza la legibilidad y, de nuevo, promueve la coherencia en MDN Web Docs.
+
+Además, tenga en cuenta estos detalles:
+
+Incluye un espacio entre el(los) selector(es) y la abrazadera rizada de apertura.
+Incluye siempre un punto y coma al final de la última declaración, aunque no sea estrictamente necesario.
+Coloque la abrazadera rizada de cierre en una nueva línea.
+En cada declaración, ponga un espacio después de los dos puntos de separación, pero no antes.
+Utilice dos espacios para la sangría de código.
+
+/*correcto/
+p {
+  color: white;
+  background-color: black;
+  padding: 1rem;
+}
+
+/*incorrecto/
+p { color: white; background-color: black; padding: 1rem; }*/

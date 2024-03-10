@@ -1,0 +1,51 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    width: 70%;
+    max-width: 960px;
+    margin: 20px auto;
+  }
+
+  button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+  }
+
+  div {
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  /* Add your flexbox CSS below here */
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Ordenar los elementos flexibles
+Los elementos flexbox también tienen una función para cambiar el orden de disposición de los elementos flexibles, sin que ello afecte a su orden en el código fuente. Esto es algo que resulta imposible de hacer con los métodos de compaginación tradicionales.
+
+El código para esto es simple: añade el siguiente CSS al código de ejemplo de la barra de controles:*/
+
+
+button:first-child {
+    order: 1;
+  }
+
+  /*Actualiza, y observa que el botón «Smile» se ha movido al final del eje principal. Observemos cómo funciona esto con un poco más de detalle:
+
+Por defecto, todos los elementos flexibles tienen un valor order de 0.
+Los elementos flexibles que tengan establecidos los valores de orden más altos aparecerán más tarde en el orden de visualización que los elementos que tengan valores de orden más bajos.
+Los artículos flexibles con el mismo valor de orden aparecerán en su orden de origen. Luego, si hay cuatro elementos cuyos valores de orden se han establecido en 2, 1, 1 y 0, respectivamente, su orden de visualización será 4°, 2°, 3° y, por último, 1°.
+El tercer elemento aparece después del segundo porque tiene el mismo valor de orden y está después de él en el orden del código de origen.
+Puedes establecer valores de orden negativos para que los elementos aparezcan antes que los elementos establecidos con el valor 0. Por ejemplo, puedes hacer que el botón «Blush» aparezca al comienzo del eje principal utilizando la regla siguiente:*/
+
+  button:last-child {
+    order: -1;
+  }
+  

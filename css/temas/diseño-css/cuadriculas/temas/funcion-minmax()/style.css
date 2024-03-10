@@ -1,0 +1,13 @@
+/*La función minmax()
+Nuestras trazas de 100 píxeles de altura no serán muy útiles si en esas trazas añadimos contenido cuya altura sea mayor que 100 píxeles, porque ello causaría un desbordamiento. Puede ser mejor tener trazas cuya altura sea de al menos 100 píxeles y que puedan expandirse si en ellas entra más contenido. Un hecho en realidad básico sobre la web es que nunca sabes qué altura va a tener algo; contenido adicional o tamaños de letra más grandes pueden causar problemas con los diseños que pretendes ser perfectos con todas las dimensiones en píxeles.
+
+La función minmax permite establecer unos tamaños mínimo y máximo para una traza, por ejemplo, minmax(100px, auto). El tamaño mínimo es de 100 píxeles, pero el máximo es auto, que se expande para adaptarse al contenido. Prueba a cambiar grid-auto-rows para usar un valor minmax:*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+}
+
+/*Observa que si añades contenido la traza se expande para permitir que se ajuste. Ten en cuenta que la expansión se produce en la dirección de la fila.*/

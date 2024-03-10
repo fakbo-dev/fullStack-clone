@@ -1,0 +1,16 @@
+/*Modos de escritura y diseño en bloque y lineal.
+Ya hemos visto el diseño en bloque y lineal, y el hecho de que algunas cosas se muestran como elementos de bloque y otras como elementos lineales. Ésto se encuentra ligado al modo de escritura del documento, y no de la pantalla física. Los bloques sólo se presentan desde la parte superior a la inferior de la página si estas usando un modo de escritura que presente el texto horizontalmente, como el español.
+
+Con el siguiente ejemplo quedará más claro. Si tienes dos cajas que contengan un heading y un paragraph. La primera usa writing-mode: horizontal-tb, un modo de escritura horizontal y desde la parte superior de la página a la base. La segunda usa writing-mode: vertical-rl; este es un modo de escritura vertical y de derecha a izquierda.*/
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  
+}
+/*Cuando cambiamos el modo de escritura, estamos cambiando que dirección es en bloque y cuál es lineal. En un modo de escritura horizontal-tb La direccion del bloque va de arriba abajo; en un modo de escritura vertical-rl el bloque corre de derecha a izquierda horizontalmente. De esta forma la dimensión del bloque es siempre la direccion en la que se muestran los bloques en el modo de escritura en uso. La dimensión lineal, es siempre la dirección en que fluye una frase.*/
+
+/*Una vez que empieces a observar el diseño CSS, y en particular los nuevos métodos de diseño, esta idea de bloque y lineal cobra mayor importancia. Será revisado más adelante.*/

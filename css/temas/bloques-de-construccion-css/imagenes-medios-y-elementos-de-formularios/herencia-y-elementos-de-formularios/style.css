@@ -1,0 +1,11 @@
+/*Herencia y elementos de formulario
+
+En algunos navegadores, los elementos de formulario no heredan el estilo de letra por defecto. Por lo tanto, si deseas asegurarte de que tus campos de formulario usan la letra que se define para el cuerpo o para un elemento principal, debes añadir esta regla a tu CSS.*/
+
+button,
+input,
+select,
+textarea {
+  font-family : inherit;
+  font-size : 100%;
+}

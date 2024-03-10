@@ -1,0 +1,100 @@
+/* Crea tu CSS de prueba aquí */
+
+/*Comprender el Concepto de Cascada 
+Hay que considerar tres factores, que se enumeran a continuación en orden de importancia creciente. Los posteriores invalidan los anteriores:
+
+* Orden en el código
+* Especificidad
+* Importancia
+
+Orden Del codigo
+Ya hemos visto cómo el orden en el código es importante en el concepto de cascada. Si tienes más de una regla con exactamente el mismo peso, la que ocupa el último lugar en el CSS gana. Puedes entenderlo como que las reglas que están más cerca del elemento considerado sobreescriben las anteriores hasta que la última gana y da formato al elemento.
+
+especificidad
+Una vez entendido el hecho de que el orden de los elementos en el código es importante, te encontrarás en alguna situación en la que sabes cuál es la última norma en la hoja de estilo, pero se aplica una regla anterior. Esto se debe a que la regla anterior tiene una especificidad mayor, es decir, es más específica y, por lo tanto, el navegador la escoge como la que debe dar forma al elemento. */
+h2 {
+  font-size: 2em;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+      
+.small {
+  font-size: 1em;
+}
+      
+.bright {
+  color: rebeccapurple;
+}         
+  
+/*Este comportamiento ayuda a evitar repeticiones en el CSS. Una práctica común es definir estilos genéricos para los elementos básicos y luego, crear clases para los elementos que son diferentes. Por ejemplo, en la hoja de estilo que mostramos a continuación hemos definido estilos genéricos para los encabezados de nivel 2; posteriormente hemos creado algunas clases que solo cambian algunas de las propiedades y los valores. Los valores definidos inicialmente se aplican a todos los encabezados, y entonces los valores más específicos se aplican a los encabezados con las clases.*/
+
+/*Ahora vamos a echar un vistazo a cómo el navegador calcula la especificidad. Ya sabemos que un selector de elemento tiene una especificidad baja y se puede sobrescribir con un elemento de clase. Esencialmente se otorga un valor de puntos a los diferentes tipos de selectores y la suma de estos establece la importancia de ese selector en particular, que a continuación puede evaluarse ante otras posibles coincidencias.
+
+La cantidad de especificidad de un selector se mide usando cuatro valores diferentes (o componentes), que pueden describirse como millares, centenas, decenas y unidades (cuatro dígitos individuales dispuestos en cuatro columnas):
+
+Millares: Se suma un punto en esta columna si la declaración está en un atributo de style o, como suelen denominarse, estilos en línea. Tales declaraciones no tienen selectores, por lo que su especificidad siempre es 1000.
+Centenas: Se suma un punto en esta columna por cada selector con ID particular que esté contenido en el selector general.
+Decenas: Se suma un punto en esta columna por cada selector de clase, de atributo o pseudoclase que estén contenidos en el selector general.
+Unidades: Se suma un punto en esta columna por cada selector o pseudoelemento que esté contenido en el selector general.*/
+
+
+/* 1. specificity: 1-0-1 */
+#outer a {
+  background-color: red;
+}
+      
+/* 2. specificity: 2-0-1 */
+#outer #inner a {
+  background-color: blue;
+}
+
+/* 3. specificity: 1-0-4 */
+#outer div ul li a {
+  color: yellow;
+}
+
+/* 4. specificity: 1-1-3 */
+#outer div ul .nav a {
+  color: white;
+}
+
+/* 5. specificity: 0-2-4 */
+div div li:nth-child(2) a:hover {
+  border: 10px solid black;
+}
+
+/* 6. specificity: 0-2-3 */
+div li:nth-child(2) a:hover {
+  border: 10px dashed black;
+}
+
+/* 7. specificity: 0-3-3 */
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}            
+
+/*¿Qué pasa aquí? En primer lugar, estamos interesados solo en las primeras siete reglas de este ejemplo y, como te habrás dado cuenta, hemos incluido sus valores de especificidad en un comentario antes de cada una.
+
+Los dos primeros selectores compiten sobre el estilo del color del fondo del vínculo (el segundo gana y por eso el color de fondo es azul, porque en la cadena hay un selector con ID particular extra: la especificidad es de 201 contra 101).
+
+El tercer y el cuarto selector compiten sobre el estilo del color del texto del enlace (el segundo gana y hace que el texto sea blanco porque, aunque tiene un selector de elemento de menos, el selector que falta se sustituye por un selector de clase, con un valor de decena en vez de un valor de unidad). Así que la especificidad es de 113 contra 104.
+
+Los selectores 5-7 compiten por el estilo del borde del vínculo cuando el cursor se desplaza sobre estos. El sexto selector pierde claramente ante el quinto con una especificidad de 23 contra 24. En la cadena hay un selector de elemento de menos. El séptimo selector, sin embargo, los supera a ambos: en la cadena hay el mismo número de estos subselectores que en el quinto, pero se ha intercambiado un elemento por un selector de clase. Así que la especificidad es de 33 contra 23 y 24.

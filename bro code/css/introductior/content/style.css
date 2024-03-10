@@ -1,0 +1,31 @@
+/*exist thre method inline. internal, External*/
+/* with ID*/
+body {
+    background-color: black;
+}
+h1 {
+    color: white;
+}
+p {
+    color: white;
+}
+#p1 {
+    color: red;
+}
+#p2 {
+    color: orange;
+}
+#p3 {
+    color: yellow;
+}
+#p4 {
+    color: green;
+}
+
+/* with CLASS*/
+.odd {
+    color: red;
+}
+.even {
+    color: blue;
+}

@@ -1,0 +1,50 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: purple;
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+  }
+
+  /* Add your flexbox CSS below here */
+
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+
+/*Aquí vemos que los elementos hijo se salen de su contenedor. Una forma de solucionar esto es añadir la declaración siguiente a tu regla <section>:*/
+
+section {
+    flex-wrap: wrap;
+}
+
+/*Añade también la declaración siguiente a tu regla <article>:*/
+
+article {
+    flex: 200px;
+}
+
+/*Pruébalo; observa que al haberlo incluido el aspecto de la compaginación resulta mucho más agradable:*/
+
+/*Ahora hay varias filas y en cada fila caben tantos elementos hijo de un elemento flexbox como sean necesarios, y cualquier desbordamiento hace saltar el elemento hacia la línea siguiente. La declaración flex: 200px que hemos establecido en los artículos significa que cada uno tendrá al menos 200 px de ancho; discutiremos esta propiedad con más detalle más adelante. Observa también que los últimos elementos hijo de la última fila se agrandan hasta rellenar toda la fila.
+
+Pero aquí podemos hacer mucho más. En primer lugar, cambia el valor de tu propiedad flex-direction a row-reverse; ahora verás que todavía tienes tu compaginación en diversas filas, pero comienza desde la esquina opuesta de la ventana del navegador y fluye al revés.*/

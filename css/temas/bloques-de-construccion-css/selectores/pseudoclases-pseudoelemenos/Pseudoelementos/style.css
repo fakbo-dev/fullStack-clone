@@ -1,0 +1,20 @@
+/*Pseudoelementos*/
+
+/*Los pseudoelementos se comportan de manera similar. Sin embargo, actúan como si hubieras añadido un elemento HTML totalmente nuevo en el marcado, en lugar de haber aplicado una clase nueva a los elementos presentes. Los pseudoelementos empiezan con un doble signo de dos puntos ::.*/
+
+/*::pseudo-element-name*/
+
+/* Algunos de los primeros pseudoelementos utilizaban la sintaxis de un solo signo de dos puntos, así que puede ser que en ocasiones los veas escritos de esta forma en algún código o ejemplo. Los navegadores modernos leen tanto los pseudoelementos con la sintaxis de los dos puntos simple como la de los dos puntos doble para garantizar la compatibilidad retrospectiva.*/
+
+/*Por ejemplo, si deseas seleccionar la primera línea de un párrafo simplemente puedes delimitarlo con el elemento <span> y utilizar un selector de elementos. Sin embargo, fallará si el número de palabras que has delimitado resulta ser más largo o más corto que el ancho del elemento padre. Ya que normalmente no sabemos cuántas palabras caben en una línea porque esto cambia con el ancho de la pantalla o con los cambios de tamaño de la letra, no es posible hacer esto introduciendo solo HTML.
+
+El pseudoelemento ::first-line soluciona este problema: no importa si el número de palabras aumenta o disminuye, siempre se selecciona la primera línea.*/
+
+article p::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}   
+
+/*Actúa como si hubiera un elemento <span> mágicamente delimitando esa primera línea, que se actualiza cada vez que la longitud de la línea cambia.
+
+Puedes observar que en ambos párrafos se selecciona la primera línea./

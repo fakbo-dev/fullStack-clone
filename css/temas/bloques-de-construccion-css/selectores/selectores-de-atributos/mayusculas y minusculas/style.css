@@ -1,0 +1,14 @@
+/*mayusculas y minusculas*/
+
+/*Si quieres relacionar los valores de atributo tanto si están escritos en mayúsculas como en minúsculas, puedes utilizar el valor i antes del paréntesis de cierre. Este indicador informa al navegador de que debe relacionar todos los caracteres ASCII independientemente de si las letras son mayúsculas o minúsculas. Sin este indicador, los valores se relacionarán según las directrices del lenguaje del documento con respecto a la distinción entre mayúsculas y minúsculas; en el caso del HTML, se distinguirá entre mayúsculas y minúsculas.
+
+En el ejemplo siguiente, el primer selector relaciona valores que empiezan con a; luego, solo coincide el primer elemento de la lista porque los otros dos comienzan con una A mayúscula. El segundo selector utiliza el indicador de no distinción entre mayúsculas y minúsculas, así que relaciona todos los elementos de la lista.*/
+
+li[class^="a"] {
+    background-color: yellow;
+}
+
+li[class^="a" i] {
+    color: red;
+}
+/*Recientemente se ha creado un valor s, que obliga a establecer la distinción de mayúsculas y minúsculas en contextos en que no se suele establecer esta distinción. Sin embargo, pocos navegadores lo utilizan y no resulta demasiado útil en un contexto HTML.*/

@@ -1,0 +1,41 @@
+/*In this task, the first list item has been given a background color using a hex color code. Your task is to complete the CSS using the same color in different formats, plus a final list item where you should make the background semi-opaque.
+
+The second list item should use RGB color.
+
+The third should use HSL color.
+
+The fourth should use RGB color but with the alpha channel set to 0.6.
+
+You can find conversions for the hex color at this link. You need to figure out how to use the values in CSS. Your final result should look like the image below:*/
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 1em;
+  padding: 0.5em;
+}
+.hex {
+  background-color: #86DEFA;
+}
+
+.rgb {
+  background-color: rgb(134, 222, 250);
+  }
+
+.hsl {
+  background-color: hsl(194, 92%, 75%);
+  }
+
+.transparency {
+  background-color: rgb(134, 222, 250, .6);
+  }

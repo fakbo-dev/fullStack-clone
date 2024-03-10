@@ -1,0 +1,33 @@
+/*Comenta tu CSS
+Agregar comentarios a su CSS ayudará a cualquier desarrollador futuro a trabajar con su archivo CSS, pero también lo ayudará cuando regrese al proyecto después de un descanso.
+
+/* This is a CSS comment
+It can be broken onto multiple lines. */
+
+/*
+Un buen consejo es agregar un bloque de comentarios entre secciones lógicas en su hoja de estilo también, para ayudar a localizar diferentes secciones rápidamente al escanearla, o incluso para darle algo que buscar para saltar directamente a esa parte del CSS. Si usa una cadena que no aparecerá en el código, puede saltar de una sección a otra buscándola, a continuación hemos usado .||
+
+/* || General styles */
+
+/* … */
+
+/* || Typography */
+
+/* … */
+
+/* || Header and Main Navigation */
+
+/* … */
+/*
+No necesita comentar cada cosa en su CSS, ya que gran parte de ella se explicará por sí misma. Lo que debes comentar son las cosas en las que tomaste una decisión particular por una razón.
+
+Es posible que haya utilizado una propiedad CSS de una manera específica para evitar incompatibilidades de navegador más antiguas, por ejemplo:
+
+.box {
+  background-color: red; /* fallback for older browsers that don't support gradients */
+ /* background-image: linear-gradient(to right, #ff0000, #aa0000);
+
+}
+
+/*
+Tal vez seguiste un tutorial para lograr algo, y el CSS no se explica por sí mismo ni es reconocible. En ese caso, puede agregar la URL del tutorial a los comentarios. Te lo agradecerás a ti mismo cuando vuelvas a este proyecto en un año más o menos y puedes recordar vagamente que hubo un gran tutorial sobre esa cosa, pero no puedes recordar de dónde es.*/

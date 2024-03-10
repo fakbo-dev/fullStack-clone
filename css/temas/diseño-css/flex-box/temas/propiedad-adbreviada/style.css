@@ -1,0 +1,9 @@
+/*Propiedades abreviadas de flex-flow
+En este punto vale la pena señalar que hay una propiedad abreviada para flex-direction y flex-wrap: flex-flow. Así, por ejemplo, puedes reemplazar:
+
+flex-direction: row;
+flex-wrap: wrap;
+Copy to Clipboard
+con
+
+flex-flow: row wrap;*/

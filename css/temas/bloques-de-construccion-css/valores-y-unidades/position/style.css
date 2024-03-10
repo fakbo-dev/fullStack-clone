@@ -1,0 +1,14 @@
+/*Posición
+El tipo de dato <position> (en-US) representa un conjunto de coordenadas 2D que se utiliza para colocar un elemento, por ejemplo una imagen de fondo (con el atributo background-position). Puede tomar palabras clave como top, left, bottom, right y center para alinear los elementos con los límites específicos de una caja de dos dimensiones, y también longitudes, que representan desplazamientos desde los bordes superior e izquierdo de la caja.
+
+Un valor de posición típico consta de dos valores: el primero establece la posición horizontal, y el segundo la vertical. Si solo especificas valores para un eje, el otro usará center por defecto.
+
+En el ejemplo siguiente hemos colocado una imagen de fondo a 40px de la parte superior, y a la derecha del contenedor con una palabra clave.*/
+
+.box {
+  height: 300px;
+  width: 400px;
+  background-image: url(../../fondos-y-bordes/evaluaciones/task2/big-star.png);
+  background-repeat: no-repeat;
+  background-position: right 40px;
+}

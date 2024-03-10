@@ -1,0 +1,50 @@
+/*Bordes
+El borde se dibuja entre el margen y el área de relleno de una caja. Si utilizas el modelo de cajas estándar, el tamaño del borde se añade a los elementos width y height que establecen el alto y el ancho de la caja. Si utilizas el modelo de cajas alternativo, el tamaño del borde reduce el tamaño de la caja de contenido, porque ocupa una parte del alto y el ancho disponibles.
+
+Hay una gran cantidad de propiedades que sirven para aplicar estilo a los bordes: hay cuatro bordes y cada borde tiene un estilo, un ancho y un color que podemos modificar.
+
+Puedes establecer el ancho, el estilo o el color de los cuatro bordes a la vez utilizando la propiedad border.*/
+
+/*Para establecer las propiedades de cada lado de forma individual, puedes utilizar:
+
+border-top
+border-right
+border-bottom
+border-left*/
+
+/*Para establecer el ancho, el estilo o el color de todos los lados, usa lo siguiente:
+
+border-width
+border-style
+border-color
+Para establecer el ancho, el estilo o el color de un solo lado, puedes usar una de las propiedades no abreviadas:
+
+border-top-width (en-US)
+border-top-style (en-US)
+border-top-color
+border-right-width (en-US)
+border-right-style (en-US)
+border-right-color (en-US)
+border-bottom-width
+border-bottom-style
+border-bottom-color
+border-left-width (en-US)
+border-left-style (en-US)
+border-left-color*/
+
+/*En el ejemplo siguiente, hemos utilizado varios ejemplos de la lista anterior para crear bordes. Juega con las diferentes propiedades para comprobar que entiendes cómo funcionan. Las páginas de MDN sobre las propiedades de los bordes te proporcionan información sobre los diferentes estilos entre los que puedes elegir para los bordes.*/
+.container {
+    border-top: 10px dotted green;
+    border-right: 1px solid black;
+    border-bottom: 20px double rgb(23,45,145);
+  }
+  
+  .box {
+    border: 10px solid #333333;
+    border-top-style: dotted;
+    border-right-width: 20px;
+    border-bottom-color: hotpink;
+    border-left-color: blueviolet;
+    
+    
+  }

@@ -1,0 +1,41 @@
+/*Selector de atributos*/
+
+/*Como ya explicamos en los artículos de HTML, los elementos pueden tener atributos que proporcionan un nivel de detalle mayor sobre el elemento que delimitan. En el CSS puedes utilizar selectores de atributo para seleccionar elementos definidos con unos atributos determinados. En este artículo veremos cómo utilizar estos selectores tan útiles.*/
+
+/*selectores de presencia y valor*/
+
+/*Estos selectores permiten seleccionar un elemento solo a partir de la presencia de un atributo (por ejemplo href) o a partir de varias coincidencias diferentes con respecto al valor del atributo.*/
+
+/*Selector	Ejemplo	Descripción
+[attr]	a[title]	Relaciona elementos con un mismo nombre de atributo, attr (el valor que se indica entre corchetes).
+
+[attr=value]	a[href="https://example.com"]	Relaciona elementos con un mismo nombre de atributo, attr, cuyo valor es exactamente el mismo, value (la cadena de caracteres que se indica entre corchetes).
+
+[attr~=value]	p[class~="special"]	Relaciona los elementos con un mismo nombre de atributo, attr, cuyo valor es exactamente value, o los elementos con un mismo atributo attr que contiene uno o más valores de los cuales, al menos uno, coincide con value.
+
+Ten en cuenta que en una lista que incluya más de un valor, los distintos valores se separan con un espacio.
+[attr|=value]	div[lang|="zh"]	Relaciona los elementos con un mismo nombre de atributo, attr, cuyo valor puede ser exactamente value o puede comenzar con value seguido inmediatamente por un guion.*/
+
+/*En el ejemplo siguiente puedes observar cómo se utilizan estos selectores.
+
+Mediante el uso de li[class] podemos relacionar cualquier selector con un atributo de clase. Los relaciona todos menos el primer elemento de la lista.
+li[class="a"] relaciona un selector con una clase de a, pero no un selector con una clase de a con otra clase separada por un espacio como parte del valor. Selecciona el segundo elemento de la lista.
+li[class~="a"] coincidirá con una clase a pero también con un valor que contenga la clase de a como parte de una lista de elementos separados por un espacio. Selecciona el segundo y el tercer elemento de la lista.*/
+
+li[class] {
+    font-size: 200%;
+}
+
+li[class="a"] {
+    background-color: yellow;
+}
+
+li[class~="a"] {
+    color: red;
+}
+/*el primero se usa para tomar todos los "li" con clase
+luego el segundo se utiliza para tomar solo los li con la clase "a"
+y el tercero elige a los li conla clase a y tambien los que otros que compartan la a en su clase asi este separada con espacios */
+
+
+

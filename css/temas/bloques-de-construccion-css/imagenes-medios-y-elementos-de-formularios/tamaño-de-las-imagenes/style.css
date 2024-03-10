@@ -1,0 +1,62 @@
+/*El tamaño de las imágenes
+Como ya conoces de estos artículos, todo en CSS genera una caja. Si colocas una imagen dentro de una caja que es más pequeña o más grande que las dimensiones intrínsecas del archivo de imagen en cualquier dirección, aparecerá más pequeño que la caja o se desbordará. Debes decidir qué hacer con el desbordamiento.
+
+En el ejemplo siguiente hay dos cajas, ambas de 200 píxeles de tamaño:
+
+Una contiene una imagen que es más pequeña de 200 píxeles: es más pequeña que la caja y no se expande para rellenarla.
+
+La otra es más grande de 200 píxeles y desborda la caja.*/
+
+
+.wrapper {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    border: 5px solid rebeccapurple;
+    margin: 10px;
+  }
+  
+  img {
+/*agregado luego del texto de abajo*/
+  max-width: 100%;
+ 
+  }
+
+/*¿Qué podemos hacer con el problema del desbordado?
+
+Como aprendimos en nuestro artículo anterior, una técnica común es hacer que el la propiedad max-width (en-US) de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como <video> o <iframe>.
+
+Añade max-width: 100% al elemento <img> del ejemplo anterior. Verás que la imagen más pequeña permanece sin cambios, pero la más grande se reduce hasta caber en la caja.
+
+Puedes tomar otras decisiones sobre las imágenes dentro de los contenedores. Por ejemplo, es posible que desees cambiar el tamaño de una imagen para que cubra una caja por completo.
+
+La propiedad object-fit puede ser de gran ayuda. Cuando se usa object-fit, el elemento de reemplazo puede dimensionarse para adaptarse a una caja de varias maneras.
+
+A continuación, hemos utilizado el valor cover, que reduce el tamaño de la imagen a la vez que mantiene la relación de aspecto hasta que rellena toda la caja. Al mantenerse la relación de aspecto, la caja corta algunas partes de la imagen.*/
+
+.box-2 {
+    width: 200px;
+    height: 200px;
+    border: 5px solid rebeccapurple;
+    margin: 10px;
+  }
+  
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .cover {
+    object-fit:cover;
+  }
+  
+  .contain {
+    object-fit: contain;
+  }
+
+/*Si usamos el valor contain, la imagen se reduce hasta que es lo bastante pequeña para caber dentro de la caja. Esto puede dar lugar a un formato panorámico si la imagen no presenta la misma relación de aspecto que la caja.
+
+También puedes probar el valor fill, que rellena la caja, pero no mantiene la relación de aspecto.

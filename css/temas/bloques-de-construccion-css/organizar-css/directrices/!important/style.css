@@ -1,0 +1,6 @@
+/*!importante
+!important es el último recurso que generalmente se usa solo cuando necesita anular algo y no hay otra forma de hacerlo. El uso es una mala práctica y debe evitarlo siempre que sea posible.!important
+
+.bad-code {
+  font-size: 4rem !important;
+}*/

@@ -1,0 +1,6 @@
+/*Otros ajustes útiles
+Además de las reglas ya mencionadas, también debes configurar overflow: auto en <textarea> para que Internet Explorer no muestre una barra de desplazamiento cuando no hay necesidad:*/
+
+textarea {
+  overflow: auto;
+}

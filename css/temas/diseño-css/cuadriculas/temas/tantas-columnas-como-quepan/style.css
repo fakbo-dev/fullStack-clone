@@ -1,0 +1,13 @@
+/*Tantas columnas como quepan
+Podemos combinar algunas de las cosas que hemos aprendido sobre las listas de trazas, la notación de repetición y la función minmax() para crear un patrón útil. A veces es útil poder pedirle a la cuadrícula que cree tantas columnas como quepan en el contenedor. Para hacer esto establecemos el valor grid-template-columns con la notación repeat(), pero en lugar de pasar un número, pasa la palabra clave auto-fill. Para el segundo parámetro de la función usamos minmax(), con un valor mínimo igual al tamaño mínimo de la traza que nos gustaría tener, y un valor máximo de 1fr.
+
+Prueba esto en tu archivo ahora, con el CSS siguiente:*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+  }
+
+/*Esto funciona porque la cuadrícula crea tantas columnas de 200 píxeles como caben en el contenedor, luego comparte el espacio restante entre todas las columnas: el máximo es 1fr, que como sabemos, distribuye el espacio de manera uniforme entre las trazas.*/

@@ -1,0 +1,8 @@
+/*Combinar pseudoclases y pseudoelementos*/
+
+/*Si quieres poner en negrita la primera línea del primer párrafo, puedes encadenar los selectores :first-child y ::first-line. Añade al ejemplo anterior el CSS siguiente. Queremos que se seleccione la primera línea del primer elemento <p> que esté dentro de un elemento <article>.*/
+
+article p:first-child::first-line {
+    font-size: 120%;
+    font-weight: bold;
+  }

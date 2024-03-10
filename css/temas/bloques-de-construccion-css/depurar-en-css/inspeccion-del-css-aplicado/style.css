@@ -1,0 +1,13 @@
+/*Inspección del CSS aplicado*/
+
+/*Selecciona un elemento de tu página, ya sea haciendo clic con el botón derecho o pulsando la tecla ctrl para seleccionar la opción Inspect, o seleccionándolo del árbol HTML que hay a la izquierda de la pantalla de la interfaz DevTools. Selecciona el elemento con la clase box1; este es el primer elemento de la página con una caja alrededor.*/
+
+/*Si observasla vista de reglas, que está a la derecha de tu HTML, deberías poder ver las propiedades y los valores CSS aplicados sobre ese elemento. Verás las reglas aplicadas directamente a la clase box1 y también el CSS que la caja hereda de su elemento padre, en este caso <body>. Esto es útil para cuando ves que se aplica un CSS que no esperabas. Tal vez se esté heredando de un elemento padre y necesites añadir una regla para sobrescribirlo en el contexto de este elemento.
+
+También es útil la capacidad de expandir las propiedades abreviadas. En nuestro ejemplo se usa la abreviación margin.
+
+Haz clic en la pequeña flecha para expandir la vista, que muestra las diferentes propiedades sin abreviar y sus valores.
+
+Puedes activar y desactivar los valores en la vista de reglas, cuando ese panel esté activo; si mantienes el ratón sobre él, aparecerán casillas de verificación. Desmarca la casilla de verificación de una regla, por ejemplo border-radius, y el CSS dejará de aplicarse.
+
+Puedes usar esto para hacer una comparación entre A y B, decidir si algo se ve mejor con una regla aplicada o sin aplicar, y también para ayudar a depurarlo. Por ejemplo, si un diseño falla e intentas determinar qué propiedad causa el problema.*/

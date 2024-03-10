@@ -1,0 +1,45 @@
+/*Manejar el espaciado de la lista
+Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como párrafos e imágenes; y el mismo espaciado horizontal entre uno y otro (en Github puedes ver el ejemplo de diseño terminado, y también encontrar el código fuente.)*/
+
+
+/* Estilos generales */
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+ul,ol,dl,p {
+  font-size: 1.5rem;
+}
+
+li, p {
+  line-height: 1.5;
+}
+
+/* Estilos para las listas de descripciones */
+
+
+dd, dt {
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.5rem;
+}
+
+/*La primera regla establece un tipo de letra para todo el sitio y un tamaño de letra base de 10px. Estos valores se heredan para toda la página.
+
+Las reglas 2 y 3 establecen tamaños de letra relativos para los títulos, diferentes tipos de listas (que heredan los hijos de los elementos de listas), y párrafos. Esto significa que todos los párrafos y todas las listas tendrán el mismo tamaño de letra y el mismo espaciado superior e inferior, lo que ayudará a mantener el ritmo vertical constante.
+
+La regla 4 establece el mismo interlineado (line-height) en los párrafos y los elementos de las listas, de modo que todos los párrafos y todos los elementos individuales de las listas tendrán el mismo espaciado entre las líneas. Esto también ayudará a mantener el ritmo vertical consistente.
+
+Las reglas 5 y 6 se aplican a las listas de descripciones; establecemos la misma altura de interlineado (line-height) en los términos y las descripciones de la lista de descripciones, así como hicimos con los párrafos y los elementos de la lista. De nuevo, ¡la coherencia es buena! También establecemos que los términos de las descripciones tengan un estilo de negrita, para que destaquen visualmente.*/

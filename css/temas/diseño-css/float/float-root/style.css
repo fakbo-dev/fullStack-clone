@@ -1,0 +1,63 @@
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif
+  }
+  
+  .box {
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+  }
+
+  .special {
+    background-color: rgb(79,185,227);
+    padding: 10px;
+    color: #fff;
+  }
+
+
+.wrapper {
+    background-color: rgb(79,185,227);
+    padding: 10px;
+    color: #fff;
+  }
+
+  /*El hack clearfix
+La forma en que esta situación se ha tratado tradicionalmente es utilizando algo conocido como "truco clearfix". Esto implica insertar algún contenido generado después del cuadro que contiene el contenido flotante y envolvente, y configurarlo para limpiar ambos.
+
+Añade el siguiente CSS al ejemplo:*/
+/*.wrapper::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  /*Usando overflow
+Un método alternativo es establecer la propiedad overflow del elemento envolvente con un valor distinto de visible.
+
+Elimina el CSS clearfix que añadiste en la anterior sección y, en su lugar, añade overflow: auto a las reglas de la caja envolvente. De nuevo, la caja debería limpiarse.*/
+
+.wrapper {
+  background-color: rgb(79,185,227);
+  padding: 10px;
+  color: #fff;
+  overflow: auto;
+}
+
+/*Este ejemplo funciona creando lo que se conoce como un block formatting context (BFC) o contexto de formato de bloque. Es como un pequeño diseño dentro de nuestra página dentro del cual todo está contenido, por lo tanto, nuestro elemento flotante está contenido dentro del BFC y el fondo se encuentra detrás de ambos elementos. Esto generalmente funcionará, sin embargo, en ciertos casos, es posible que encuentre barras de desplazamiento no deseadas o sombras recortadas debido a las consecuencias no deseadas del uso del desbordamiento..*/
+
+
+/*display: flow-root
+La manera moderna de resolver este problema es usar el valor flow-root de la propiedad display. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina overflow: auto de la regla .wrapper y añade display: flow-root. Asumiendo que tu navegador sea compatible, la caja se limpiará.*/
+
+.wrapper {
+  background-color: rgb(79,185,227);
+  padding: 10px;
+  color: #fff;
+  display: flow-root;
+}

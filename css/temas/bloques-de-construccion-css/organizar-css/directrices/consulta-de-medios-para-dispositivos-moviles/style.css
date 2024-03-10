@@ -1,0 +1,16 @@
+/*Consultas de medios para dispositivos móviles
+En una hoja de estilos que contenga estilos de consulta de medios para diferentes tamaños de ventanilla de destino, primero incluya el estilo de pantalla estrecha/móvil antes de encontrar otras consultas de medios. Agregue estilos para tamaños de ventana gráfica más amplios a través de consultas de medios sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de Mobile First.
+
+/* Default CSS layout for narrow screens /
+
+@media (min-width: 480px) {
+  /* CSS for medium width screens /
+}
+
+@media (min-width: 800px) {
+  /* CSS for wide screens /
+}
+
+@media (min-width: 1100px) {
+  /* CSS for really wide screens /
+}*/

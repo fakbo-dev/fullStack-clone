@@ -1,0 +1,56 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: purple;
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+  }
+
+  /* Add your flexbox CSS below here */
+
+  section {
+    display: flex;
+  }
+
+/*Dimensionamiento flexible de elementos flexibles
+Volvamos ahora a nuestro primer ejemplo y veamos cómo podemos controlar qué proporción de espacio ocupan los elementos flexibles. Inicia tu copia local de flexbox0.html o toma una copia de flexbox1.html como nuevo punto de partida (consúltalo en vivo).
+
+Primero, añade la regla siguiente al final de tu CSS:*/
+
+article {
+  flex: 1;
+}
+
+article:nth-of-type(3) {
+    flex: 2;
+  }
+
+  article {
+    flex: 1 200px;
+  }
+  
+  article:nth-of-type(3) {
+    flex: 2 200px;
+  }
+
+/*Esto establece básicamente que «a cada elemento flexible se le da primero 200px del espacio disponible. Después de eso, el resto del espacio disponible se reparte de acuerdo con las unidades de proporción». Actualiza y observa de qué modo se reparte ahora el espacio.*/
+
+/*El valor real del elemento flexbox se puede ver en su flexibilidad/adaptabilidad: si cambias el tamaño de la ventana del navegador o añades otro elemento <article>, el diseño continúa funcionando bien.*/

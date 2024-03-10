@@ -1,0 +1,110 @@
+/*Aplicar estilo a los fondos en CSS
+La propiedad background de CSS es una propiedad abreviada de una serie de propiedades de fondo que vamos a ver en este artículo. Si descubres una propiedad de fondo compleja en una hoja de estilo, puede parecer un poco difícil de entender porque pueden estarse pasando muchos valores a la vez.*/
+
+/*.box {
+    background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat, rebeccapurple;
+}*/
+
+/*Más adelante en este tutorial regresaremos a cómo funcionan las propiedades abreviadas, pero primero echemos un vistazo a las diferentes cosas que puedes hacer con los fondos en CSS, a partir de observar las propiedades de fondo individuales.*/
+
+
+/*Los colores de fondo
+
+La propiedad background-color define el color de fondo de cualquier elemento en CSS. La propiedad admite cualquier <color> válido. Un color de fondo (background-color) se extiende por debajo del contenido y el relleno del elemento.
+
+En el ejemplo siguiente hemos utilizado varios valores de color para añadir un color de fondo a la caja, a un encabezado y a un elemento <span>.
+
+Juega un poco con ellos; usa cualquier valor <color> disponible.*/
+
+.box {
+    background-color: #5da7e7;
+}
+
+h2 {
+    background-color: rgb(88, 73, 73);
+    color: rgb(207, 36, 36);
+}
+span {
+    background-color: rgba(182, 182, 182, 0.5);
+}
+
+/*Las imágenes de fondo
+
+La propiedad background-image permite visualizar una imagen de fondo en un elemento. En el ejemplo siguiente hay dos cajas: una tiene una imagen de fondo que es más grande que la caja misma, la otra tiene una imagen pequeña en forma de estrella.
+
+Este ejemplo demuestra dos cosas sobre las imágenes de fondo. De forma predeterminada, la imagen grande no se reduce para ajustarse a la caja, por lo que solo vemos una pequeña esquina de esta, mientras que la imagen pequeña aparece en forma de mosaico hasta llenar la caja. En este caso, la imagen es en realidad una sola estrella.*/
+
+.a {
+  background-image: url(image/ballon.jpg);
+  height: 20em;
+}
+
+.b {
+  background-image: url(image/star.png);
+}
+
+/* no se ve porque no tengo las imagenes xd. Si especificas un color de fondo además de una imagen de fondo, la imagen se muestra encima del color de fondo. Añade una propiedad background-color al ejemplo anterior y obsérvalo en acción.*/
+
+/*Controlar background-repeat
+La propiedad background-repeat se usa para controlar el comportamiento de tipo mosaico de las imágenes. Los valores disponibles son:
+
+no-repeat: evita que el fondo se repita.
+repeat-x: repite horizontalmente.
+repeat-y: repite verticalmente.
+repeat: es el valor por defecto; repite en ambas direcciones.
+Prueba estos valores en el ejemplo siguiente. Hemos establecido el valor no-repeat, así que solo verás una estrella. Prueba los diferentes valores (repeat-x y repeat-y) y observa cuáles son los efectos.*/
+
+
+/*Dimensionar la imagen de fondo
+
+En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad background-size, que puede tomar valores de longitud o porcentaje, para ajustar el tamaño de la imagen para que quepa dentro del fondo.
+
+También puedes utilizar palabras clave:
+
+cover: el navegador agrandará la imagen lo suficientemente grande como para que esta cubra por completo el área de la caja sin que pierda su relación de aspecto. En este caso, es probable que parte de la imagen quede fuera de la caja.
+contain: el navegador adecuará el tamaño de la imagen para que quepa dentro de la caja. En este caso, pueden quedar huecos a ambos lados o en la parte superior e inferior de la imagen si la relación de aspecto de la imagen es diferente de la de la caja.
+En el ejemplo siguiente hemos usado la imagen más grande del ejemplo anterior y unidades de longitud para establecer sus dimensiones dentro de la caja. Puedes ver que esto ha distorsionado la imagen.
+
+Prueba lo siguiente:
+
+Cambia las unidades de longitud que has utilizado para modificar el tamaño del fondo.
+Elimina las unidades de longitud y observa qué sucede cuando usas background-size: cover o background-size: contain.
+Si tu imagen es más pequeña que la caja, puedes cambiar el valor background-repeat para que la imagen se repita.*/
+
+/*Posicionar la imagen de fondo
+
+La propiedad background-position te permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es (0,0), y la caja se coloca sobre los ejes horizontal (x) y vertical (y).*/
+
+/*Puedes usar palabras clave como top y right (busca todas las demás en la página sobre la propiedad background-position):*/
+.box {
+    background-image: url(star.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  /*Y también longitudes y porcentajes:
+
+.box {
+  background-image: url(star.png);
+  background-repeat: no-repeat;
+  background-position: 20px 10%;
+}*/
+
+/*También puedes mezclar valores de palabras clave con longitudes o porcentajes, por ejemplo:*/
+
+/*También puedes mezclar valores de palabras clave con longitudes o porcentajes, por ejemplo:
+
+.box {
+  background-image: url(star.png);
+  background-repeat: no-repeat;
+  background-position: top 20px;
+}
+*/
+/*Por último, también puedes usar una sintaxis de 4 valores para indicar una distancia desde ciertos bordes del cuadro: la unidad de longitud en este caso es un desplazamiento del valor que la precede. Entonces, en el CSS siguiente, colocamos el fondo a 20 px desde la parte superior y a 10 px desde la derecha:*/
+.box {
+    background-image: url(star.png);
+    background-repeat: no-repeat;
+    background-position: top 20px right 10px;
+  }
+
+ 

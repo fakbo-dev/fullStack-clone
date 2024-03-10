@@ -1,0 +1,38 @@
+/*Limpiar las cajas envueltas alrededor de un float
+Ahora ya sabes cómo limpiar un elemento que sigue a un elemento flotante, pero observa lo que sucede si tienes un flotante alto y un párrafo corto, con una caja envolviendo a ambos elementos. Modifica tu documento para que el primer párrafo y el cuadro flotante estén envueltos por un <div> con una clase wrapper.*/
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif
+  }
+  
+  .box {
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207,232,220);
+    padding: 1em;
+  }
+
+  .special {
+    background-color: rgb(79,185,227);
+    padding: 10px;
+    color: #fff;
+  }
+
+
+.wrapper {
+    background-color: rgb(79,185,227);
+    padding: 10px;
+    color: #fff;
+  }
+
+/*En tu CSS, añade la siguiente regla para la clase .wrapper y después recarga la página:*/
+
+/*Verás que, como en el ejemplo en el que hemos puesto un color de fondo al párrafo, el color de fondo pasa por detrás del elemento flotante.*/
+
+/*Una vez más, esto se debe a que el flotador se ha sacado del flujo normal. Limpiar el siguiente elemento no ayuda con este problema de limpieza de caja, donde queremos que la parte inferior de la caja envuelva el elemento flotante y envuelva el contenido incluso si el contenido es más corto. Hay tres formas posibles de lidiar con esto, dos que funcionan en todos los navegadores, pero tienen algo de truco, y una tercera, nueva forma de lidiar con esta situación correctamente.*/

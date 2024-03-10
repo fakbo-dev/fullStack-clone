@@ -1,0 +1,7 @@
+/*Cómo acceder a las DevTools de los navegadores*/
+
+/*El artículo ¿Qué son las herramientas de desarrollo de los navegadores? es una guía actualizada que explica cómo acceder a las herramientas en varios navegadores y plataformas. Si bien puedes optar por desarrollar principalmente en un navegador en particular y, por lo tanto, te familiarizarás más con las herramientas incluidas en ese navegador, vale la pena saber cómo acceder a ellas en otros navegadores. Esto ayudará si haces pruebas de las representaciones que dan diferentes navegadores.
+
+También te darás cuenta de que los diversos navegadores han optado por centrarse en áreas diferentes al crear sus DevTools. Por ejemplo, en Firefox hay algunas herramientas excelentes para trabajar visualmente con la compaginación con CSS, que te permiten inspeccionar y editar Compaginaciones de cuadrícula, Flexbox (en-US) y formas (en-US). Sin embargo, todos los navegadores tienen herramientas fundamentales similares. Por ejemplo, para inspeccionar las propiedades y los valores que se aplican a los elementos de tu página, y hacer cambios desde el editor.
+
+En este artículo veremos algunas características útiles de Firefox DevTools para trabajar con CSS. Para hacerlo, usaremos un archivo de ejemplo. Carga esto en una pestaña nueva si deseas seguir adelante y abre tus DevTools como se describe en el artículo del enlace anterior.*/

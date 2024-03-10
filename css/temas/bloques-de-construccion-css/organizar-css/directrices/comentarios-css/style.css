@@ -1,0 +1,12 @@
+/*Comentarios CSS
+Use comentarios de estilo CSS para comentar código que no se autodocumente. También tenga en cuenta que debe dejar un espacio entre los asteriscos y el comentario.
+
+/* This is a CSS-style comment */
+/*Ponga sus comentarios en líneas separadas que preceden al código al que se refieren, así:*/
+
+/*h3 {
+  /* Creates a red drop shadow, offset 1px right and down, w/2px blur radius /
+  text-shadow: 1px 1px 2px red;
+  /* Sets the font-size to double the default document font size /
+  font-size: 2rem;
+}*/

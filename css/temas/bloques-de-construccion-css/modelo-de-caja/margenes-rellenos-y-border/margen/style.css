@@ -1,0 +1,36 @@
+/*Margen
+El margen es un espacio invisible que hay alrededor de la caja. Aleja el resto de elementos de la caja. Los márgenes pueden tener valores positivos o negativos. Establecer un margen negativo para un lado de tu caja puede hacer que se superponga con otros elementos de la página. Tanto si utilizas el modelo de cajas estándar como el alternativo, el margen siempre se añade después de haber calculado el tamaño de la caja que se ve.
+
+Podemos controlar todos los márgenes de un elemento a la vez usando la propiedad margin, o cada lado individualmente usando las propiedades equivalentes sin abreviar:
+
+margin-top (en-US)
+margin-right
+margin-bottom
+margin-left (en-US)*/
+
+/*En el ejemplo siguiente, cambia los valores de margen para ver cómo se empuja la caja debido al espacio que el margen crea o se elimina (si es un margen negativo) entre este elemento y el elemento que lo contiene.*/
+
+.box {
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 4em;
+    border: 5px solid black;
+  }
+
+/*Colapso del margen
+Un punto clave a la hora de entender los márgenes es el concepto de colapso del margen. Si tienes dos elementos cuyos márgenes se tocan, esos márgenes se combinan para convertirse en un solo margen, cuyo tamaño es el del margen más grande.
+
+En el ejemplo siguiente hay dos párrafos. El párrafo superior tiene un atributo margin-bottom de 50 píxeles. El segundo párrafo tiene un atributo margin-top de 30 píxeles. Los márgenes colapsan, por lo que el margen real entre las cajas es de 50 píxeles, y no el total de ambos márgenes.
+
+Pruébalo ajustando el atributo margin-top del segundo párrafo a 0. El margen visible entre los dos párrafos no cambiará, sino que conservará los 50 píxeles fijados en el atributo bottom-margin del primer párrafo.*/
+
+.one {
+    margin-bottom: 50px;
+  }
+  
+  .two {
+    margin-top: 20px;
+  }
+  /*Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre entender el colapso de márgenes. Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.*/
+  

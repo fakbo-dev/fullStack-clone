@@ -1,0 +1,10 @@
+/*Comprender el modelo de cajas
+En artículos anteriores hemos expuesto el modelo de cajas, y el hecho de que tengamos un modelo de cajas alternativo que cambia la forma en que se calcula el tamaño de los elementos en función del tamaño que les asignas, más el relleno y los bordes. Las DevTools realmente pueden ayudarte a comprender cómo se calcula el tamaño de un elemento.
+
+El panel de disposición muestra un diagrama del modelo de cajas en el elemento seleccionado, junto con una descripción de las propiedades y los valores que cambian la forma en que el elemento se presenta. Esto incluye una descripción de las propiedades que puedes no haber utilizado explícitamente en el elemento, pero que tienen valores iniciales establecidos.
+
+En esta ventana, una de las propiedades que se detallan es la propiedad box-sizing, que controla qué modelo de cajas usa el elemento.
+
+Compara las dos cajas con las clases box1 y box2. Ambas tienen el mismo ancho aplicado (400 px), sin embargo, box1 es visualmente más ancha. En la ventana de diseño puedes ver que usa content-box. Este es el valor que toma el tamaño que asignas al elemento y luego añade el área de relleno y el ancho del borde.
+
+El elemento con una clase box2 usa border-box, por lo que aquí el área de relleno y el borde se restan del tamaño que has asignado al elemento. Esto significa que el espacio que la caja ocupa en la página es el tamaño exacto que se ha especificado, en nuestro caso width: 400px.*/

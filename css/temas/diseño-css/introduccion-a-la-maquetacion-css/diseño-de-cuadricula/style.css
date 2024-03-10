@@ -1,0 +1,41 @@
+/*diseño de cuadriculas*/
+
+/*Mientras que el método Flexbox está pensado para distribuir elementos unidimensionalmente, el diseño de cuadrícula está diseñado para distribuir elementos en dos dimensiones: alinear elementos en filas y columnas.
+
+Una vez más, puedes activar el diseño de páginas web en cuadrícula con un valor de visualización específico: display: grid. El ejemplo siguiente utiliza un marcado similar al del ejemplo del método Flexbox, con un contenedor y algunos elementos secundarios. Además de usar display: grid, también definimos algunos tramos de filas y columnas en el elemento padre con las propiedades grid-template-rows y grid-template-columns. Hemos definido tres columnas, cada una de 1fr, y dos filas de 100px. No necesitamos poner ninguna regla sobre los elementos secundarios porque se colocan automáticamente en las celdas que nuestra cuadrícula ha creado.*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
+}
+
+/*Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explícitamente en lugar de confiar en el comportamiento de colocación automática que hemos visto arriba. En el segundo ejemplo, hemos definido la misma cuadrícula, pero esta vez con tres elementos secundarios. Hemos establecido la línea de inicio y final de cada elemento con las propiedades grid-column (en-US) y grid-row (en-US). Esto hace que los elementos abarquen varios tramos.*
+
+*/
+
+/*.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+
+.box1 {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.box2 {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.box3 {
+    grid-row: 2;
+    grid-column: 3;
+}
+*/
+
+/*Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre Diseñar cuadrículas.*/

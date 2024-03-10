@@ -1,0 +1,69 @@
+/*Cajas en bloque y en línea
+
+En CSS, en general, hay dos tipos de cajas: cajas en bloque y cajas en línea. Estas características se refieren al modo como se comporta la caja en términos de flujo de página y en relación con otras cajas de la página:
+
+Si una caja se define como un bloque, se comportará de las maneras siguientes:
+
+La caja fuerza un salto de línea al llegar al final de la línea.
+La caja se extenderá en la dirección de la línea para llenar todo el espacio disponible que haya en su contenedor. En la mayoría de los casos, esto significa que la caja será tan ancha como su contenedor, y llenará el 100% del espacio disponible.
+Se respetan las propiedades width y height.
+El relleno, el margen y el borde mantienen a los otros elementos alejados de la caja.
+A menos que decidamos cambiar el tipo de visualización a en línea, elementos como los encabezados (por ejemplo, <h1>) y todos los elementos <p> usan por defecto block como tipo de visualización externa.
+
+
+Si una caja tiene una visualización externa de tipo inline, entonces:
+
+La caja no fuerza ningún salto de línea al llegar al final de la línea.
+Las propiedades width y height no se aplican.
+Se aplican relleno, margen y bordes verticales, pero no mantienen alejadas otras cajas en línea.
+Se aplican relleno, margen y bordes horizontales, y mantienen alejadas otras cajas en línea.
+El elemento <a>, que se utiliza para los enlaces, y los elementos <span>, <em> y <strong> son ejemplos de elementos que se muestran en línea por defecto.
+
+El tipo de caja que se aplica a un elemento está definido por los valores de propiedad display, como block y inline, y se relaciona con el valor externo (outer) de visualización (display).*/
+
+/*Aparte: tipos de visualización interna y externa
+En este punto, será mejor que también expliquemos los tipos de visualización interna y externa. Como se mencionó anteriormente, las cajas en CSS tienen un tipo de visualización externa, que define si se trata de una caja en bloque o en línea.
+
+Sin embargo, las cajas también tienen un tipo de visualización interna, que determina cómo se disponen los elementos dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en flujo normal, lo que significa que se comportan como otros elementos de tipo en bloque o en línea (como se explicó anteriormente).
+
+Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de display, como flex. Si en un elemento establecemos display: flex;, el tipo de visualización externa es de tipo bloque (block), pero el tipo de visualización interna cambia a flexible (flex). Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo con las reglas que se establecen en la especificación de Flexbox, tema que veremos más adelante.*/
+
+/*A medida que vayas aprendiendo más detalles sobre el diseño CSS, te irás encontrando con el valor flex y con otros valores internos que puedan presentar tus cajas, por ejemplo, grid.
+
+Sin embargo, la disposición en bloque y en línea es la forma predeterminada cómo se comportan las cosas en la web; como ya dijimos, a veces esto se conoce como flujo normal, porque nuestras cajas se dispondrán en bloque o en línea, si no reciben ninguna otra instrucción.*/
+
+/*Ejemplos de diferentes tipos de visualización
+Sigamos adelante y veamos algunos ejemplos. A continuación tenemos tres elementos HTML diferentes, todos con visualización externa de tipo block. El primero es un párrafo, que tiene un borde añadido con CSS. El navegador representa esto como una caja en bloque, por lo que el párrafo comienza en una línea nueva y se expande por todo el ancho disponible.
+
+El segundo es una lista, que se presenta usando display: flex. Esto establece una disposición flexible para los elementos que están dentro del contenedor; sin embargo, la lista en sí misma es una caja que se comporta en bloque y, como el párrafo, se expande por todo el ancho del contenedor y fuerza un salto de línea al llegar al final de línea.
+
+Debajo hay un párrafo a nivel de bloque, dentro del cual hay dos elementos <span>. Estos elementos normalmente serían de tipo inline; sin embargo, uno de los elementos tiene una clase de bloque, y lo hemos establecido como display: block.*/
+
+p, 
+ul {
+  border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+
+.block,
+li {
+  border: 2px solid blue;
+  padding: .5em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}      
+
+/*Podemos ver cómo se comportan los elementos inline en el ejemplo siguiente. Los elementos <span> del primer párrafo están en línea de manera predeterminada y, por lo tanto, no fuerzan ningún salto de línea.
+
+También hay un elemento <ul> que se establece como display: inline-flex, que crea una caja con un comportamiento de tipo en línea alrededor de algunos elementos de tipo flex.
+
+Finalmente, hay dos párrafos configurados con display: inline. El contenedor flexible en línea y los párrafos fluyen todos juntos en línea, en lugar de dividirse en líneas nuevas como lo harían si se mostraran como elementos de bloque.
+
+En el ejemplo puedes cambiar display: inline por display: block o display: inline-flex y por display: flex para alternar entre estos modos de visualización.*/

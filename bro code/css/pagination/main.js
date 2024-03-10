@@ -1,0 +1,1 @@
+const arroL = document.querySelector();

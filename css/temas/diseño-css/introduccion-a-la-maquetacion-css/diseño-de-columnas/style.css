@@ -1,0 +1,13 @@
+/*Diseño en columnas
+El módulo de diseño en columnas nos proporciona un modo de distribuir el contenido en columnas, de forma similar al modo como el texto fluye en un periódico. Aunque en un contexto web leer en columnas de arriba a abajo no resulta tan útil porque podría obligar a los usuarios a tener que hacer desplazamientos de arriba a abajo, la técnica de organizar el contenido en columnas también puede tener su utilidad.
+
+Para convertir un bloque en un contenedor, utilizamos la propiedad column-count, que le dice al navegador cuántas columnas nos gustaría tener, o column-width (en-US), que le dice al navegador que llene el contenedor con tantas columnas de al menos ese ancho.
+
+En el ejemplo siguiente comenzamos con un bloque de HTML dentro de un elemento <div> que contiene una clase container.*/
+
+/*Ejemplo
+Utilizamos un column-width de 200 píxeles en ese contenedor, que crea en el navegador tantas columnas de 200 píxeles como quepan en el contenedor y luego comparte el espacio restante entre las columnas creadas.*/
+
+.container {
+    column-width: 200px;
+}

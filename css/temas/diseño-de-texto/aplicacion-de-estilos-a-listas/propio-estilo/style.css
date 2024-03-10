@@ -1,0 +1,44 @@
+/*general style*/
+
+html {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 10px;
+    background: black;
+    color: white;
+}
+h2 {
+    font-size: 2rem;
+}
+
+p,
+ul,
+ol,
+dl {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+/*unordered list style*/
+ul {
+    list-style-type: none;
+    padding-left: 2rem;
+}
+
+ul li {
+    padding-left: 2rem;
+    background-image: url(star.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+}
+/*ordered list style*/
+ol {
+    list-style-type: upper-roman;
+}
+/*description list tyle*/
+dt {
+    font-weight: bold;
+}
+dd,
+dt {
+    line-height: 1.5;
+}

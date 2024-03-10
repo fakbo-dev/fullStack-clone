@@ -1,0 +1,17 @@
+/*Las listas se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.*/
+
+
+/*Un ejemplo sencillo de lista
+Para empezar, veamos un ejemplo sencillo de una lista. A lo largo de este artículo veremos listas no ordenadas, listas ordenadas y listas de descripciones; todas tienen características de estilo similares, algunas que son particulares del tipo de lista. El ejemplo sin ningún estilo aplicado está disponible en Github (consulta también el código fuente.)
+
+El HTML para nuestro ejemplo de lista se ve así:*/
+
+
+
+/*Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las herramientas de desarrollador del navegador, observarás un par de valores de estilo predeterminados:
+
+Los elementos <ul> y <ol> tienen un margin superior e inferior de 16px (1em) y un padding-left (en-US) de 40px (2.5em.)
+Los elementos de lista <li> no tienen valores de espacio predeterminados.
+El elemento <dl> tiene un margin superior e inferior de 16px (1em), pero no tiene ningún padding establecido.
+Los elementos <dd> tienen un margin-left (en-US) de 40px (2.5em).
+Los elementos de referencia <p> que hemos incluido tienen un margin superior e inferior de 16px (1em), al igual que los diferentes tipos de lista.*/

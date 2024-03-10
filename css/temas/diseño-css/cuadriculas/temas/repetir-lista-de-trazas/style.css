@@ -1,0 +1,10 @@
+/*Repetir listas de trazas
+Puedes repetir todas tus trazas, o una sección de tu lista de trazas, con la notación de repetición. Cambia tu lista de trazas por lo siguiente:*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+/*Copy to ClipboardCopy to Clipboard
+Ahora vas a tener 3 trazas de 1fr, igual que antes. El primer valor que pasas a la función de repetición son las veces que deseas que la lista se repita, mientras que el segundo valor es una lista de trazas, que puede constar de una o más trazas.*/

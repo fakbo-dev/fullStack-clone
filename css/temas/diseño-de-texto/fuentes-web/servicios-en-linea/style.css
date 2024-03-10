@@ -1,0 +1,37 @@
+/*Los servicios de tipos de letra en línea
+Los servicios de tipos de letra en línea en general guardan tipos de letra y los proporcionan a los usuarios, por lo que no tienes que preocuparte por escribir el código @font-face, solo necesitas insertar una o dos sencillas líneas de código en tu sitio web para que todo funcione. Los ejemplos incluyen Adobe Fonts y Cloud.typography. La mayoría de estos servicios se basan en suscripciones de pago, con la excepción notable de Google Fonts, un servicio gratuito y muy útil, sobre todo para trabajos de prueba rápida y escritura de ejemplos de demostración.
+
+La mayoría de estos servicios son fáciles de usar, por lo que no vamos a exponerlos en gran detalle. Vamos a echar un vistazo rápido a las fuentes de Google, para que te hagas una idea. De nuevo, usa copias de web-font-start.html y web-font-start.css como punto de partida.
+
+Ve a Google Fonts.
+Usa los filtros del lado izquierdo para indicar los tipos de letra que deseas escoger y elige un par de tipos de letra que te gusten.
+Para seleccionar una familia de tipos de letra, pulsa el botón ⊕ que encontrarás al lado.
+Cuando hayas elegido las familias de tipos de letra, pulsa la barra [número] familias seleccionadas que encontrarás en la parte inferior de la página.
+En la pantalla resultante, primero debes copiar la línea de código HTML que se muestra y pegarla en el encabezado de tu archivo HTML. Ponlo encima del elemento <link>, de modo que el tipo de letra se importe correctamente antes de intentar utilizarlo en tu CSS.
+Luego, debes copiar las declaraciones CSS enumeradas en tu CSS según corresponda para aplicar los tipos de letra personalizados a tu HTML.*/
+
+/*Nota: Puedes encontrar una versión completa en google-font.html y google-font.css, si necesitas comparar tu trabajo con el nuestro (consúltalo en vivo).*/
+
+
+/*@font-face con más detalle
+Vamos a explorar que la sintaxis correspondiente a @font-face que te ha generado Fontsquirrel. Uno de los bloques se verá así:
+
+@font-face {
+  font-family: 'ciclefina';
+  src: url('fonts/cicle_fina-webfont.eot');
+  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
+         url('fonts/cicle_fina-webfont.woff') format('woff'),
+         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
+         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+Copy to Clipboard
+Esto se conoce como «sintaxis @font-face a prueba de balas» desde una publicación de Paul Irish, en los tiempos en que @font-face empezaba a popularizarse (Bulletproof @font-face Syntax). Vamos a ver qué hace:
+
+font-family: Esta línea especifica el nombre con el que vas a referirte a la fuente. Puedes poner el que quieras, siempre y cuando lo uses de manera coherente a lo largo de tu CSS.
+src: Estas líneas especifican las rutas de acceso a los archivos de tipos de letra para que puedas importarlos a tu CSS (la parte URL) y el formato de cada archivo de tipo de letra (la parte format). La última parte en cada caso es opcional, pero es útil declararla porque permite que los navegadores encuentren más rápido un tipo de letra que puedan usar. Se pueden enumerar varias declaraciones, separadas por comas: el navegador buscará por ellas y usará la primera que encuentre. Por lo tanto, es mejor poner formatos nuevos y mejores, como WOFF2 y formatos más antiguos, no tan buenos, como TTF. La única excepción son las fuentes EOT: se colocan primero para corregir un par de errores en versiones anteriores de Internet Explorer, por lo que intentará usar lo primero que encuentre, incluso si realmente no puede usar la fuente.
+font-weight/font-style: Estas líneas especifican qué grueso tiene el tipo de letra y si se muestra en cursiva o no. Si vas a importar diversos grosores del mismo tipo de letra, puedes especificar cuál es su grueso/estilo y luego usar valores de font-weight / font-style diferentes para elegir entre ellos, en lugar de tener que llamar a todos los diferentes miembros de la familia de tipos de letra con nombres distintos. @tip-face tip: define font-weight and font-stile to keep your CSS simple de Roger Johansson muestra qué hacer con más detalle.*/
+
+/*Nota: También puedes especificar los valores particulares font-variant y font-stretch (en-US) para tus tipos de letra seguros para web. En los navegadores más nuevos también puedes especificar un valor unicode-range (en-US), que es un rango de caracteres específicos que debes usar aparte del tipo de letra seguro para web en los navegadores que incluyan esta opción. Solo se descargaran los caracteres especificados y te ahorrarás descargas innecesarias. Creating Custom Font Stacks with Unicode-Range de Drew McLellan proporciona algunas ideas útiles sobre cómo hacer uso de todo esto.*/

@@ -1,0 +1,22 @@
+/*Jugar con los modelos de cajas
+En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase .box, lo que les da los mismos atributos width, height, margin, border y padding. La única diferencia es que la segunda caja se ha configurado para utilizar el modelo de cajas alternativo.
+
+¿Puedes cambiar el tamaño de la segunda caja (añadiendo CSS a la clase .alternate) para que su anchura y altura coincidan con las de la primera caja?*/
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
+
+.alternate {
+  box-sizing: border-box;
+  width: 390px;
+  height: 240px;
+}
+
+/*Utilizar las DevTools del navegador para ver el modelo de cajas
+Las herramientas del desarrollador de tu navegador pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.*/

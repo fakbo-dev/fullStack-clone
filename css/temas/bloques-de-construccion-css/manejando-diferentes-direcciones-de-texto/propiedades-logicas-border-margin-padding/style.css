@@ -1,0 +1,44 @@
+/*En las últimas dos lecciones aprendimos acerca del modelo de cajas con CSS, y los bordes CSS. En las propiedades margin, border y padding vas a encontrar varias instancias de propiedades físicas, por ejemplo margin-top (en-US), padding-left (en-US), y border-bottom. Del mismo modo que tenemos asignaciones para ancho y alto, hay asignaciones para estas propiedades.
+
+La propiedad margin-top está asignada a margin-block-start, esto siempre se va a referir al margen al inicio de la dimensión del bloque.
+
+La propiedad padding-left (en-US) se asigna a padding-inline-start, el padding que se aplica al inicio de la dirección inline. Aquí será donde las oraciones comienzan en ese modo de escritura. La propiedad border-bottom se asigna a border-block-end, que es el borde del final de la dimensión del bloque.*/
+
+
+
+
+/*Puedes ver una comparación entre las propiedades físicas y lógicas a continuación.
+
+Si cambias el modo de escritura de las cajas asignando a la propiedad writing-mode en .box a vertical-rl, vas a ver como las propiedades físicas se quedan ligadas a sus direcciones físicas, mientras que las propiedades lógicas cambian con el modo de escritura.
+
+También puedes ver que el <h2> (en-US) tiene un border-bottom negro. ¿Puedes averiguar como hacer que el borde inferior siempre esté debajo del texto en ambos modos de escritura?*/
+
+.box {
+    inline-size: 200px;
+    writing-mode: vertical-rl;
+  }
+  
+  .logical {
+    margin-block-start: 20px;
+    padding-inline-end: 2em;
+    padding-block-start: 2px;
+    border-block-start: 5px solid pink;
+    border-inline-end: 10px dotted rebeccapurple;
+    border-block-end: 1em double orange;
+    border-inline-start: 1px solid black;
+  }
+  
+  .physical {
+    margin-top: 20px;
+    padding-right: 2em;
+    padding-top: 2px;
+    border-top: 5px solid pink;
+    border-right: 10px dotted rebeccapurple;
+    border-bottom: 1em double orange;
+    border-left: 1px solid black;
+  }
+  
+  h2 {
+    border-block-end: 5px solid black;
+    
+  }

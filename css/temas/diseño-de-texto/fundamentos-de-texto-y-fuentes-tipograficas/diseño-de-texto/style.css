@@ -1,0 +1,90 @@
+
+html {
+    font-size: 10px;
+  }
+  
+  h1 {
+    font-size: 2.6rem;
+    text-transform: capitalize;
+  }
+  
+  h1 + p {
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.4rem;
+    color: red;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+
+  h1 {
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+}
+
+/*Alineación del texto
+La propiedad text-align (en-US) se usa para controlar la forma en que el texto se alinea dentro de la caja que lo contiene. Los valores disponibles para esta propiedad son los siguientes, y funcionan de la misma forma que en una aplicación de procesamiento de texto:
+
+left: Alinea el texto por la izquierda.
+right: Alinea el texto por la derecha.
+center: Centra el texto.
+justify: Varía los espacios entre las palabras para que todas las líneas de texto tengan el mismo ancho. Debes usar este valor con prudencia porque puede quedar terrible, especialmente si el párrafo al que se aplica contiene muchas palabras largas. Si tienes intención de utilizar esta propiedad, también deberías pensar en alguna otra, como hyphens, para dividir las palabras largas entre las líneas.
+Si aplicamos text-align: center; al elemento <h1> (en-US) de nuestro ejemplo, obtendremos esto:*/
+
+h1{
+    text-align: center;
+}
+
+/*Interlineado
+La propiedad line-height establece la altura entre cada línea de texto; esta propiedad admite la mayoría de las unidades y magnitudes, pero también puede tomar un valor sin unidades, que actúa como un multiplicador y generalmente se considera la mejor opción porque se multiplica la propiedad font-size para obtener la altura de la línea (line-height). El texto del cuerpo (body) generalmente se ve mejor y es más fácil de leer si hay más separación entre las líneas; la altura recomendada de la línea es entre 1.5-2 (a doble espacio). Por lo tanto, para configurar nuestras líneas de texto a 1.5 veces la altura de la fuente, deberías usar esto:*/
+
+p{
+    line-height: 1.5;
+}
+
+/*Espacio entre letras y espacio entre palabras
+Las propiedades letter-spacing (en-US) y word-spacing (en-US) te permiten establecer el espacio entre las letras y entre las palabras del texto. No los usarás a menudo, pero podría ser útil para obtener una apariencia determinada o para mejorar la legibilidad de un tipo de letra particularmente denso. Estas propiedades admiten la mayoría de las unidades y magnitudes.
+
+Así, como ejemplo, podemos aplicar a la primera línea de los elementos <p> de nuestro ejemplo lo siguiente:*/
+
+p::first-line {
+  letter-spacing: 2px;
+  word-spacing: 4px;
+}
+
+
+/*Otras propiedades interesantes
+Las propiedades anteriores nos dan una idea de cómo empezar a aplicar texto a una página web, pero hay muchas más propiedades que puedes usar. Nuestro objetivo aquí es solo exponer las más importantes. Cuando te hayas acostumbrado a usar las propiedades anteriores, también deberías explorar las siguientes:
+
+Aplicación de estilos a tipos de letra:
+
+font-variant: Cambia entre las opciones de versalita y normal del tipo de letra.
+font-kerning (en-US): Activa/Desactiva las opciones de interletraje del tipo de letra.
+font-feature-settings (en-US): Activa/Desactiva diversas características de los tipos de letra OpenType.
+font-variant-alternates: Controla el uso de los caracteres alternativos para un tipo de letra dado.
+font-variant-caps (en-US): Controla el uso de los caracteres alternativos de las mayúsculas.
+font-variant-east-asian (en-US): Controla el uso de los caracteres alternativos en textos en idiomas del Asia Oriental, como el japonés y el chino.
+font-variant-ligatures (en-US): Controla qué ligaduras y formas contextuales se usarán en el texto.
+font-variant-numeric (en-US): Controla el uso de los caracteres alternativos para números, fracciones y marcadores de ordinales.
+font-variant-position (en-US): Controla el uso de los caracteres alternativos de tamaños más pequeños posicionados como subíndice y superíndice.
+font-size-adjust: Ajusta el tamaño visual del texto independientemente del tamaño real del tipo de letra.
+font-stretch (en-US): Cambia entre posibles versiones ampliadas de un tipo de letra determinado.
+text-underline-position (en-US): Especifica la posición de los subrayados con el valor underline de la propiedad text-decoration-line.
+text-rendering (en-US): Intenta optimizar la representación del texto.
+Estilos de disposición de los textos
+
+text-indent (en-US): Especifica el espacio horizontal que debe dejarse antes del comienzo de la primera línea del contenido de texto.
+text-overflow: Define cómo se señala el contenido que los usuarios no ven porque desborda.
+white-space: Define cómo se usan los espacios en blanco y los saltos de línea asociados dentro del elemento.
+word-break (en-US): Especifica si se deben dividir las palabras a final de línea.
+direction: Define la dirección del texto (esto depende del idioma, y por lo general es mejor dejar que HTML maneje esa parte, porque está vinculada al contenido del texto).
+hyphens: Activa/Desactiva la separación de palabras en los idiomas admitidos.
+line-break (en-US): Relaja o refuerza el salto de línea en los idiomas asiáticos.
+text-align-last (en-US): Define cómo es la alineación de la última línea de un bloque o línea justo antes de un salto de línea forzado.
+text-orientation: Define la orientación del texto en una línea.
+word-wrap (en-US): Especifica si el navegador puede dividir palabras a final de línea para evitar desbordamientos del contenido.
+writing-mode: Define si las líneas de texto se disponen en horizontal o en vertical y la dirección en la que fluyen las líneas subsiguientes./

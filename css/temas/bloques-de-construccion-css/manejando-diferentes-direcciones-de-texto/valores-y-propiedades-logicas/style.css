@@ -1,0 +1,34 @@
+/*Valores y propiedades lógicas
+La razón de hablar acerca de modos de escritura y dirección en este punto en tu aprendizaje, es por el hecho de que ya vimos muchas de estas propiedades que están atadas a las dimensiones físicas de la pantalla, y tienen más sentido cuando está en un modo de escritura horizontal.
+
+Vamos a echarle un vistzo a nuestras dos cajas de nuevo, una con el modo escritura horizontal-tb y otro con vertical-rl. Le hemos dado a estas dos cajas un width. Puedes ver que cuando la caja está en el modo de escritura vertical, aún tiene una anchura, y esto está causando que el texto se desborde.*/
+
+.box {
+  width: 150px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+  display: inline;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+/*Lo que nosotros realmente queremos en este escenario, es esencialmente intercambiar altura y anchura junto con el modo de escritura. Cuando estamos en el modo de escritura vertical, queremos que la caja se expanda en la dimensión del bloque así como lo hace en el modo horizontal.
+
+Para hacerlo más fácil, CSS ha desarrollado recientemente un conjunto de propiedades asignadas. Estas esencialmente reemplazan las propiedades físicas como width and height, con versiones lógicas o relativas al flujo.
+
+La propiedad asignada a width cuando está en el modo de escritura horizontal se llama inline-size, se refiere al tamaño en la dimensión inline. La propiedad para height se llama block-size y es el tamaño en la dimensión de bloque. Puedes ver como funciona en el ejemplo de abajo, donde reemplazamos width con inline-size.*/
+
+.box {
+  inline-size: 150px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}

@@ -1,0 +1,27 @@
+
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 2em auto;
+    font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.container > div {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207,232,220);
+    border: 2px solid rgb(79,185,227);
+}
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*La cuadrícula implícita y explícita
+Hasta ahora solo hemos especificado trazas de columna y, sin embargo, también creamos filas para contener nuestro contenido. Este es un ejemplo de una cuadrícula explícita con respecto a una implícita. La cuadrícula explícita es la que creas usando grid-template-columns o grid-template-rows. La cuadrícula implícita se crea cuando el contenido se posiciona fuera de esa cuadrícula, como en nuestras filas. Las cuadrículas explícitas e implícitas son análogas a los ejes principales y transversales del método Flexbox.
+
+Por defecto, las trazas que se crean en la cuadrícula implícita tienen un tamaño auto, lo que en general significa que son lo bastante grandes para ajustarse a su contenido. Si deseas asignar un tamaño a las trazas de las cuadrícula implícitas, puedes usar las propiedades grid-auto-rows y grid-auto-columns. Si añades grid-auto-rows con un valor de 100px a tu CSS, observa que esas filas que has creado ahora tienen 100 píxeles de alto.*/

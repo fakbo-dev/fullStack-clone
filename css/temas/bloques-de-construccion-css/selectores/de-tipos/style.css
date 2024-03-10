@@ -1,0 +1,20 @@
+/*Un selector de tipo también recibe el nombre de selector de nombre de etiqueta o selector de elemento porque selecciona un elemento/etiqueta HTML del documento. En el ejemplo siguiente hemos utilizado los selectores span, em y strong. Se aplica estilo a todas las instancias de los elementos <span>, <em> y <strong>.
+
+Trata de añadir una regla CSS que seleccione el elemento <h1> y cambie su color para que se vea azul.*/
+h1 {
+  color: blue;
+}
+
+span {
+  background-color: yellow;
+}
+
+strong {
+  color: rebeccapurple;
+}
+em {
+  color: rebeccapurple;
+}
+
+
+

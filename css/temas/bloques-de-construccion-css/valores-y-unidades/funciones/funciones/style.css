@@ -1,0 +1,16 @@
+/*Funciones
+
+El último tipo de valor que vamos a analizar es el grupo de valores conocidos como funciones. En programación, una función es un bloque de código reutilizable que es posible ejecutar varias veces para completar una tarea repetitiva con el mínimo esfuerzo tanto por parte del desarrollador como del ordenador. Las funciones suelen asociarse a lenguajes como JavaScript, Python o C++, pero también hay funciones en CSS, como valores de código propietario. Ya hemos visto funciones en acción en la sección sobre los colores: rgb(), hsl(), etc. El valor que se utiliza para devolver una imagen de un archivo, en este caso url(), también es una función.
+
+Un valor que se comporta más como algo que puedes encontrar en un lenguaje de programación tradicional es la función calc(). Esta función te proporciona la capacidad de hacer cálculos simples en tu CSS. Es particularmente útil si deseas calcular valores que no puedes definir al escribir el CSS para tu proyecto y necesitas que el navegador lo haga durante la ejecución.
+
+Por ejemplo, a continuación usamos calc() para hacer que la caja tenga 20% + 100px de ancho. El 20% se calcula a partir del ancho del contenedor principal .wrapper y, por lo tanto, cambiará si ese ancho cambia. No podemos hacer este cálculo de antemano porque no sabemos cuál será el 20% del elemento padre, por lo que usamos calc() para decirle al navegador que lo haga por nosotros.*/
+
+
+.wrapper {
+  width: 400px;
+}
+
+.box {
+  width: calc(20% + 100px);
+}

@@ -1,0 +1,27 @@
+/*En el primer artículo del módulo, exploramos las características básicas del CSS disponibles para aplicar estilos a tipos de letra y al texto. En este artículo vamos a ir más lejos: exploraremos en detalle las tipografías web, que permiten que te descargues tipos de letra personalizados junto con tu página web para lograr un estilo de texto más variado y personalizado.*/
+
+/*Tipografías web
+Hay una alternativa, sin embargo, que funciona muy bien hasta con versiones posteriores a la versión 6 de Internet Explorer. Las tipografías web son una función del CSS que te permite especificar los archivos de tipo de letra que se van a descargar junto con tu sitio web a medida que el usuario acceda a ellos, lo que significa que cualquier navegador que admita tipografías web puede disponer de los tipos de letra que especificas. ¡Increíble! Observa a continuación la sintaxis que se necesita.
+
+En primer lugar, tienes un bloque @font-face al comienzo del CSS, que especifica los archivos de los tipos de letra que quieres que se descarguen:*/
+
+@font-face {
+  font-family: "myFont";
+  src: url("myFont.woff");
+}
+
+/*A continuación, puedes usar el nombre de la familia de tipos de letra especificado en @font-face para aplicar tu tipo de letra personalizado a cualquier elemento que desees:*/
+
+html {
+    font-family: "myfont";
+}
+
+/*La sintaxis es un poco más compleja; más adelante la veremos más detalladamente.
+
+Hay dos cosas importantes a tener en cuenta acerca de las tipografías web:
+
+Los navegadores admiten diferentes formatos de tipos de letra, por lo que necesitarás más de un formato de tipos de letra para conseguir una compatibilidad decente entre navegadores. Por ejemplo, la mayoría de los navegadores modernos admiten WOFF/WOFF2 (Web Open Font Format, versiones 1 y 2), el formato más eficiente disponible. Pero las versiones antiguas de Internet Explorer solo admiten tipos de letra con formato EOT (Embedded Open Type) y es posible que debas incluir una versión SVG del tipo de letra para soportar versiones antiguas de navegadores iPhone y Android. A continuación te mostraremos cómo generar el código necesario.
+Generalmente las fuentes no son de uso gratuito. Debes pagar por ellas y/o respetar otras condiciones de licencia, como acreditar al creador del tipo de letra en el código (o en tu sitio web). Los tipos de letra no deben robarse, ni debes utilizarlos sin otorgar a su creador el crédito apropiado.*/
+
+/*Nota: ¡Los tipos de letra seguros para web como tecnología han sido compatibles con Internet Explorer desde su versión 4!*/
+

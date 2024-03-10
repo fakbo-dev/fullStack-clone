@@ -1,0 +1,108 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: purple;
+    height: 100px;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+  }
+
+  /* Add your flexbox CSS below here */
+
+  section {
+    display: flex;
+  }
+
+  article {
+    flex: 1 200px;
+  }
+
+  article:nth-of-type(3) {
+    flex: 3 200px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  article:nth-of-type(3) div:first-child {
+    flex: 1 100px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  button {
+    flex: 1 auto;
+    margin: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+
+  /*Cajas flexibles anidadas
+Los elementos flexbox permiten crear algunos diseños de página bastante complejos. Es perfectamente aceptable configurar un elemento flexible para que también sea un contenedor flexible, de modo que los elementos secundarios también se dispongan como cajas flexibles. Echa un vistazo a complex-flexbox.html (consúltalo en vivo).*/
+
+/*El HTML para ello es bastante simple. Hay un elemento <section> que contiene tres elementos <article>. El tercer elemento <article> contiene tres elementos <div>:
+
+section - article
+          article
+          article - div - button
+                    div   button
+                    div   button
+                          button
+                          button
+Veamos el código que hemos usado para esta compaginación.
+
+En primer lugar, configuramos los elementos secundarios de <section> para que se presenten como cajas flexibles.
+
+section {
+  display: flex;
+}
+Copy to ClipboardCopy to ClipboardCopy to Clipboard
+A continuación, establecemos algunos valores flexibles en los elementos <article>. Presta una atención especial a la segunda regla: configuramos el tercer elemento <article> para que sus hijos también se presenten como elementos flexibles, pero esta vez los disponemos en una columna.
+
+article {
+  flex: 1 200px;
+}
+
+article:nth-of-type(3) {
+  flex: 3 200px;
+  display: flex;
+  flex-flow: column;
+}
+Copy to ClipboardCopy to ClipboardCopy to Clipboard
+A continuación, seleccionamos el primer elemento <div>. Primero usamos flex:1 100px; para darle una altura mínima efectiva de 100 px, luego configuramos sus elementos secundarios (los elementos <button>) para que también se presenten como elementos flexibles. Aquí los colocamos en una fila que los delimita y los alineamos en el centro del espacio disponible, como hicimos en el ejemplo del botón individual que vimos antes.
+
+article:nth-of-type(3) div:first-child {
+  flex:1 100px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+Copy to ClipboardCopy to ClipboardCopy to Clipboard
+Por último, establecemos un tamaño para el botón, pero lo más interesante es que le damos un valor flexible de 1 auto. Esto tiene un efecto muy interesante, que puedes observar si cambias el tamaño del ancho de la ventana de tu navegador. Los botones ocuparán tanto espacio como puedan y se asentarán tantos en la misma línea como quepan, pero cuando ya no quepan con comodidad en la misma línea, saltarán de línea y crearán líneas nuevas.
+
+button {
+  flex: 1 auto;
+  margin: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}*/

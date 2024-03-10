@@ -1,0 +1,34 @@
+/*Porcentajes
+En muchos casos, un porcentaje es tratado de la misma manera que una longitud. Lo que sucede con los porcentajes es que siempre se establecen en relación con otro valor. Por ejemplo, si estableces el atributo font-size de un elemento como un porcentaje, será un porcentaje del font-size del elemento padre. Si usas un porcentaje para un valor width, será un porcentaje del atributo width del elemento padre.
+
+En el ejemplo siguiente, las dos cajas con el tamaño especificado en unidades de porcentaje y las dos cajas con el tamaño especificado en unidades de píxel tienen los mismos nombres de clase. En ambos conjuntos de cajas, los anchos de las cajas son de 200 píxeles y de 40%, respectivamente.
+
+La diferencia es que el segundo conjunto de dos cajas está dentro de un contenedor que tiene 400 píxeles de ancho. La segunda caja de 200 px de ancho tiene el mismo ancho que la primera, pero la segunda caja de 40% ahora es el 40% de 400 px, ¡mucho más estrecha que la primera!
+
+Cambia el ancho del contenedor o el valor de porcentaje para ver cómo funciona.*/
+
+
+.box {
+    border: 5px solid blue;
+    margin: 1em;
+    background: lightblue;
+}
+.wrapper {
+    width: 400px;
+    border: 5px solid rebeccapurple;
+  }
+  
+  .px {
+    width: 200px;
+  }
+  
+  .percent {
+    width: 40%;
+  }
+
+  /*El ejemplo siguiente tiene tamaños de letra establecidos en porcentajes. Cada elemento <li> tiene un atributo font-size del 80%, por lo tanto, los elementos de la lista anidada se vuelven progresivamente más pequeños a medida que heredan su tamaño del elemento padre.*/
+
+  li {
+    font-size: 80%;
+  }
+

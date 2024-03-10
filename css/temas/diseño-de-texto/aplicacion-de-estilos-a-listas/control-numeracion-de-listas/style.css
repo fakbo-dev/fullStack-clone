@@ -1,0 +1,34 @@
+/*Control de numeración de las listas
+A veces puedes querer numerar las listas de manera diferente, por ejemplo, que empiece con un número que no sea el 1, o que cuente hacia atrás, o que cuente a saltos de más de una unidad. HTML y CSS tienen algunas herramientas para ayudarte con esto.
+
+start
+El atributo start te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
+
+<ol start="4">
+  <li>Toast pitta, leave to cool, then slice down the edge.</li>
+  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pitta with salad, humous, and fried halloumi.</li>
+</ol>*/
+
+/*reversed
+El atributo reversed empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
+
+<ol start="4" reversed>
+  <li>Toast pitta, leave to cool, then slice down the edge.</li>
+  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pitta with salad, humous, and fried halloumi.</li>
+</ol>*/
+
+/*Nota: Si en una lista inversa hay más elementos de lista que el valor que se ha establecido para el atributo start, la numeración continuará hasta cero y luego con valores negativos.*/
+
+/*value
+El atributo value te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
+
+<ol>
+  <li value="2">Toast pitta, leave to cool, then slice down the edge.</li>
+  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="6">Wash and chop the salad.</li>
+  <li value="8">Fill pitta with salad, humous, and fried halloumi.</li>
+</ol>*/

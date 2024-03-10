@@ -1,0 +1,4 @@
+/*Dirección
+Además del modo de escritura también tenemos la dirección del texto. Como se mencionó antes, algunos idiomas como el Árabe se escriben horizontalmente, de derecha a izquierda. Esto no es algo que usarías en un sentido creativo. Si tu simplemente quieres alinear algún elemento a la derecha, existen otras formas de hacerlo. Sin embargo es importante entender esto como parte de la naturaleza del CSS. La web no es solo para lenguajes que son escritos de izquierda a derecha!
+
+Debido al hecho de que el modo de escritura y la dirección del texto pueden cambiar, los nuevos métodos de diseño CSS no toman como referencia la izquierda y derecha, ni la parte superior e inferior. En su lugar, hablarán de inicio y fin junto con esta idea de en línea y bloque. No te preocupes mucho por eso en este momento, pero ten en cuenta estas ideas a medida que empiezas a mirar el diseño de una página web; va a ser de gran ayuda en tu entendimiento de CSS.*/

@@ -1,0 +1,47 @@
+/*Tamaños mínimo y máximo
+
+Además de asignar a las cosas un tamaño fijo, podemos pedirle al CSS que asigne a un elemento un tamaño mínimo o máximo. Si tienes una caja que puede contener una cantidad variable de contenido y deseas que tenga siempre al menos una altura determinada, puedes establecer la propiedad min-height. La caja siempre tendrá al menos esta altura, pero crecerá si hay más contenido del que la caja puede contener.
+
+En el ejemplo siguiente puedes ver dos cuadros, ambos con una altura definida de 150 píxeles. La caja de la izquierda tiene 150 píxeles de alto; la de la derecha contiene contenido que necesita más espacio, por lo que su tamaño supera los 150 píxeles.*/
+
+.wrapper {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.box {
+    border: 5px solid darkblue;
+    min-height: 150px;
+    width: 200px;
+    margin: 20px 10px 0 0;
+  }
+
+/*Esto es muy útil para trabajar con cantidades de contenido variables y asimismo evitar desbordamientos.
+
+Un uso común de max-width (en-US) es para reducir el tamaño de las imágenes si no hay suficiente espacio para mostrarlas en su ancho intrínseco, al asegurarte de que no serán mayores que ese ancho.
+
+A modo de ejemplo, si para una imagen tienes que establecer width: 100% y su ancho intrínseco es menor que su contenedor, la imagen se verá obligada a expandirse y agrandarse, y se pixelará. Si su ancho intrínseco es mayor que su contenedor, se desbordará. No es probable que desees que suceda ninguno de estos casos.
+
+Si en lugar de ello usas max-width: 100%, la imagen puede encogerse con respecto a su tamaño intrínseco, pero no se agranda más allá del 100% de su tamaño.
+
+En el ejemplo siguiente hemos utilizado la misma imagen dos veces. La primera imagen tiene width: 100% y está en un contenedor que es más grande, por lo que se extiende hasta el ancho del contenedor. La segunda imagen tiene max-width: 100% y, por lo tanto, no se estira para llenar el recipiente. La tercera caja contiene la misma imagen de nuevo, también con max-width: 100%; pero en este caso puedes ver cómo se ha reducido para encajar en la caja.*/
+
+.box-2 {
+    width: 200px;
+    border: solid darkblue;
+    margin: 10px;
+  }
+  .minibox {
+    width: 50px;
+    border: solid darkblue;
+  }
+  .width {
+    width: 100%;
+  }
+  .max {
+    max-width: 100%;
+  }
+
+/*Esta técnica se utiliza para dar a las imágenes una respuesta adaptativa, de modo que se reduzcan adecuadamente cuando se visualizan en un dispositivo más pequeño. Sin embargo, no es conveniente usar esta técnica para cargar imágenes demasiado grandes y luego reducirlas en el navegador. Las imágenes deben tener el tamaño adecuado, no deben ser más grandes de lo que sea necesario para el tamaño más grande que se muestran en el diseño. Descargar imágenes muy grandes ralentizará tu sitio y puede costarles más dinero a los usuarios si tienen una conexión tarifada.*/  
+
+/*Obtén más información sobre las técnicas adaptativas para las imágenes.*/

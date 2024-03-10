@@ -1,0 +1,82 @@
+/*Anclaje del fondo
+
+Otra opción que hay disponible para fondos es especificar cómo se desplazan cuando se desplaza el contenido. Esto se controla con la propiedad background-attachment, que puede tomar los valores siguientes:
+
+scroll: Hace que el fondo del elemento se desplace cuando te desplazas por el contenido de la página. Si te desplazas por el contenido del elemento, el fondo no se mueve. El efecto resultante es que el fondo está anclado a la página en una posición fija, por lo que se desplaza a medida que la página se desplaza.
+
+fixed: Hace que el fondo de un elemento quede fijo con respecto a la ventana gráfica, de modo que no se desplace cuando te desplazas por la página o el contenido del elemento. Siempre permanece en la misma posición de la pantalla.
+
+local: Este valor se añadió posteriormente (solo es compatible con Internet Explorer 9+, mientras que los otros son compatibles con IE4+) porque el valor scroll es bastante confuso y en muchos casos no hace lo que deseas. El valor local ancla el fondo al elemento en el que está configurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este.
+
+La propiedad background-attachment solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a background-attachment.html (También puedes consultar el código fuente aquí).*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  body {
+    padding: 1em;
+  }
+  
+  html {
+    background-color: yellow;
+    font-family: sans-serif;
+  }
+  
+  body {
+    height: 2000px;
+  }
+  
+  p {
+    padding: 10px;
+    color: white;
+    background: rgba(0,0,0,0.3);
+  }
+  
+  section {
+    display: flex;
+  }
+  
+  article {
+    flex: 1;
+    height: 400px;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(image/emoji.png);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 1%;
+    overflow: auto;
+  }
+  
+  article pre {
+    height: 800px;
+  }
+  
+  .fixed, .scroll {
+    margin-right: 1%;
+  }
+  
+  .fixed {
+    background-attachment: fixed;
+  }
+  
+  .scroll {
+    background-attachment: scroll;
+  }
+  
+  .local {
+    background-attachment: local;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+
+

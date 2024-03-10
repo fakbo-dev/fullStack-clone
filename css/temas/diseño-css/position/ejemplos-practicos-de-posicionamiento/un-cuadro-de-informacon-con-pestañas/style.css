@@ -1,0 +1,116 @@
+/*Un cuadro de información con pestañas
+El primer ejemplo que veremos es un cuadro de información con pestañas clásico, una característica muy común que se usa cuando desea empaquetar mucha información en un área pequeña. Esto incluye aplicaciones con mucha información como juegos de estrategia / guerra, versiones móviles de sitios web donde la pantalla es estrecha y el espacio es limitado, y cuadros de información compactos donde es posible que desee hacer que haya mucha información disponible sin que llene toda la interfaz de usuario. Nuestro ejemplo simple se verá así una vez que hayamos terminado:*/
+
+/*Podrías estar pensando "¿por qué no crear las pestañas separadas como páginas web separadas, y simplemente hacer que las pestañas hagan clic en las páginas separadas para crear el efecto?" Este código sería más simple, sí, pero entonces cada vista de "página" separada sería en realidad una página web recién cargada, lo que dificultaría guardar información entre vistas e integrar esta característica en un diseño de interfaz de usuario más grande. Además, las llamadas "aplicaciones de una sola página" se están volviendo muy populares, especialmente para las interfaces de usuario web móviles, porque tener todo servido como un solo archivo reduce la cantidad de solicitudes HTTP necesarias para ver todo el contenido, mejorando así el rendimiento.*/
+
+/*Algunos desarrolladores web llevan las cosas aún más lejos, solo tienen una página de información cargada a la vez y cambian dinámicamente la información que se muestra utilizando una característica de JavaScript como XMLHttpRequest. En este punto de su aprendizaje, sin embargo, queremos mantener las cosas lo más simples posible. Hay algo de JavaScript más adelante, pero solo un poco.*/
+
+/*Así que aquí tenemos un elemento <sección> con un de , que contiene un <ul> y un <div>. La lista desordenada contiene tres elementos de lista con enlaces dentro, que se convertirán en las pestañas reales en las que hacer clic para mostrar nuestros paneles de contenido. Contiene tres elementos <artículo>, que conformarán los paneles de contenido que corresponden a cada pestaña. Cada panel contiene contenido de muestra.classinfo-boxdiv
+
+La idea aquí es que diseñaremos las pestañas para que se vean como un menú de navegación horizontal estándar, y diseñaremos los paneles para que se sienten uno encima del otro usando posicionamiento absoluto. También le daremos un poco de JavaScript para incluir en su página para mostrar el panel correspondiente cuando se presiona una pestaña y diseñar la pestaña en sí. No necesitará comprender el JavaScript en sí en esta etapa, pero debe pensar en aprender algo de JavaScript básico lo antes posible: cuanto más complejas sean las características de su interfaz de usuario, más probable es que necesite algo de JavaScript para implementar la funcionalidad deseada.*/
+
+
+/*general style*/
+
+html {
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+/*Esto establece un ancho y alto específicos en el contenido, y lo centra en la pantalla usando el truco anterior. Anteriormente, en el curso, desaconsejamos establecer una altura fija en los contenedores de contenido si es posible; está bien en esta circunstancia porque hemos arreglado contenido en nuestras pestañas. También parece un poco discordante tener diferentes pestañas a diferentes alturas.margin: 0 auto*/
+
+.info-box {
+    width: 450px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+/*Esto establece un ancho y alto específicos en el contenido, y lo centra en la pantalla usando el truco anterior. Anteriormente, en el curso, desaconsejamos establecer una altura fija en los contenedores de contenido si es posible; está bien en esta circunstancia porque hemos arreglado contenido en nuestras pestañas. También parece un poco discordante tener diferentes pestañas a diferentes alturas.margin: 0 auto*/
+
+/*Aplicar estilo a nuestras pestañas
+Ahora queremos diseñar pestañas para que se vean como pestañas; básicamente, estas son un menú de navegación horizontal, pero en lugar de cargar diferentes páginas web cuando se hace clic en ellas como hemos visto anteriormente en el curso, hacen que se muestren diferentes paneles en la misma página. Primero, agregue la siguiente regla en la parte inferior de su CSS para eliminar el relleno predeterminado izquierdo y margin-top de la lista no ordenada:*/
+
+.info-box ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+/*Nota: Estamos usando selectores descendientes con al principio de la cadena a lo largo de este ejemplo, esto es para que podamos insertar esta característica en una página con otro contenido ya en ella, sin temor a interferir con los estilos aplicados a otras partes de la página..info-box*/
+
+
+/*A continuación, aplicaremos estilo a las pestañas horizontales: los elementos de la lista flotan hacia la izquierda para que se sienten en una línea juntos, su tipo de estilo de lista está configurado para deshacerse de las viñetas y su ancho está configurado para que quepan cómodamente en el cuadro de información. Los elementos <a> están configurados para mostrar bloques en línea para que se asienten en una línea pero sigan siendo estilizados, y tienen el estilo apropiado para los botones de tabulación, utilizando una variedad de otras propiedades.none150px*/
+
+
+/*links stlye*/
+.info-box li {
+    float: left;
+    list-style: none;
+    width: 150px;
+}
+
+.info-box li a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: red;
+    color: black;
+    width:100%;
+    line-height: 3;
+    text-align: center;
+}
+
+/*Finalmente, para esta sección, estableceremos algunos estilos en los estados del enlace. Primero, estableceremos los estados y las pestañas para que se vean diferentes cuando estén enfocadas / desplazadas, proporcionando a los usuarios algunos comentarios visuales. En segundo lugar, estableceremos una regla que ponga el mismo estilo en una de las pestañas cuando haya una de presente. Estableceremos esto usando JavaScript cuando se haga clic en una pestaña. Coloca el siguiente CSS debajo de tus otros estilos::focus:hoverclassactive*/
+
+.info-box li a:focus,
+.info-box li a:hover {
+  background-color: #a60000;
+  color: white;
+}
+
+.info-box li a.active {
+  background-color: #a60000;
+  color: white;
+}
+
+/*Estilo de los paneles
+El siguiente trabajo es diseñar nuestros paneles. ¡Vamos a empezar!
+
+En primer lugar, agregue la siguiente regla para aplicar estilo al contenedor <div>. Aquí establecemos una altura fija para asegurarnos de que los paneles encajen perfectamente dentro del cuadro de información, la posición para establecer el <div> como contexto de posicionamiento, para que luego pueda colocar elementos secundarios posicionados en relación con él y no con la ventana gráfica inicial, y finalmente borramos el conjunto flotante en el CSS anterior para que no interfiera con el resto del diseño..panelsrelative*/
+
+.info-box .panels {
+    height: 352px;
+    position: relative;
+    clear: both;
+  }
+  
+/*Finalmente, para esta sección, diseñaremos los elementos individuales <artículo> que componen nuestros paneles. La primera regla que agregaremos posicionará absolutamente los paneles y hará que todos se queden al ras de la parte superior e izquierda de su contenedor <div>: esta parte es absolutamente clave para toda esta característica de diseño, ya que hace que los paneles se sienten uno encima del otro. La regla también da a los paneles la misma altura establecida que el contenedor, y le da al contenido algo de relleno, un color de texto y un color de fondo.
+
+La segunda regla que agregaremos aquí hace que un panel con un conjunto tenga un índice z de 1 aplicado, lo que hará que se siente por encima de los otros paneles (los elementos posicionados tienen un de 0 por defecto, lo que los pondría por debajo). Nuevamente, agregaremos esta clase usando JavaScript en el momento apropiado.classactive-panelz-index*/
+
+.info-box article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 352px;
+    padding: 10px;
+    color: white;
+    background-color: #a60000;
+  }
+  
+  .info-box .active-panel {
+    z-index: 1;
+  }
+  
+
+
+
+
+
+
+
+
+

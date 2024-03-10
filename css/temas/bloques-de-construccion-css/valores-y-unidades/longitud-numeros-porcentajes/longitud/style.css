@@ -1,0 +1,74 @@
+/*Longitudes
+El tipo numérico con el que te vas a encontrar con mayor frecuencia es <length>, por ejemplo, 10px (píxeles) o 30em. En CSS se utilizan dos longitudes diferentes: relativa y absoluta. Es importante conocer la diferencia para entender qué dimensiones van a tener las cosas.*/
+
+/*Unidades de longitud absoluta
+
+Todas las unidades siguientes son unidades de longitud absoluta: no son relativas a nada más y en general se considera que siempre tienen el mismo tamaño.
+
+Unidad	Nombre	Equivale a
+cm	Centímetros	1cm = 96px/2,54
+mm	Milímetros	1mm = 1/10 de 1cm
+Q	Cuartos de milímetros	1Q = 1/40 de 1cm
+in	Pulgadas	1in = 2,54cm = 96px
+pc	Picas	1pc = 1/6 de 1in
+pt	Puntos	1pt = 1/72 de 1in
+px	Píxeles	1px = 1/96 de 1in*/
+
+/*La mayoría de estos valores son más útiles cuando se usan en una salida en formato impreso que en la salida de pantalla. Por ejemplo, normalmente no usamos cm (centímetros) en pantalla. El único valor que usarás de forma frecuente es px (píxeles).*/
+
+/*Unidades de longitud relativa
+
+Las unidades de longitud relativa son relativas a algo más, por ejemplo, al tamaño de letra del elemento principal o al tamaño de la ventana gráfica. La ventaja de usar unidades relativas es que con una planificación cuidadosa puedes lograr que el tamaño del texto u otros elementos escalen en relación con todo lo demás en la página. En la tabla siguiente se enumeran algunas de las unidades más útiles para el desarrollo web.*/
+
+/*em	Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como width.
+
+ex	Altura x de la fuente del elemento.
+
+ch	La medida de avance (ancho) del glifo "0" de la letra del elemento.
+
+rem	Tamaño de la letra del elemento raíz.
+
+lh	Altura de la línea del elemento.
+
+vw	1% del ancho de la ventana gráfica.
+
+vh	1% de la altura de la ventana gráfica.
+
+vmin	1% de la dimensión más pequeña de la ventana gráfica.
+
+vmax	1% de la dimensión más grande de la ventana gráfica.*/
+
+
+/*Un ejemplo de análisis
+
+En el ejemplo siguiente puedes ver cómo se comportan algunas unidades de longitud relativa y absoluta. La primera caja tiene un ancho (width) establecido en píxeles. Como unidad absoluta, este ancho será siempre el mismo aunque lo demás cambie.
+
+La segunda caja tiene un ancho establecido en unidades vw (ancho de ventana). Este valor es relativo al ancho de la ventana gráfica, por lo que 10vw es el 10 por ciento del ancho de la ventana gráfica. Si cambiases el ancho de la ventana de tu navegador, el tamaño de la caja cambiaría. Sin embargo, esto no te va a funcionar porque este ejemplo se ha incrustado en la página usando <iframe>. Para verlo en acción debes probar el ejemplo después de abrirlo en una pestaña independiente de tu navegador.
+
+La tercera caja utiliza unidades em. Son unidades relativas al tamaño de la letra. Hemos establecido un tamaño de fuente de 1em en el contenido <div>, que tiene una clase .wrapper. Si cambias este valor a 1.5em, verás que el tamaño de letra de todos los elementos aumenta, pero solo se amplía el ancho en el último elemento, porque el ancho es relativo a ese tamaño de letra.
+
+Después de seguir las instrucciones anteriores, juega un poco más con los valores para ver qué obtienes.*/
+
+
+.box{
+  background-color: lightblue;
+    border: 5px solid darkblue;
+    padding: 10px;
+    margin: 1em 0;
+}
+
+.wrapper {
+  font-size: 1.5em;
+}
+
+.px {
+  width: 200px;
+}
+
+.vw {
+  width: 10vw;
+}
+
+.em {
+  width: 10em;
+}
