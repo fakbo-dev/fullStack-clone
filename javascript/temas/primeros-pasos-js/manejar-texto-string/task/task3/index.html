@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+
+
+    // Add your code here
+    /*En la siguiente tarea de cadena, se le da la misma cotización con la que terminó en la tarea anterior, ¡pero está un poco rota! Queremos que lo arregles y actualices, así:
+
+Cambie el uso de mayúsculas y minúsculas al caso correcto de la oración (todo en minúsculas, excepto la primera letra en mayúsculas). Almacene la nueva cotización en una variable llamada fixedQuote.
+En fixedQuote, reemplaza "huevos verdes con jamón" por otro alimento que realmente no te guste.
+Hay una pequeña solución más que hacer: agregue un punto al final de la cita y guarde la versión final en una variable llamada finalQuote.*/
+const quote = 'I dO nOT lIke gREen eGgS anD HAM';
+
+// Add your code here
+const lower = quote.toLowerCase();
+const firstL = lower[0];
+let fixedQuote = lower.replace(firstL, firstL.toUpperCase());
+fixedQuote = fixedQuote.replace('green eggs and ham', 'coconut and pineapple');
+const finalQuote = `${fixedQuote}.`
+
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+const para1 = document.createElement('p');
+para1.textContent = fixedQuote;
+const para2 = document.createElement('p');
+para2.textContent = finalQuote;
+
+section.appendChild(para1);
+section.appendChild(para2);
+
+
+    /*const lower = quote.toLowerCase();
+const fixed = quote.slice(0,1);
+let fixedQuote = lower.replace(fixed, fixed.toUpperCase());
+fixedQuote = fixedQuote.replace('green eggs and ham', 'coconut and pineaples');
+finalQuote = fixedQuote;
+*/
+  </script>
+
+</html>

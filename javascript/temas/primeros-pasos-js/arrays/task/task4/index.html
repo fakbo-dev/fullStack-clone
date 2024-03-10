@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays: Task 4</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+const birds = [ "Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets" ];
+
+// Add your code here
+const index = birds.indexOf('Eagles');
+if (index !== -1) {
+birds.splice(index, 1);
+}
+function onlyE(birds) {
+return birds.startsWith('E');
+}
+const eBirds = birds.filter(onlyE);
+
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+
+const para1 = document.createElement('p');
+para1.textContent = eBirds;
+
+section.appendChild(para1);
+  </script>
+
+</html>

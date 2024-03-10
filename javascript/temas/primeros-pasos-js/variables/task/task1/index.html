@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables: Task 1</title>
+    
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    // Add your code here
+    /*En esta tarea queremos que:
+
+Declares una variable llamada myName.
+Inicies myName con un valor adecuado, en una línea separada (puedes usar tu nombre real o algo más).
+Declares una variable llamada myAge la inicies con un valor, en la misma línea.
+Intenta actualizar el código en vivo a continuación para recrear el ejemplo terminado:*/
+
+    let myName;
+    myName = 'Mauricio';
+    let myAge = 20;
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    para1.textContent = myName;
+    const para2 = document.createElement('p');
+    para2.textContent = myAge;
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
+

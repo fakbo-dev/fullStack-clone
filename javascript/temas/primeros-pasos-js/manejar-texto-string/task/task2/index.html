@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+const quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
+const substring = 'green eggs and ham';
+
+// Add your code here
+const quoteLength = quote.length;
+const index = quote.indexOf(substring);
+const revisedQuote = quote.replace(quote.slice(index),substring);
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+const para1 = document.createElement('p');
+para1.textContent = `The quote is ${ quoteLength } characters long.`;
+const para2 = document.createElement('p');
+para2.textContent = revisedQuote;
+
+section.appendChild(para1);
+section.appendChild(para2);
+  </script>
+
+</html>

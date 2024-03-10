@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+let myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
+
+// Add your code here
+myArray.pop();
+myArray.unshift('pepe');
+myArray.unshift('ete shech');
+
+for (let i = 0; i < myArray.length; i++) {
+myArray[i] = myArray[i] + `(${i})`;
+}
+const myString = myArray.join('-');
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+
+let para1 = document.createElement('p');
+para1.textContent = myString;
+
+section.appendChild(para1);
+  </script>
+
+</html>
