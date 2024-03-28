@@ -30,7 +30,7 @@ lastChild.style.backgroundColor = "green";
 
 ulElements.forEach(ulElement => {
     const lastChild = ulElement.lastElementChild;
-    lastChild.style.backgroundColor = "orange"; 
+    lastChild.style.backgroundColor = "orange";
 })
 
 //next ElementSibling
@@ -46,7 +46,7 @@ previusS.style.backgroundColor = "violet";
 
 //parent element (container)
 
-const element2 =document.getElementById("apple");
+const element2 = document.getElementById("apple");
 const parent = element2.parentElement;
 parent.style.backgroundColor = "yellow";
 
