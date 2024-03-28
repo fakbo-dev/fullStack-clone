@@ -1,28 +1,28 @@
 // -------------- ES5 Code
-// // Superclass constructor
+// Superclass constructor
 // function Animal(name) {
 //   this.name = name;
 // }
 
-// // Method shared among all Animal instances
+// Method shared among all Animal instances
 // Animal.prototype.makeSound = function () {
 //   return "Unknown sound";
 // };
 
-// // Subclass constructor inheriting from Animal
+// Subclass constructor inheriting from Animal
 // function Dog(name) {
 //   Animal.call(this, name); // Call the superclass constructor
 // }
 
-// // Set up prototype chain for Dog to inherit from Animal
+// Set up prototype chain for Dog to inherit from Animal
 // Dog.prototype = Object.create(Animal.prototype);
 
-// // Method specific to Dog
+// Method specific to Dog
 // Dog.prototype.makeSound = function () {
 //   return "Woof!";
 // };
 
-// // Creating instances of the classes
+// Creating instances of the classes
 // const genericAnimal = new Animal("Generic Animal");
 // console.log(genericAnimal.name); // Output: Generic Animal
 // console.log(genericAnimal.makeSound()); // Output: Unknown sound
