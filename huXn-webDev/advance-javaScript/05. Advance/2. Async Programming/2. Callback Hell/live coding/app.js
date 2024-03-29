@@ -1,48 +1,44 @@
-function callbackHell(callback) {
+function callBackHell(callback) {
   setTimeout(() => {
-    const data = "Inside (callbackHell) Function";
+    const data = "Inside (Callbackhell) function";
     console.log(data);
     callback(data);
-  }, 2000);
+  }, 2000)
 }
 
 function firstFunc(data, callback) {
   setTimeout(() => {
-    const processedData = `${data} - Processed First`;
-    console.log("Inside (firstFunc) Function");
+    const processedData = `${data} - Processed first`;
+    console.log(`inside (firstFunc) Function`);
     callback(processedData);
-  }, 1000);
+  }, 1000)
 }
 
 function secondFunc(data, callback) {
   setTimeout(() => {
     const processedData = `${data} - Processed Second`;
-    console.log("Inside (secondFunc) Function.");
+    console.log(`inside (SecondFunc) function`);
     callback(processedData);
   }, 1500);
 }
 
-// Callback Hell
-callbackHell((data) => {
+//Callback hell
+
+
+callBackHell((data) => {
   firstFunc(data, (processedData1) => {
     secondFunc(processedData1, (processedData2) => {
-      console.log(`Final result of all functions: ${processedData2}`);
+      console.log(`Final Result Of all functions: ${processedData2}`)
     });
   });
 });
-// -----------------------------------------------------
 
-// ********* Example 2
-// Callback is not always asynchronous
+//callback is not alwaus asynchronous
 
-// This is the example of synchronous callback function
-console.log("Start"); // first
+console.log("start");
 
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-numbers.forEach((r) => {
-  console.log(r); // second
-});
+numbers.forEach((n) => console.log(n));
 
-console.log("End"); // third
-// -----------------------------------------------------
+console.log("end");

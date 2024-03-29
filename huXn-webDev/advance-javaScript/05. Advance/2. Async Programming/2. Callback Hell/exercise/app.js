@@ -21,27 +21,32 @@
 //   });
 // });
 
-console.log("Start");
 
+console.log("start");
 function getUserDataFromDB(name, callback) {
   setTimeout(() => {
-    console.log("Getting User Name...");
+    console.log("getting Username");
     callback(name);
   }, 2000);
 }
 
-function getUserHobbies(name, callback) {
+function getUserHobbies(arr, callback) {
   setTimeout(() => {
-    console.log("Getting user hobbies...");
-    callback(["Cricket", "Reading", "Dancing"]);
+    console.log("Getting Hobbies");
+    //Should broke the code if it do change to name the parameter
+
+    arr = ["VideoGames", "Coding", "Read"];
+    callback(arr);
   }, 2000);
 }
 
-getUserDataFromDB("HuXn", (data) => {
+
+getUserDataFromDB("Fakbo", (data) => {
   console.log(data);
-  getUserHobbies(data, (hobby) => {
-    console.log(hobby);
+  getUserHobbies(data, (hobbies) => {
+    console.log(hobbies);
+
   });
 });
 
-console.log("End");
+console.log("end");

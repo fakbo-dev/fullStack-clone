@@ -30,41 +30,36 @@
 // --------------------------------------------------
 
 // Refactoring
-console.log("Start");
-
+console.log("start");
 function getUserDataFromDB(name) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("Valid Name");
+      console.log(name);
       resolve(name);
     }, 2000);
-  });
+  })
 }
 
 function getUserHobbies() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Getting user hobbies...");
-      resolve(["Football", "Singing", "Solving Math"]);
+      console.log("Get Hobbies...")
+      resolve(["Coding", "VideoGames", "Read"]);
     }, 2000);
-  });
+  })
 }
-
-// getUserDataFromDB("HuXn")
-//   .then((name) => getUserHobbies(name))
-//   .then((hobby) => console.log(hobby))
-//   .catch((err) => console.log(err));
 
 async function showUserHobbies() {
   try {
-    const name = await getUserDataFromDB("HuXn");
-    const hobby = await getUserHobbies(name);
-    console.log(hobby);
+    const name = await getUserDataFromDB("fakbo");
+    const hobbies = await getUserHobbies(name);
+    console.log(hobbies);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
-showUserHobbies();
 
-console.log("End");
+showUserHobbies();
+console.log("end")

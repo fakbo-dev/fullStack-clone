@@ -1,12 +1,16 @@
 const result = document.querySelector(".result");
 
+
 async function renderData() {
   try {
     const response = await fetch("data.json");
-    if (!response.ok) throw Error(response.statusText);
-    const data = await response.json();
-    result.textContent = data.name;
-    // result.textContent = data.roll;
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    } else {
+      const data = await response.json();
+      result.innerText = data.roll;
+    }
   } catch (error) {
     console.log(error);
   }

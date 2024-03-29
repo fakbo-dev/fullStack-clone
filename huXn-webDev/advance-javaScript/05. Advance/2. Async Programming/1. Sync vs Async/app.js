@@ -1,17 +1,21 @@
-// ********** Synchronous Code
-// function myFunc() {
-//   console.log("Inside function");
-// }
 
-// console.log("Start");
-// myFunc();
-// console.log("End");
+//Synchronous Code
 
-// ********** Asynchronous Code
-console.log("Start");
+function myFunc() {
+  return console.log("inside Function");
+}
+
+console.log("start");
+myFunc();
+console.log("End");
+
+
+//Asynchronous Code
+
+console.log("start")
 
 setTimeout(() => {
-  console.log("Inside SetTimeOut");
+  console.log("InsideTimout");
 }, 2000);
 
 console.log("End");

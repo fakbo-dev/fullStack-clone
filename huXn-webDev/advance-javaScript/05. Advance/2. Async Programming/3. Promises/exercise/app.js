@@ -26,31 +26,29 @@
 // console.log("End");
 // ----------------------------------------------
 
-// Solution
-console.log("Start");
+console.log("start");
 
 function getUserDataFromDB(name) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Valid Name");
+      console.log("Getting Username...");
+      console.log(name);
       resolve(name);
     }, 2000);
   });
-}
+};
 
 function getUserHobbies() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Getting user hobbies...");
-      resolve(["Football", "Singing", "Solving Math"]);
-    }, 2000);
-  });
+      console.log("Getting Hobbies...");
+      resolve(["VideoGames", "Coding", "Read"]);
+    }, 3000);
+  })
 }
 
-getUserDataFromDB("HuXn")
-  .then((name) => getUserHobbies(name))
-  .then((hobby) => console.log(hobby))
-  .catch((err) => console.log(err));
+getUserDataFromDB("fakbo")
+  .then(hobbies => getUserHobbies(hobbies))
+  .then(arr => console.log(`Hobbies: ${arr}`));
 
 console.log("End");
-// ---------------------------

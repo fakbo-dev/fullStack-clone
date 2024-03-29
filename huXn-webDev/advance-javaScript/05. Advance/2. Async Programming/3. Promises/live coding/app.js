@@ -1,65 +1,57 @@
 function checkNumber(number) {
   return new Promise((resolve, reject) => {
     if (number % 2 === 0) {
-      resolve(`${number} is an even number.`);
+      resolve(`${number} is an even number`)
     } else {
-      reject(`${number} is an odd number.`);
+      reject(`${number} is an odd number`);
     }
   });
+};
+
+
+const numberToCheck = 7; //odd
+
+checkNumber(numberToCheck).then((message) => {
+  console.log(`Success: ${message}`);
+}).catch(error => {
+  console.log(`Error: ${error}`);
+});
+
+
+
+function fetchData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const data = "Inside (Callback Hell) function";
+      console.log(data);
+      resolve(data);
+    }, 2000);
+  });
+};
+
+function firstFunc(data) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      const processesdData = `${data} - Processed data`;
+      console.log("Inside (firstFunc) function");
+      resolve(processesdData)
+    }, 2000);
+  })
 }
 
-const numberToCheck = 7; // odd
-// const numberToCheck = 2; // even
 
-checkNumber(numberToCheck)
-  .then((message) => {
-    console.log("Success:", message);
+function secondFunc(data) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const processesdData = `${data} - processed data`;
+      console.log("inside (secondFunc) function");
+      resolve(processesdData);
+    }, 1500);
   })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+}
 
-// ---------------------------
-// Refactoring the previous example to use (Promises)
-// function fetchData() {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       const data = "Inside (callbackHell) Function";
-//       console.log(data);
-//       resolve(data);
-//     }, 2000);
-//   });
-// }
-
-// function firstFunc(data) {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       const processedData = `${data} - Processed First`;
-//       console.log("Inside (firstFunc) Function");
-//       resolve(processedData);
-//     }, 1000);
-//   });
-// }
-
-// function secondFunc(data) {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       const processedData = `${data} - Processed Second`;
-//       console.log("Inside (secondFunc) Function.");
-//       resolve(processedData);
-//     }, 1500);
-//   });
-// }
-
-// fetchData()
-//   .then((data) => firstFunc(data))
-//   .then((processedData1) => secondFunc(processedData1))
-//   .then((processedData2) => {
-//     console.log(
-//       `Final result of all functions with Promises: ${processedData2}`
-//     );
-//   })
-//   .catch((error) => {
-//     console.error("Error:", error);
-//   });
-// ---------------------------
+fetchData()
+  .then(data => firstFunc(data))
+  .then((processesdData1) => secondFunc(processesdData1))
+  .then(processesdData2 => console.log(`final result of all function With Promesis: ${processesdData2}`))
+  .catch(error => console.log(`Error: ${error}`));
