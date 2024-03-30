@@ -14,14 +14,14 @@ function generatePassword(length, includeLowerCase, includeUpperCase, includeNum
     allowedChars += includeNumbers ? numberChars : "";
     allowedChars += includeSymbols ? symbolChars : "";
 
-    if(length <= 0) {
+    if (length <= 0) {
         return "(password length must be at least 1)"
     }
-    if(allowedChars.length === 0) {
+    if (allowedChars.length === 0) {
         return `At least 1 set of characters need to be selected`;
     }
 
-    for(let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         const randomIndex = Math.floor(Math.random() * allowedChars.length);
         password += allowedChars[randomIndex];
     }
@@ -36,10 +36,10 @@ const includeNumbers = true;
 const includeSymbols = true;
 
 const password = generatePassword(
-                                passwordLength,
-                                includeLowerCase, 
-                                includeUpperCase, 
-                                includeNumbers, 
-                                includeSymbols);
+    passwordLength,
+    includeLowerCase,
+    includeUpperCase,
+    includeNumbers,
+    includeSymbols);
 
 console.log(`Generated password: ${password}`);
