@@ -68,7 +68,6 @@ function checkWinner() {
         const boxB = board[condition[1]];
         const boxC = board[condition[2]];
 
-
         if (boxA === "" || boxB === "" || boxC === "") {
             continue;
         }
