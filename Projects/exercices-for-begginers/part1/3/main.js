@@ -3,9 +3,6 @@
 // character in a given string with the character 
 // following it in the alphabet
 
-
-
-
 function replace(str) {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
     let result = "";
