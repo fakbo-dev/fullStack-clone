@@ -3,3 +3,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+$bg-layout: no-repeat right/cover;
+
+.container {
+  background: url(sebastian-svenson-d2w-_1LJioQ-unsplash.jpg) $bg-layout;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  ul {
+    font-family: sans-serif;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin: 20px;
+    padding-bottom: 5px;
+  }
+  a:hover {
+    border-bottom: 1px solid #fff;
+  }
+}
