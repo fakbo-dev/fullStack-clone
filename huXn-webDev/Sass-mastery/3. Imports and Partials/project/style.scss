@@ -1,0 +1,26 @@
+//Variables
+$bg-img-layout: no-repeat center/cover;
+
+//Reset
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+//Components
+
+@import "components/nav";
+@import "components/main";
+@import "components/background";
+@import "components/gallery";
+@import "components/footer";
+@import "components/responsive";
+
+
+
+
+
+

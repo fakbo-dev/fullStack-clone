@@ -1,5 +1,85 @@
+//Reset Layout
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+//Creating Mixins
+@mixin btn-style {
+  padding: 10px 20px;
+  border: none;
+  background: #141414;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 140px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@mixin card-style {
+  width: 300px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #ec4bd2, #eb4bd05d);
+  border-radius: 10px;
+  color: #fff;
+}
+
+@mixin card-content-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  height: 70%;
+}
+
+//Apply layout
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  @include card-style;
+  margin: 0.8rem;
+
+  .card-content {
+    @include card-content-style;
+
+    .price {
+      font-size: 3rem;
+
+      span {
+        -webkit-text-stroke: 1px white;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.6rem
+      }
+    }
+
+    .card-info {
+      text-align: center;
+      padding: 0 20px;
+      line-height: 1.4rem;
+    }
+
+    button {
+      @include btn-style;
+    }
+  }
+}
+
+.card-two {
+  background: linear-gradient(to bottom, #2cbd60, #69c5085d);
+}
+
+.card-three {
+  background: linear-gradient(to bottom, #060da35d, #4ba1ec);
 }
