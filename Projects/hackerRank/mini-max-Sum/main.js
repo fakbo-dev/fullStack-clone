@@ -17,7 +17,7 @@ function minMax(arr) {
             max = arr[i];
         }
         store += arr[i];
-
+        console.log(min, max);
         const sumMax = store - max;
         const minMax = store - min;
         result = `${sumMax} ${minMax}`;
