@@ -48,16 +48,9 @@ for (let i = 0; i < Object.length; i++) {
 //Reverse integers
 
 function reverseInteger(number) {
-  let numberString = number.toString();
+  const numberString = number.toString().split("").reverse().join("");
 
-  if (number === -1) {
-    const sing = numberString.slice(0, 1);
-
-  }
-  let fix = numberString.split("");
-  fix = fix.reverse();
-  fix = fix.join("");
-  return parseInt(fix) * Math.sign(number);
+  return parseInt(numberString) * Math.sign(number);
 }
 
 reverseInteger(21) // 12
