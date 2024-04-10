@@ -2,13 +2,13 @@
 // generar un numero aleatorio entre 0 y 1
 
 function random(number) {
-    return Math.floor(Math.random() * (number + 1))
+  return Math.floor(Math.random() * (number + 1))
 }
 // generar un color aleatorio 
-  function bgChange() {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-    return rndCol;
-  }
+function bgChange() {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return rndCol;
+}
 
 // alternar el texto de un boton
 
@@ -25,12 +25,12 @@ function changeBtn() {
 // bucle de galeria de imagenes 
 for (const image of images) {
   const newImage = document.createElement('img');
-  newImage.setAttribute('src',`./images/${image}`);
-  newImage.setAttribute('alt',alts[image]);
+  newImage.setAttribute('src', `./images/${image}`);
+  newImage.setAttribute('alt', alts[image]);
   thumbBar.appendChild(newImage);
   newImage.addEventListener('click', e => {
-      displayedImage.src = e.target.src;
-      displayedImage.alt = e.target.alt;
+    displayedImage.src = e.target.src;
+    displayedImage.alt = e.target.alt;
   });
 }
 
@@ -43,3 +43,24 @@ for (let i = 0; i < Object.length; i++) {
     motherInfo += `and ${cats[i].name}.`;
   }
 }
+
+
+//Reverse integers
+
+function reverseInteger(number) {
+  let numberString = number.toString();
+
+  if (number === -1) {
+    const sing = numberString.slice(0, 1);
+
+  }
+  let fix = numberString.split("");
+  fix = fix.reverse();
+  fix = fix.join("");
+  return parseInt(fix) * Math.sign(number);
+}
+
+reverseInteger(21) // 12
+reverseInteger(981)
+reverseInteger(5)
+reverseInteger(-15)
