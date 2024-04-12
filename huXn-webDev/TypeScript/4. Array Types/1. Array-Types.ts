@@ -20,3 +20,4 @@ numList.push(-1);
 // numList.push("Hello") // ERROR
 console.log(numList);
 // -------------------------
+

@@ -1,23 +1,22 @@
 let password: string | number = 20;
 
-type UserInfo = {
+type UserInfo2 = {
   first: string;
   last: string;
   age: number;
-};
+}
 
-type AccountDetails = {
+type AccountDetails2 = {
   email: string;
   password: string;
-};
+}
 
-let user: UserInfo | AccountDetails = {
-  first: "HuXn",
-  last: "WebDev",
-  age: 29,
-};
+const user: UserInfo2 | AccountDetails2 = {
+  email: "fakbodev@gmail.com",
+  password: "Poggers",
+}
 
-console.log(user);
 
-const items: (number | string)[] = [1, 3, "hello"];
+const items: (number | string)[] = [1, 4, 5, "Hello"];
+
 console.log(items);

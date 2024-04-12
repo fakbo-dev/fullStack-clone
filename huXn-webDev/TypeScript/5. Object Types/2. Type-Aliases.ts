@@ -2,11 +2,12 @@ type User = {
   name: string;
   age: number;
   location: string;
+}
+
+const printUserInfo = (whatever: User) => {
+  return `Name: (${whatever.name}) Age: (${whatever.age}) location: (${whatever.location})`
 };
 
-const printUserInfo = (user: User) => {
-  return `Name: (${user.name}) Age: (${user.age}) Location: (${user.location})`;
-};
+const res2 = printUserInfo({ name: "Fakbo", age: 21, location: "Venezuela" });
 
-const result = printUserInfo({ name: "Alex", age: 20, location: "USA" });
-console.log(result);
+console.log(res2);
