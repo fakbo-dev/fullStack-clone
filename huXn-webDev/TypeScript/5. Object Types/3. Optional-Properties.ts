@@ -1,15 +1,13 @@
-type User2 = {
+type User = {
   name: string;
   age?: number;
-  //readonly propertie can't be modify it
-  readonly location: string;
-}
-
-
-const user: User2 = {
-  name: "Fakbo",
-  location: "Venezuela",
+  location: string;
 };
 
-console.log(`Name: ${user.name}, location: ${user.location}`);
+const user: User = {
+  name: "HuXn",
+  age: 20,
+  location: "Arabic",
+};
 
+console.log(`Name: ${user.name}, Age: ${user.age}, Location: ${user.location}`);

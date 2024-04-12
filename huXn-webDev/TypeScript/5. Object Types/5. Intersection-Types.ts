@@ -2,21 +2,23 @@ type UserInfo = {
   first: string;
   last: string;
   age: number;
-}
+};
 
 type AccountDetails = {
   email: string;
   password: string;
-}
+};
 
-type User5 = UserInfo & AccountDetails;
+type User = UserInfo & AccountDetails;
 
-const fakbo: User5 = {
-  first: "Fakbo",
+const huxn: User = {
+  first: "HuXn",
   last: "WebDev",
-  age: 21,
-  email: "fakbodev@gmail.com",
-  password: "Poggers",
-}
+  age: 18,
+  email: "test@gmail.com",
+  password: "strongpassword123",
+};
 
-console.log(`Name: ${fakbo.first} ${fakbo.last}, Age: ${fakbo.age}, Email: ${fakbo.email}, Password: ${fakbo.password}`);
+console.log(
+  `Name: (${huxn.first} ${huxn.last}) Age: (${huxn.age}) Email: (${huxn.email}) Password: (${huxn.password})`
+);

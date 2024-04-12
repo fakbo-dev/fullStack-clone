@@ -1,14 +1,16 @@
+// Regular Func
 function addOne(num: number) {
   return num + 1;
 }
 
-const result: number = addOne(20);
+const result = addOne(3);
 console.log(result);
 
-// Arrow function
-
+// Arrow Func Annotations
 const double = (x: number, y: number) => x * y;
+const res = double(2, 10);
+console.log(res);
 
-const rest = double(2, 10);
+// Also notice, TypeScript will gives you warning if you provide more or less arguments then you specifiy in your parameters area.
 
-console.log(rest);
+// double(2, 10, 20); // 👈 Warning

@@ -1,11 +1,11 @@
 // Here we're inferring the types!
 let tech = "TypeScript";
 let favNumber = 8;
-let tsHard2 = true;
+let tsHard = true;
 
-console.log(typeof tech, typeof favNumber, typeof tsHard2);
+console.log(tech, favNumber, tsHard);
 
-// !ERROR
+// ERROR
 // tech = false
 // favNumber = "Hello"
 // tsHard = 20

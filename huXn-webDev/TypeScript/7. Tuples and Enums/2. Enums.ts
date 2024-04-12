@@ -1,9 +1,9 @@
 enum WeatherConditions {
-  Sunny = "Sunny",
-  Cloudy = "Cloudy",
-  Rainy = "Rainy",
+  Sunny = "sunny",
+  Cloudy = "cloudy",
+  Rainy = "rainy",
+  Snowy = "snowy",
 }
 
-const currentWeather: string | number = WeatherConditions.Rainy;
-
+const currentWeather = WeatherConditions.Sunny;
 console.log(`The current weather is ${currentWeather}`);

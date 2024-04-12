@@ -1,6 +1,6 @@
 let tsHard: boolean = false;
 console.log(tsHard);
 
-// !ERROR
+// ERROR
 // tsHard = 100;
 // tsHard = "HuXn";
