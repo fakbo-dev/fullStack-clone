@@ -1,3 +1,9 @@
+//1st rule = need to wrap the components otherway is gonna throw an error
+//2nd rule = ALWAYS close your tags example
+// <img> ❌
+// <img/> ✅
+//3rd instead of write a "class" we shoud use "className"
+
 const App = () => {
   return (
     <section id="section">
