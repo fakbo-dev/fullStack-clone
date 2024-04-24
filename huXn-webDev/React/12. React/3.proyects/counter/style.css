@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.container .number {
+    font-size: 6rem;
+}
+
+.btns-container {
+    width: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+.btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 6.25rem;
+    background: #141517;
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+}
