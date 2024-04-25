@@ -15,12 +15,38 @@
 //Take references
 
 const calculator = document.querySelector(".calculator");
-const calcDisplay = document.querySelector(".calculatorDisplay");
+const calcDisplay = calculator.querySelector(".calculatorDisplay");
 const calcKeys = calculator.querySelector(".calculatorButtons");
 
 
-//add Event Listener para recuperar cada pulsasion de teclas
+//functions
 
+const calculate = (n1, operator, n2) => {
+    let result = "";
+
+    switch (operator) {
+        case "add":
+            result = parseFloat(n1) + parseFloat(n2);
+            break;
+        case "subtract":
+            result = parseFloat(n1) - parseFloat(n2);
+            break;
+        case "multiply":
+            result = parseFloat(n1) * parseFloat(n2);
+            break;
+        case "divide":
+            result = parseFloat(n1) / parseFloat(n2);
+            break;
+        default:
+            result = "";
+    }
+
+
+    return result;
+}
+
+
+//add Event Listener para recuperar cada pulsasion de teclas
 calcKeys.addEventListener("click", (event) => {
 
     //Asegurarse si los elementos presionados son botones
@@ -32,7 +58,8 @@ calcKeys.addEventListener("click", (event) => {
         const action = key.dataset.action; // recuperar dataset del boton presionado
         const keyContext = key.textContent; // recuperar el contenido del boton actual
         const displayContext = calcDisplay.textContent; // recuperar el contenido del display actual
-        const previousKeyType = calculator.dataset.previousKeyType; //agregar un dataset para verificar si la tecla anterior es un operador
+        const previousKeyType = calculator.dataset.previousKeyType;
+        //agregar un dataset para verificar si la tecla anterior es un operador
 
 
         //! INDETIFICAR CADA KEY 
@@ -48,10 +75,12 @@ calcKeys.addEventListener("click", (event) => {
             } else {
                 calcDisplay.textContent = displayContext + keyContext;
             }
+            calculator.dataset.previousKeyType = 'number';
+
 
             //cuando un usuario presiona una tecla numerica luego de un operador debemos remover el estado pressed de todas las keys 
-
-            Array.from(key.parentNode.children).forEach(item => item.classList.remove("pressed"));
+            Array.from(calcKeys.parentNode.children)
+                .forEach(item => item.classList.remove("pressed"));
         }
 
 
@@ -63,30 +92,42 @@ calcKeys.addEventListener("click", (event) => {
 
 
             key.classList.add("pressed");
+            calculator.dataset.previousKeyType = 'operator';
 
-            calculator.dataset.previousKeyType = "operator";
+            calculator.dataset.firstValue = displayContext;
+            calculator.dataset.operator = action;
         }
 
         //? si la key tiene data action y coincide con los vaores especiales
 
         if (action === "decimal") {
             //al pulsar la key decimal debe agregarse al displaycontext despues del numero en el que estaba
-
-            calcDisplay.textContent = `${displayContext}.`;
+            if (!displayContext.includes(".")) {
+                calcDisplay.textContent = displayContext + ".";
+            } else if (previousKeyType === "operator") {
+                calcDisplay.textContent = "0.";
+            }
+            calculator.dataset.previousKeyType = "decimal";
 
         }
 
         if (action === "clear") {
-            console.log("Clear key!");
+            calcDisplay.textContent = "0";
+            calculator.dataset.previousKeyType = "clear";
         }
 
         if (action === "equal") {
+            const firstValue = calculator.dataset.firstValue;
+            const operator = calculator.dataset.operator;
             const secondValue = displayContext;
-        }
 
+            calcDisplay.textContent = calculate(firstValue, operator, secondValue);
+            calculator.dataset.previousKeyType = "equal";
+        }
 
 
     }
 })
+
 
 
