@@ -34,7 +34,7 @@ body {
     box-shadow: 0px 5px 9px rgba(0, 0, 0, .6);
 }
 
-.calculator-display {
+.calculatorDisplay {
     margin-bottom: 0.8rem;
     font-size: 2rem;
     background: #000;
@@ -46,7 +46,7 @@ body {
     border-radius: 0.618rem;
 }
 
-.calculator-buttons {
+.calculatorButtons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -106,4 +106,12 @@ button {
 
 .key-equal:hover {
     background: #dd5f0b;
+}
+
+.pressed {
+    background: skyblue;
+}
+
+.pressed:hover {
+    background: rgb(91, 184, 221);
 }
