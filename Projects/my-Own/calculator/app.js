@@ -79,8 +79,7 @@ calcKeys.addEventListener("click", (event) => {
 
 
             //cuando un usuario presiona una tecla numerica luego de un operador debemos remover el estado pressed de todas las keys 
-            Array.from(calcKeys.parentNode.children)
-                .forEach(item => item.classList.remove("pressed"));
+
         }
 
 
@@ -124,7 +123,8 @@ calcKeys.addEventListener("click", (event) => {
             calcDisplay.textContent = calculate(firstValue, operator, secondValue);
             calculator.dataset.previousKeyType = "equal";
         }
-
+        Array.from(calcKeys.parentNode.children)
+            .forEach(item => item.classList.remove("pressed"));
 
     }
 })

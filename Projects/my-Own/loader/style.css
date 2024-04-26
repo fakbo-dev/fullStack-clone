@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    max-width: 50%;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loader__author {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 0.6rem 0 2rem 0;
+    display: block;
+}
+
+.loader__animation {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    border: 0.3rem solid rgba(189,189,189 ,0.25);
+    border-right-color: skyblue;
+    border-bottom-color: skyblue;
+    border-radius: 50%;
+    animation: rotate 600ms infinite linear;
+}
+
+
+@keyframes rotate {
+    to { transform: rotate(1turn);}
+}
