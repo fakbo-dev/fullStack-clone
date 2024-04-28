@@ -28,9 +28,11 @@ function draw() {
 
 function drawSnake() {
     snake.forEach((segment) => {
-        const snakeElement = createGameElement("div", "snake");
-        setPosition(snakeElement, segment);
-        board.appendChild(snakeElement);
+        if (gameStarted === true) {
+            const snakeElement = createGameElement("div", "snake");
+            setPosition(snakeElement, segment);
+            board.appendChild(snakeElement);
+        }
     })
 }
 
@@ -56,7 +58,8 @@ function setPosition(element, position) {
 //draw food function
 
 function drawFood() {
-    if (!gameStarted) {
+
+    if (gameStarted === true) {
         const foodElement = createGameElement("div", "food");
         setPosition(foodElement, food)
         board.appendChild(foodElement);
@@ -102,7 +105,7 @@ function move() {
 
     if (head.x === food.x && head.y === food.y) {
         food = generateFood();
-        increaseSpeed(); // generate another food 
+        increaseSpeed();
         clearInterval(gameInterval); // clear past interval
         gameInterval = setInterval(() => {
             checkCollision();
