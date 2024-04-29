@@ -75,4 +75,15 @@ const head = {...snake[0]};
 
 ##### startGame
 
-cambiamos el valor de `gameStarted` a `true` para empezar el juego por lo cual escondemos el texto y el logo y iniciamos el juego usando una vez mas el `gameInterval` variable y cabiamos su contenido a build-in `setInterval`
+- cambiamos el valor de `gameStarted` a `true` para empezar el juego por lo cual escondemos el texto y el logo y iniciamos el juego usando una vez mas el `gameInterval` variable y cabiamos su contenido a build-in `setInterval` en el cual primero dibujamos los elementos con la funcion `draw` revisamos las collisiones con `checkCollision` y por ultimo llamamos `move` para mover los elementos.
+
+##### handleKeyPress
+
+- Queremos iniciar el juego al presionar la barra espaciadora asi que. Si 
+ el usuario presiona la tecla de espacio deberiamos iniciar el juego `startGame()` si no, queremos asignar las las flechas del teclado para cada caso de movimiento de la snake.
+
+ ##### increaseSpeed
+
+ - queremos que el usuario mientras mas grande sea el tiempo pase mas rapido asi que cuando el valor de `gameSpeedDelay` alcance un numero determinado queremos restar ese valor para que el refresco sea mas rapido
+
+ 
