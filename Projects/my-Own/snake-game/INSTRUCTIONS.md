@@ -84,6 +84,31 @@ const head = {...snake[0]};
 
  ##### increaseSpeed
 
- - queremos que el usuario mientras mas grande sea el tiempo pase mas rapido asi que cuando el valor de `gameSpeedDelay` alcance un numero determinado queremos restar ese valor para que el refresco sea mas rapido
+ - queremos que el usuario mientras mas grande sea el numero  pase mas rapido asi que cuando el valor de `gameSpeedDelay` alcance un numero determinado queremos restar ese valor para que el refresco sea mas rapido.
 
- 
+ ##### checkCollision
+
+ - creamos una `head` variable que guarde el primer valor `head[0]` para determinar cuando collisione  y evaluamos los siguiente. 
+
+ - 1. si `head` choca con alguna pared ejecutamos `stopGame`.
+
+ - 2. si `head` choca con alguna seccion de su mismo ejecutamos `stopGame`.
+
+
+ ##### resetGame
+
+ - actualizamos el score con la funcion `updateScore()` paramos el juego  ponemos a la snake default generamos una nueva comida reseteamos el delay y ponemos la direction default y luego actualizamos la `highScore()`.
+
+ ##### updateScore
+
+ - tomamos el puntaje por el tamano de la snake y luego mostramos ese tamano en nuestro scrore text de la UI
+
+ ##### stopGame
+
+ - limpiamos el intervalo cambiamos el gameStarted a false y mostramos el logo y el logo-text.
+
+ ##### updateHighScore
+
+ - guardamos el valor actual del score y evaluamos
+
+ - si el valor actual es mayor a el valor maximo, entonces ese valor sera el nuevo valor maximo y lo mostraremos en la UI como highScore y volveremos su display block para mostrar el valor
