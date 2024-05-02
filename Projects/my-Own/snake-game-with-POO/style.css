@@ -1,0 +1,75 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Center the elements */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #2B2730;
+}
+
+/* Scores Layout */
+
+.scores {
+    display: flex;
+    width: 100%;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+
+.scores__current_score {
+    color: #fff;
+    letter-spacing: 0.2rem;
+}
+
+.scores__high_score {
+    color: #fff;
+    letter-spacing: 0.2rem;
+}
+
+/* Screen Layout */
+
+.screen__board {
+    display: grid;
+    grid-template-columns:  repeat(30, 1.25rem);
+    grid-template-rows:  repeat(30, 1.25rem);
+    background: #BFCFE7;
+    border-radius: 2rem;
+
+}
+
+
+
+/* Text layout */
+
+.text__title {
+    position: relative;
+    left: 9rem;
+    bottom: 21rem;
+    font-size: 2rem;
+    width: 20rem;
+    text-align: center;
+}
+
+
+
+.snake {
+    background-color: green;
+}
+
+.food {
+    background-color: crimson;
+}
