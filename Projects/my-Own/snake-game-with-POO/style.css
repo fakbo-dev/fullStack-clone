@@ -44,8 +44,8 @@ body {
 
 .screen__board {
     display: grid;
-    grid-template-columns:  repeat(30, 1.25rem);
-    grid-template-rows:  repeat(30, 1.25rem);
+    grid-template-columns:  repeat(20, 1.25rem);
+    grid-template-rows:  repeat(20, 1.25rem);
     background: #BFCFE7;
     border-radius: 2rem;
 
@@ -62,9 +62,13 @@ body {
     font-size: 2rem;
     width: 20rem;
     text-align: center;
+    display: none;
 }
 
 
+
+
+/* Elements styles */
 
 .snake {
     background-color: green;
