@@ -21,3 +21,17 @@ function createElement(elementName, className) {
     element.classList.add(className);
     return element;
 }
+
+// draw the board
+
+function draw() {
+    drawSnake();
+}
+
+
+
+//draw the snake
+
+function drawSnake() {
+    createElement("div", "snake");
+}
