@@ -47,8 +47,6 @@ body {
     grid-template-columns:  repeat(20, 1.25rem);
     grid-template-rows:  repeat(20, 1.25rem);
     background: #BFCFE7;
-    border-radius: 2rem;
-
 }
 
 
@@ -56,13 +54,13 @@ body {
 /* Text layout */
 
 .text__title {
-    position: relative;
-    left: 9rem;
-    bottom: 21rem;
-    font-size: 2rem;
-    width: 20rem;
+    position: absolute;
+    top: 55%;
+    color: #333;
+    width: 18.75rem;
     text-align: center;
-    display: none;
+    text-transform: capitalize;
+    margin: 0;
 }
 
 
@@ -72,6 +70,7 @@ body {
 
 .snake {
     background-color: green;
+    border: 1px dotted gray;
 }
 
 .food {
