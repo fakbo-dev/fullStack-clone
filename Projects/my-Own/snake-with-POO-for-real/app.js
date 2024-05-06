@@ -4,13 +4,14 @@ const currentScore = document.querySelector(".container__scores__current");
 const highScore = document.querySelector(".container__scores__high");
 const board = document.querySelector(".container__board");
 const instructionsText = document.querySelector(".container__content__text");
+const logo = document.querySelector(".container__content__logo");
 
 // Variables
 let snakePosition = [{ x: 15, y: 15 }];
 const gridSize = 30;
 let gameStarted = false;
 let food = randomFood();
-let position = "left";
+let position = "right";
 let gameSpeed = 200;
 let gameInterval;
 let highScorePoint = 0;
@@ -40,12 +41,14 @@ function createElement(tag, className) {
 //draw the snake and Each Segment
 
 function drawSnake() {
-    snakePosition.forEach((segment) => {
-        const snakeElement = createElement("div", "snake");
-        setPosition(snakeElement, segment);
-        board.appendChild(snakeElement);
+    if (gameStarted) {
+        snakePosition.forEach((segment) => {
+            const snakeElement = createElement("div", "snake");
+            setPosition(snakeElement, segment);
+            board.appendChild(snakeElement);
 
-    })
+        })
+    }
 }
 
 
@@ -57,9 +60,11 @@ function setPosition(element, position) {
 }
 
 function drawFood() {
-    const foodElement = createElement("div", "food");
-    setPosition(foodElement, food);
-    board.appendChild(foodElement);
+    if (gameStarted) {
+        const foodElement = createElement("div", "food");
+        setPosition(foodElement, food);
+        board.appendChild(foodElement);
+    }
 }
 
 function randomFood() {
@@ -110,7 +115,7 @@ function move() {
 
 function startGame() {
     gameStarted = true;
-
+    logo.style.display = "none";
     gameInterval = setInterval(() => {
         move();
         draw();
@@ -133,20 +138,29 @@ function keyHandler(event) {
     } else {
         switch (event.key) {
             case "a":
-                position = "left";
+                if (position !== "right") {
+                    position = "left";
+                }
                 break;
             case "d":
-                position = "right";
+                if (position !== "left") {
+                    position = "right";
+                }
                 break;
             case "s":
-                position = "down";
+                if (position !== "up") {
+                    position = "down";
+                }
                 break;
             case "w":
-                position = "up";
+                if (position !== "down") {
+                    position = "up";
+                }
                 break;
         }
     }
 }
+
 
 
 function increaseSpeed() {
@@ -165,17 +179,19 @@ function increaseSpeed() {
 function checkCollision() {
     const head = { ...snakePosition[0] };
 
-    if (head.x < 1 ||
+    if (head.x < 0 ||
         head.x > gridSize ||
-        head.y < 1 ||
+        head.y < 0 ||
         head.y > gridSize) {
         resetGame();
+        return;
     } else {
         for (let i = 1; i < snakePosition.length; i++) {
             const index = snakePosition[i];
 
             if (head.x === index.x && head.y === index.y) {
                 resetGame();
+                return;
             }
         }
     }
@@ -199,6 +215,7 @@ function updateScore() {
 function stopGame() {
     clearInterval(gameInterval);
     gameStarted = false;
+    logo.style.display = "block";
 }
 
 function updateHighScore() {

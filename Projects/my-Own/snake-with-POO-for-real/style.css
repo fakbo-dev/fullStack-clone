@@ -39,6 +39,9 @@ body {
     align-items: center;
     background: #99BC85;
     width: 100%;
+    background-image: url("img/stacked-steps-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -66,13 +69,21 @@ letter-spacing: 0.2rem;
 
 .container__border1 {
     border: 1rem solid black;
+    border-radius: 20px;
 }
 
 .container__board {
     display: grid;
     grid-template-columns: repeat(30, 1rem);
     grid-template-rows: repeat(30, 1rem);
-    background: #1A4D2E;
+    background: #A8A196;
+}
+
+.container__content__logo {
+    position: absolute;
+    max-width: 30rem;
+    max-height: 30rem;
+    bottom: 9.6rem;
 }
 
 /* Text Content */
@@ -85,12 +96,13 @@ letter-spacing: 0.2rem;
 .snake {
     background: #94FFD8;
     border: 1px solid #003C43;
+    border-radius: 0.3rem;
 }
 
 .food {
-    background: #FF004D;
-    border: 1px solid #9400FF;
-    border-radius: 0.34rem;
+    background: #BB2525;
+    border: 1px solid #FE0000;
+    border-radius: 0.6rem;
 }
 
 
