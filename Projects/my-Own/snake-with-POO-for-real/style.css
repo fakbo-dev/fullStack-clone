@@ -57,8 +57,8 @@ body {
     font-size: 1.7rem;
 }
 
-.container__scores__current span,
-.container__scores__high span {
+.container__scores__current,
+.container__scores__high  {
 color: #1A4D2E;
 letter-spacing: 0.2rem;
 }
