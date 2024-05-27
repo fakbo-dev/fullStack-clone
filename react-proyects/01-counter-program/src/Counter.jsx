@@ -3,7 +3,7 @@ import { useState } from "react";
 function Counter() {
 
     const [count, setCount] = useState(0);
-
+    const [initial, setInitial] = useState(0);
     function handleIncrement() {
 
         setCount((c) => c + 1);
@@ -17,6 +17,12 @@ function Counter() {
         setCount((c) => c = 0);
     }
 
+    function handleChange(e) {
+        setInitial((i) => i = e.target.value);
+    }
+    function handleInitialValue() {
+        setCount(initial);
+    }
     return (
         <>
             <main className="b-wrapper">
@@ -37,9 +43,9 @@ function Counter() {
                         <button className="b-buttons__reset button" onClick={handleReset}>Reset</button>
                     </div>
                     <div className="b-change">
-                        <input type="number" /><br />
+                        <input type="number" value={initial} onChange={handleChange} /><br />
 
-                        <button className="button b-change__inital">Set the initial value</button>
+                        <button className="button b-change__inital" onClick={handleInitialValue}>Set the initial value</button>
                     </div>
                 </section>
 
