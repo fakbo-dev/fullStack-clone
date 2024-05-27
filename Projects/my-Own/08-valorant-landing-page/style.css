@@ -6,3 +6,16 @@
     src: url("./src/font/Valorant\ Font.ttf");
 }
 
+
+/* Reset */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: gray;
+}
