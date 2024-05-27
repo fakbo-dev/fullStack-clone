@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Counter() {
 
     const [count, setCount] = useState(0);
     const [initial, setInitial] = useState(0);
+    const inputRef = useRef(null);
     function handleIncrement() {
 
         setCount((c) => c + 1);
@@ -18,10 +19,11 @@ function Counter() {
     }
 
     function handleChange(e) {
-        setInitial((i) => i = e.target.value);
+        setInitial((i) => i = Number(e.target.value));
     }
     function handleInitialValue() {
         setCount(initial);
+        inputRef.current.value = "";
     }
     return (
         <>
@@ -43,7 +45,7 @@ function Counter() {
                         <button className="b-buttons__reset button" onClick={handleReset}>Reset</button>
                     </div>
                     <div className="b-change">
-                        <input type="number" value={initial} onChange={handleChange} /><br />
+                        <input type="number" value={initial} onChange={handleChange} ref={inputRef} /><br />
 
                         <button className="button b-change__inital" onClick={handleInitialValue}>Set the initial value</button>
                     </div>
