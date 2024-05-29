@@ -1,0 +1,96 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variables */
+
+:root {
+
+    --bg-color: #6F4E37;
+    --font-color: #A67B5B;
+    --span-color: #ECB176;
+    --extra: #FED8B1;
+    --main-font: "Roboto","sans-serif";
+}
+
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    color: var(--span-color);
+}
+
+/* Center all the elements in the middle of the screen */
+
+.b-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+/* give the element a 100% width respect of is parent */
+/* 
+.b-container {
+
+} */
+
+/* Title Layout */
+
+.b-title__header {
+    font-size: 4rem;
+    position: fixed;
+    bottom: 40rem;
+    left: 33rem;
+    
+}
+
+.b-title__dev {
+    font-size: 2rem;
+    position: fixed;
+    bottom: 37rem;
+    left: 39rem;
+}
+
+.b-title__dev__first {
+    color: var(--extra);
+}
+
+/* List Layout */
+
+
+.b-list__items {
+    list-style: none;
+    margin: 0.5rem;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    background: var(--font-color);
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+}
+
+.button {
+    padding: 0.6rem 1.2rem;
+    margin: 0;
+    background: #DEAC80;
+    color: #000;
+    font-size: 1.4rem;
+    border: none;
+
+}
+
+/* Buttons layout */
+
+.b-buttons  > button{
+    margin: 1rem;
+}
+input[type="text"] {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #000;
+
+}

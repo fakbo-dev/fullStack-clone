@@ -1,7 +1,10 @@
+import ToDo from "./components/ToDo.jsx";
 
 function App() {
   return (
-    <div>App</div>
+    <>
+      <ToDo />
+    </>
   )
 }
 
