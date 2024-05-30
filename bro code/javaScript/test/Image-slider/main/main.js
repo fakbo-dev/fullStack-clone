@@ -5,11 +5,11 @@ const slides = document.querySelectorAll(".slide");
 let slideIndex = 0;
 let intervalId = null;
 
-
 //event
 prevBtn.addEventListener("click", prevSlide);
 nextBtn.addEventListener("click", nextSlide);
 document.addEventListener("DOMContentLoaded", initializeSlider);
+
 //functions
 function initializeSlider() {
     if (slides.length > 0) {
@@ -17,8 +17,8 @@ function initializeSlider() {
         intervalId = setInterval(nextSlide, 5000);
     }
 }
-function showSlide(index) {
 
+function showSlide(index) {
     if (index >= slides.length) {
         slideIndex = 0;
     }
@@ -30,12 +30,17 @@ function showSlide(index) {
     });
     slides[slideIndex].classList.add("displaySlide");
 }
+
 function prevSlide() {
     clearInterval(intervalId);
     slideIndex--;
     showSlide(slideIndex);
+    intervalId = setInterval(nextSlide, 5000); // Reset the interval
 }
+
 function nextSlide() {
+    clearInterval(intervalId);
     slideIndex++;
     showSlide(slideIndex);
+    intervalId = setInterval(nextSlide, 5000); // Reset the interval
 }
