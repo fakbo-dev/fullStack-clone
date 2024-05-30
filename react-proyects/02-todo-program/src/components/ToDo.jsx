@@ -1,50 +1,115 @@
 import { useState } from "react";
 
-const baseToDo = [
-    {
-        id: 0,
-        content: "Take a shower",
-    },
-    {
-        id: 1,
-        content: "Play Videogames",
-    },
-    {
-        id: 2,
-        content: "walk the dog",
-    }
-];
-
 function ToDo() {
+    const [list, setList] = useState(listDefault);
+    const [text, setText] = useState("");
+    let id = list.length;
 
-    const [list, setList] = useState(baseToDo);
+    const listItems = list.map(item => (
+        <li key={item.id} className={item.completed ? "completed" : ""}>
+            <input
+                type="checkbox"
+                checked={item.completed}
+                onChange={() => handleToggle(item.id)}
+            />
+            {item.text}
+        </li>
+    ));
 
-    const listItems = list.map((l) => <li key={l.id} className="b-list__items">{l.content}{" "}<button className="button">Done</button></li>);
+    function handleAdd() {
+        const newItem = {
+            id: id++,
+            text: text,
+            completed: false,
+        };
+
+        setList([...list, newItem]);
+        setText("");
+    }
+
+    function handleText(e) {
+        setText(e.target.value);
+    }
+
+    function handleDelete() {
+        const updateList = list.filter(item => !item.completed);
+        setList(updateList);
+
+    }
+    function handleToggle(id) {
+        const updatedList = list.map(item => {
+            if (item.id === id) {
+                return {
+                    ...item,
+                    completed: !item.completed,
+                };
+            }
+            return item;
+        });
+        setList(updatedList);
+    }
+
+    function handleSubmit(e) {
+
+        e.preventDefault();
+        e.target.reset();
+    }
     return (
         <>
-            <main className="b-wrapper">
-                <section className="b-container">
-                    <div className="b-title">
-                        <h1 className="b-title__header">To-Do List 📃!</h1>
-                        <h2 className="b-title__dev"><span className="b-title__dev__first">F</span>akbo <span className="b-title__dev__first">W</span>ebDev.</h2>
-                    </div>
+            <main className="wrapper">
+                <section className="header">
+                    <h1 className="title">To-Do App</h1>
+                    <h3 className="dev"><span>F</span>akbo <span>W</span>ebDev</h3>
+                </section>
 
-                    <div className="b-list">
+                <div className="form">
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="name">
+                            <input type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Add new Task"
+                                className="form__input"
+                                value={text}
+                                onChange={handleText}>
+                            </input>
+                        </label>
+                        <button
+                            className="add-btn"
+                            onClick={handleAdd}>+</button>
+                    </form>
+                </div>
+                <section className="container">
+
+
+                    <div className="list">
                         <ol>
                             {listItems}
                         </ol>
                     </div>
-
-                    <div className="b-buttons">
-                        <input type="text" />
-                        <br />
-                        <button className="button">Add new task</button>
-                        <button className="button">delete complete task</button>
-                    </div>
                 </section>
+                <button className="delete-btn" onClick={handleDelete}>Delete</button>
             </main>
         </>
     )
 }
 
 export default ToDo
+
+const listDefault = [
+    {
+        id: 0,
+        text: "Walk the dog",
+        completed: true,
+    },
+    {
+        id: 1,
+        text: "Take a shower",
+        completed: true,
+    },
+    {
+        id: 2,
+        text: "buy the groceries",
+        completed: false,
+    }
+];

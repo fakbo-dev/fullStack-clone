@@ -1,5 +1,4 @@
-import ToDo from "./components/ToDo.jsx";
-
+import ToDo from "./components/ToDo"
 function App() {
   return (
     <>
