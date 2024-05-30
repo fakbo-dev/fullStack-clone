@@ -42,3 +42,45 @@ li a:hover {
     text-decoration: underline;
 }
 
+
+
+
+.items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0.6rem;
+}
+
+.card {
+    background: #EEF7FF;
+    font-size: 0.8rem;
+    color: #373A40;
+    cursor: pointer;
+    padding: 1.8rem;
+    transition: 1s ease;
+    cursor: pointer;
+    margin: 2rem;
+    border-radius: 2rem;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    margin-top: 0.5rem;
+}
+
+p {
+    font-weight: bold;
+}
+
+.api-image {
+    border-radius: 5px;
+    height: 20rem;
+    width: 20rem;
+}
