@@ -1,43 +1,40 @@
+import Input from "../../components/Input"
 import "./Category.css"
-function Category() {
+function Category({ handleChange }) {
   return (
     <div className="sidebar-flex">
       <h2 className="sidebar-title">Category</h2>
 
       <div className="sidebar-items">
         <label className="sidebar-label-container">
-          <input type="radio" name="test" />
+          <input type="radio" name="test" onChange={handleChange} value="" />
           <span className="checkmark"></span>All
         </label>
       </div>
 
-      <div className="sidebar-items">
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>Sneakers
-        </label>
-      </div>
+      <Input
+        handleChange={handleChange}
+        value="sneakers"
+        title="Sneakers"
+        name="test" />
 
-      <div className="sidebar-items">
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>Flats
-        </label>
-      </div>
+      <Input
+        handleChange={handleChange}
+        value="flats"
+        title="Flats"
+        name="test" />
 
-      <div className="sidebar-items">
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>Sandals
-        </label>
-      </div>
+      <Input
+        handleChange={handleChange}
+        value="sandals"
+        title="Sandas"
+        name="test" />
 
-      <div className="sidebar-items">
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>Hells
-        </label>
-      </div>
+      <Input
+        handleChange={handleChange}
+        value="heels"
+        title="Heels"
+        name="test" />
     </div>
   )
 }

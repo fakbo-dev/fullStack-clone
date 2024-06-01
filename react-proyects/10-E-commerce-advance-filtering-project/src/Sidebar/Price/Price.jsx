@@ -1,45 +1,39 @@
+import Input from "../../components/Input"
 import "./Price.css"
 
-function Price() {
+function Price({ handleChange }) {
     return (
         <>
             <div className="ml">
                 <h2 className="sidebar-title price-title">Price</h2>
+                <label className="sidebar-label-container">
+                    <input type="radio" name="test2" onChange={handleChange} value="" />
+                    <span className="checkmark"></span>All
+                </label>
 
-                <div className="sidebar-items">
-                    <label className="sidebar-label-container">
-                        <input type="radio" name="test2" />
-                        <span className="checkmark"></span>All
-                    </label>
+                <Input
+                    handleChange={handleChange}
+                    value={50}
+                    title="$0 - $50"
+                    name="test2" />
 
-                    <div className="sidebar-items">
-                        <label className="sidebar-label-container">
-                            <input type="radio" name="test2" />
-                            <span className="checkmark"></span>$0 - $50
-                        </label>
-                    </div>
+                <Input
+                    handleChange={handleChange}
+                    value={100}
+                    title="$50 - $100"
+                    name="test2" />
 
-                    <div className="sidebar-items">
-                        <label className="sidebar-label-container">
-                            <input type="radio" name="test2" />
-                            <span className="checkmark"></span>$50 - $100
-                        </label>
-                    </div>
+                <Input
+                    handleChange={handleChange}
+                    value={150}
+                    title="$100 - $150"
+                    name="test2" />
 
-                    <div className="sidebar-items">
-                        <label className="sidebar-label-container">
-                            <input type="radio" name="test2" />
-                            <span className="checkmark"></span>$100 - $150
-                        </label>
-                    </div>
-
-                    <div className="sidebar-items">
-                        <label className="sidebar-label-container">
-                            <input type="radio" name="test2" />
-                            <span className="checkmark"></span>$150 - $200
-                        </label>
-                    </div>
-                </div>
+                <Input
+                    handleChange={handleChange}
+                    value={200}
+                    title="$150 - $200"
+                    name="test2" />
             </div>
         </>
     )

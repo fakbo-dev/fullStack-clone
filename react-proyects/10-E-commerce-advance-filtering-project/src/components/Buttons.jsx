@@ -1,7 +1,9 @@
 
-function Buttons() {
+function Buttons({ onCLickHandler, value, title }) {
     return (
-        <div>Buttons</div>
+        <button onCLick={onCLickHandler} value={value} className="btns">
+            {title}
+        </button>
     )
 }
 
