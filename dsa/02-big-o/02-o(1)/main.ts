@@ -9,6 +9,6 @@
 const numbers: number[] = [1, 2, 3, 4, 5];
 
 
-const getElement = (arr: number[], index: number): number => arr[index];
+const getElement = <T>(arr: T[], index: number): T => arr[index];
 
-console.log(getElement(numbers, 2));
+console.log(getElement<number>(numbers, 2));
