@@ -6,3 +6,28 @@
 // abba === abba ✅
 
 // Hello !== olleH ❌
+
+// 1. Convert string to Array
+// 2. Reverse the Array
+// 3. Convert array back to string
+// 4. Compare Strings
+
+
+function detectPalindromes(str: string): void {
+
+    const stringArray: string[] = str.split("");
+    let stringTransform: string[] = [];
+    for (let i = stringArray.length - 1; i >= 0; i--) {
+        stringTransform.push(stringArray[i]);
+    }
+    const result = stringTransform.join("");
+
+    if (result === str) {
+        console.log(`Is a palindrome: initial String: "${str}" is equal to result: "${result}"`);
+    } else {
+        console.log(`Is Not  a palindrome: initial String: "${str}" is not equal to result: "${result}"`);
+    }
+}
+
+detectPalindromes("hola");
+detectPalindromes("cddc");
