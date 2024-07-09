@@ -13,6 +13,7 @@
 // 4. Compare Strings
 
 
+// ? My Own
 function detectPalindromes(str: string): void {
 
     const stringArray: string[] = str.split("");
@@ -31,3 +32,12 @@ function detectPalindromes(str: string): void {
 
 detectPalindromes("hola");
 detectPalindromes("cddc");
+
+// ? Better Way
+
+const detectPalindromesTwo = (str: string): void => str.split("").reverse().join("") === str
+    ? console.log(`Is a palindrome: initial String: "${str}" is equal to result: "${str.split("").reverse().join("")}"`)
+    : console.log(`Is Not  a palindrome: initial String: "${str}" is not equal to result: "${str.split("").reverse().join("")}"`);
+
+detectPalindromesTwo("hola");
+detectPalindromesTwo("cddc");

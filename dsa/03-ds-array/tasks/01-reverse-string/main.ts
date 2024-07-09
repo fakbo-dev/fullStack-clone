@@ -5,7 +5,7 @@
 // Apple = elppA;
 
 
-
+// ? My Own
 
 const reverseString = (str: string): string => {
 
@@ -28,3 +28,13 @@ const reverseString = (str: string): string => {
 
 console.log(reverseString("Hello")); //Expected ouput: "Olleh";
 console.log(reverseString("Apple")); //Expected ouput: "Elppa"
+
+
+// ? Better way
+
+
+
+const reverseStringTwo = (str: string): string => str.toLowerCase().split("").reverse().join("");
+
+console.log(reverseStringTwo("fakbo"));
+console.log(reverseStringTwo("kol0"));
