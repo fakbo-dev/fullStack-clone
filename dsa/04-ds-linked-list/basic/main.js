@@ -44,6 +44,14 @@ class LinkedList {
         this.tail = newNode;
         this.length++;
     }
+
+    // 2# pop method
+    //  1.1 iterate over the interi list and find the last element
+    //  1.2 we have to find the previous element for the last element
+    //  1.3 change the tale to the prev element (el ante ultimo);
+    // 1.4 need to create 2 variables (temp, prev);
+
+
 }
 
 
@@ -51,6 +59,7 @@ const myLinkedList = new LinkedList(1);
 
 console.log(myLinkedList);
 myLinkedList.push(2);
+myLinkedList.push(3);
 console.log(myLinkedList);
 
 
