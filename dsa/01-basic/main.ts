@@ -21,7 +21,7 @@ function findStudents(allStudents: string[], studentName: string): void {
         let index = allStudents[i];
 
         if (index === studentName) {
-            console.log(`Find Student:${index}`)
+            console.log(`Student Found:${index}`)
             break;
         }
         console.log(`Student Not found`);
