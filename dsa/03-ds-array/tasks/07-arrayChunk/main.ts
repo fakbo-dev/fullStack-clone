@@ -50,13 +50,10 @@ const chunkArrayBetter = (arr: number[], chunkSize: number): number[][] => {
 
     const chunkedArray: number[][] = [];
 
-    let index = 0;
-
-    while (index < arr.length) {
-        const chunk = arr.slice(index, index + chunkSize)
-
-        chunkedArray.push(chunk);
-        index += chunkSize;
+    for (let i = 0; i < arr.length; i++) {
+        const chunkIndex = Math.floor(i / chunkSize);
+        chunkedArray[chunkIndex] = chunkedArray[chunkIndex] || [];
+        chunkedArray[chunkIndex].push(arr[i]);
     }
     return chunkedArray;
 }
