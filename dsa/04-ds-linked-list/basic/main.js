@@ -24,8 +24,8 @@ class NodeTest {
 
 class LinkedList {
 
-    constructor(value) {
-        this.head = new NodeTest(value);
+    constructor(newNode) {
+        this.head = new NodeTest(newNode);
         this.tail = this.head;
         this.length = 1;
     }
@@ -46,21 +46,49 @@ class LinkedList {
     }
 
     // 2# pop method
-    //  1.1 iterate over the interi list and find the last element
-    //  1.2 we have to find the previous element for the last element
-    //  1.3 change the tale to the prev element (el ante ultimo);
-    // 1.4 need to create 2 variables (temp, prev);
+    // Allows you to remove the last node in a linked list
+    // delete the last node and change the tail to the previous node and return null to this element
 
+    // Steps
+    //  1.iterate over the list and find the last element
+    //  2. need to find the previous element
+    //  3. taking the tail and set to the previous element
+    //  4.remove the last element.
+
+    // we need to create two variables (temp, prev)
+    // both varibale initalize with the head value
+    // iterate over the list with for... loop or while... lop.
+
+
+    pop() {
+        if (!this.head) {
+            return null;
+        }
+        let temp = this.head;
+        let prev = this.head;
+
+        while (temp.next) {
+            prev = temp;
+            temp = prev.next;
+        }
+
+        this.tail = prev;
+        this.tail.next = null;
+        this.length--;
+        return temp;
+    }
 
 }
 
 
 const myLinkedList = new LinkedList(1);
 
-console.log(myLinkedList);
+// console.log(myLinkedList);
 myLinkedList.push(2);
 myLinkedList.push(3);
+myLinkedList.push(4);
 console.log(myLinkedList);
-
+myLinkedList.pop();
+console.log(myLinkedList);
 
 
