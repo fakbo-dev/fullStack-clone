@@ -1,13 +1,8 @@
-// MaxProfit
+// Array chunk
 
-// Imagine you're buying and selling stocks throughout the year. your job is to find the biggest profit you could make by buying low and selling high only once
+// Write a function that takes an array and chunk size as input.
+// the Function should return a new array where the original array is split into chunks of the specified size
 
-// here's what you're given
+// Chunk([1,2,3,4,5,6,7,8], 3) -> [[1,2,3], [4,5,6], [7,8]];
 
-// A list of stock prices for each day -> [7,1,5,3,6,4]
-
-// Here's what you need to find:
-
-// The difference between the cheapest price and could have bought the stock and the most expensive price you could have sold it later on
-
-
+// chunkArray([1,2,3,4,5],2) -> Ouput: [[1,2], [3,4]];
