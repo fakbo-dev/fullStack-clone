@@ -28,7 +28,6 @@ const chunkArray = (arr: number[], chunkSize: number) => {
 
 
 const test: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
-const test2: number[] = [1, 2, 3, 4, 5];
 const test3: number[] = [1, 2, 3, 4, 5];
 // console.log(chunkArray(test, 3));
 // console.log(chunkArray(test2, 2));
