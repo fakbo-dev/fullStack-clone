@@ -90,5 +90,3 @@ myLinkedList.push(4);
 console.log(myLinkedList);
 myLinkedList.pop();
 console.log(myLinkedList);
-
-
