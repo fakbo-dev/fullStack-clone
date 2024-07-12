@@ -104,6 +104,51 @@ class LinkedList {
         return this;
     }
 
+    // 4# shift 
+    //  1.1 we need to take the head to the next node
+    //  1.2 remove the first element
+    shift() {
+
+        if (!this.head) {
+            return null;
+        }
+
+        let temp = this.head;
+        this.head = this.head.next;
+
+        temp.next = null;
+        this.length--;
+
+        if (this.length === 0) {
+            this.tail = null;
+        }
+
+        return temp;
+    }
+
+
+    getFirstElement() {
+        return this.head;
+    }
+
+    getLast() {
+
+        if (!this.head) {
+            return null;
+        }
+
+        let temp = this.head;
+
+        while (temp) {
+
+            if (!temp.next) {
+                return temp;
+            }
+
+            temp = temp.next;
+        }
+
+    }
 }
 
 
@@ -118,5 +163,5 @@ myLinkedList.pop();
 console.log(myLinkedList);
 myLinkedList.unshift(20);
 console.log(myLinkedList);
-
-
+console.log(myLinkedList.getFirstElement());
+console.log(myLinkedList.getLast());    
