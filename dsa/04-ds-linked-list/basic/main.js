@@ -78,6 +78,32 @@ class LinkedList {
         return temp;
     }
 
+
+    // 3# unshift
+    //  1.1 iterate over the list
+    //  1.2 create a new node
+    //  1.3 point the new node to the head
+    //  1.4 change the head to the new node
+    //  1.5 increase the length by 1
+    //  1.6 return the new length
+    //  1.7 if the list was empty, set the tail to the new node;
+
+    unshift(value) {
+        const newNode = new NodeTest(value);
+
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        }
+
+        newNode.next = this.head;
+        this.head = newNode;
+
+        this.length++
+
+        return this;
+    }
+
 }
 
 
@@ -90,3 +116,7 @@ myLinkedList.push(4);
 console.log(myLinkedList);
 myLinkedList.pop();
 console.log(myLinkedList);
+myLinkedList.unshift(20);
+console.log(myLinkedList);
+
+
