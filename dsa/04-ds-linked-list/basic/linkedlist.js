@@ -82,6 +82,11 @@ class LinkedList {
         this.tail = prev;
         this.tail.next = null;
         this.length--;
+
+        if (this.length === 0) {
+            this.tail = null;
+        }
+
         return temp;
     }
 
@@ -103,6 +108,60 @@ class LinkedList {
         this.length++;
         return newNode;
     }
+
+    // #4 shift method allows to remove the first element of a linkedList
+    //  1.1 we need to take our head and point to the next node.
+    //  1.2 after that we need to remove the first Element.
+
+    shift() {
+        const tempValue = this.head;
+
+        if (!this.head) {
+            return null;
+        }
+        this.head = this.head.next;
+        tempValue.next = null;
+        this.length--;
+
+        return tempValue;
+    }
+
+    // #5 getFirstElement return the the firstNode (head);
+
+    getFistElement() {
+
+        return this.head;
+    }
+
+    // #6 getLastElement
+    getLastElement() {
+        let temp = this.head;
+
+        if (!this.head) {
+            return null;
+        }
+
+        while (temp.next !== null) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    // #7 get return the data of the node
+
+    get(index) {
+        let temp = this.head;
+        let element = 0;
+        while (temp.next !== null) {
+
+            if (temp.data === index) {
+                element = temp;
+            }
+            temp = temp.next;
+        }
+
+        return element;
+    }
 }
 
 
@@ -117,3 +176,8 @@ linkedList.pop();
 console.log(linkedList);
 linkedList.unshift(0);
 console.log(linkedList);
+linkedList.shift();
+console.log(linkedList);
+console.log(linkedList.getFistElement());
+console.log(linkedList.getLastElement());
+console.log(linkedList.get(3));
