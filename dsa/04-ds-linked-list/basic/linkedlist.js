@@ -163,7 +163,7 @@ class LinkedList {
         return element;
     }
 
-    // #7 set update the data of the node
+    // #8 set update the data of the node
     //  1.1 take two parameters index and data
     //  1.2 iterate over the linked list and find the node with the given index.
     //  1.3 update the node with the given index with the new data.
@@ -178,6 +178,48 @@ class LinkedList {
 
         return false;
     }
+
+    // #9 insert method add a node in whatever size
+    //  1.1 create the new node.
+    //  1.2 where you wanna place the node.
+
+
+    insert(index, data) {
+        if (index === 0) {
+
+            this.unshift(data);
+        }
+
+        if (index === this.length) {
+            return this.push(data);
+        }
+        const newNode = new Node(data);
+
+        let temp = this.get(index - 1);
+
+        newNode.next = temp;
+        temp.next = newNode;
+        this.length++;
+
+        return true;
+    }
+
+    size() {
+        let count = 0;
+        let temp = this.head;
+
+        while (temp.next !== null) {
+
+            count++
+            temp = temp.next;
+        }
+
+        return count;
+    }
+
+    clear() {
+        this.head = null;
+    }
 }
 
 
@@ -189,14 +231,14 @@ linkedList.push(4);
 linkedList.push(5);
 // console.log(linkedList);
 linkedList.pop();
-console.log(linkedList);
+// console.log(linkedList);
 linkedList.unshift(0);
-console.log(linkedList);
+// console.log(linkedList);
 linkedList.shift();
-console.log(linkedList);
+// console.log(linkedList);
 // console.log(linkedList.getFistElement());
 // console.log(linkedList.getLastElement());
 // console.log(linkedList.get(3));
 linkedList.set(2, 20);
 
-console.log(linkedList);
+console.log(linkedList.size());
