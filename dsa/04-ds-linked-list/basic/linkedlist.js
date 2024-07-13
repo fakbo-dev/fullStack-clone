@@ -162,6 +162,22 @@ class LinkedList {
 
         return element;
     }
+
+    // #7 set update the data of the node
+    //  1.1 take two parameters index and data
+    //  1.2 iterate over the linked list and find the node with the given index.
+    //  1.3 update the node with the given index with the new data.
+
+    set(index, data) {
+        let temp = this.get(index);
+
+        if (temp) {
+            temp.data = data;
+            return true;
+        }
+
+        return false;
+    }
 }
 
 
@@ -178,6 +194,9 @@ linkedList.unshift(0);
 console.log(linkedList);
 linkedList.shift();
 console.log(linkedList);
-console.log(linkedList.getFistElement());
-console.log(linkedList.getLastElement());
-console.log(linkedList.get(3));
+// console.log(linkedList.getFistElement());
+// console.log(linkedList.getLastElement());
+// console.log(linkedList.get(3));
+linkedList.set(2, 20);
+
+console.log(linkedList);
