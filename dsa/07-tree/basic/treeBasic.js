@@ -100,6 +100,16 @@ class BST {
 
         return dataValues;
     }
+
+    dfsPreOrder(node = this.root, dataArr = []) {
+        if (node === null) return dataArr;
+        console.log("--------------", dataArr);
+        dataArr.push(node.data);
+        if (node.left) this.dfsPreOrder(node.left, dataArr);
+        if (node.right) this.dfsPreOrder(node.right, dataArr);
+
+        return dataArr;
+    }
 }
 
 
@@ -115,3 +125,4 @@ tree.insert(9);
 console.log(tree);
 console.log(tree.includes(3));
 console.log(tree.bfs());
+console.log(tree.dfsPreOrder())
