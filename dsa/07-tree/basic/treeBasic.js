@@ -57,13 +57,35 @@ class BST {
                 }
             }
         }
+
+    }
+    // #2 includes method return true is the parameters is in the binary tree
+    // 1.1 we need to check is the data is equal to te root
+    // 1.2 check if the data is less than the current Node
+    // 1.3 check if the data is greater tahn the current Node
+    // return true is the result match.
+    // return false is not have match.
+    includes(data) {
+        let temp = this.root;
+
+        while (temp !== null) {
+
+            if (data === temp.data) {
+                return true
+            } else if (data < temp.data) {
+                temp = temp.left;
+            } else {
+                temp = temp.right;
+            }
+        }
+        return false;
     }
 }
 
 
 const tree = new BST();
 
-console.log(tree);
+// console.log(tree);
 tree.insert(5);
 tree.insert(8);
 tree.insert(3);
@@ -71,3 +93,4 @@ tree.insert(1);
 tree.insert(7);
 tree.insert(9);
 console.log(tree);
+console.log(tree.includes(3));
