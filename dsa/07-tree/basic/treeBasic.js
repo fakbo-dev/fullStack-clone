@@ -29,10 +29,34 @@ class BST {
     // #1 insert add a node to the BST and check in each leaf is the value is greater or less than the root and the next node, if is less go to the left if is greater go to the right
     insert(data) {
         const newNode = new Node(data);
-
         if (this.root === null) this.root = newNode;
+        let temp = this.root;
 
-        
+        while (true) {
+            if (temp.data === newNode.data) {
+                return null;
+            }
+
+            if (temp.data > newNode.data) {
+
+                if (temp.left === null) {
+                    temp.left = newNode;
+                    return this;
+
+                } else {
+                    temp = temp.left;
+                }
+            }
+
+            if (temp.data < newNode.data) {
+                if (temp.right === null) {
+                    temp.right = newNode;
+                    return this;
+                } else {
+                    temp = temp.right;
+                }
+            }
+        }
     }
 }
 
@@ -41,9 +65,9 @@ const tree = new BST();
 
 console.log(tree);
 tree.insert(5);
-// tree.insert(8);
-// tree.insert(3);
-// tree.insert(1);
-// tree.insert(7);
-// tree.insert(9);
+tree.insert(8);
+tree.insert(3);
+tree.insert(1);
+tree.insert(7);
+tree.insert(9);
 console.log(tree);
