@@ -80,6 +80,26 @@ class BST {
         }
         return false;
     }
+
+    // 3# bfs (breadth first search)
+    bfs() {
+        let current = this.root;
+        let queue = [];
+        let dataValues = [];
+
+        queue.push(current);
+
+        while (queue.length) {
+
+            current = queue.shift();
+            dataValues.push(current.data);
+
+            if (current.left) queue.push(current.left);
+            if (current.right) queue.push(current.right);
+        }
+
+        return dataValues;
+    }
 }
 
 
@@ -94,3 +114,4 @@ tree.insert(7);
 tree.insert(9);
 console.log(tree);
 console.log(tree.includes(3));
+console.log(tree.bfs());
