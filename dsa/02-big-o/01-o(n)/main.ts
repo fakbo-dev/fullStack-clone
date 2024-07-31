@@ -24,6 +24,7 @@ const searchItems = <T>(item: T): void => {
         if (currentIndex === item) {
             console.log(`Item Found: ${item}`);
         }
+
     }
 
     // n + n = 2n -> O(2n)
