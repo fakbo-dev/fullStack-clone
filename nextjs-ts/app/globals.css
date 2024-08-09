@@ -30,5 +30,8 @@ body {
   body {
     @apply m-5
   }
+  input {
+    @apply text-black
+  }
 }
 

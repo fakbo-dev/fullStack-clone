@@ -3,6 +3,7 @@ import About from "@/component/About";
 import Info from "@/component/Info";
 import AdminInfo from "@/component/AdminInfo";
 import Counter from "@/component/Counter";
+import Form from "@/component/Form";
 export default function Home() {
   return (
     <>
@@ -23,7 +24,10 @@ export default function Home() {
         <AdminInfo name="kol0" lastName="webDev" age={99} hobbies="Is Girlfriend" location={["Venezuela", "Valencia"]} admin="true" /> */}
 
         {/* useState with types */}
-        <Counter />
+        {/* <Counter /> */}
+
+        {/* Using Types in Forms */}
+        <Form />
       </main>
     </>
   );
