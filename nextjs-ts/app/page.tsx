@@ -5,6 +5,7 @@ import AdminInfo from "@/component/AdminInfo";
 import Counter from "@/component/Counter";
 import Form from "@/component/Form";
 import Wrapper from "@/component/Wrapper";
+import Button, { primaryButtonProps, secondaryButtonProps } from "@/component/Button";
 export default function Home() {
   return (
     <>
@@ -31,9 +32,13 @@ export default function Home() {
         {/* <Form /> */}
 
         {/* element Wrapper */}
-        <Wrapper elementType="div">
+        {/* <Wrapper elementType="div">
           <h1>hello</h1>
-        </Wrapper>
+        </Wrapper> */}
+
+        {/* type predicates */}
+        <Button {...primaryButtonProps} />
+        <Button {...secondaryButtonProps} />
       </main>
     </>
   );
