@@ -4,6 +4,7 @@ import Info from "@/component/Info";
 import AdminInfo from "@/component/AdminInfo";
 import Counter from "@/component/Counter";
 import Form from "@/component/Form";
+import Wrapper from "@/component/Wrapper";
 export default function Home() {
   return (
     <>
@@ -26,8 +27,13 @@ export default function Home() {
         {/* useState with types */}
         {/* <Counter /> */}
 
-        {/* Using Types in Forms */}
-        <Form />
+        {/* Using Types in Forms,useRef and events */}
+        {/* <Form /> */}
+
+        {/* element Wrapper */}
+        <Wrapper elementType="div">
+          <h1>hello</h1>
+        </Wrapper>
       </main>
     </>
   );
